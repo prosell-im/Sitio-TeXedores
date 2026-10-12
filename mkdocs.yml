@@ -1,5 +1,5 @@
-site_name: Papirhos Preprints
-site_url: https://kavallemon-t.github.io/papirhos-preprints
+site_name: TeXedores  
+site_url: https://prosell-im.github.io/Sitio-TeXedores/
 theme:
   name: material
   custom_dir: docs/overrides
@@ -20,10 +20,10 @@ extra_css:
  - stylesheets/media.css
 nav:
  - Inicio: index.md
- - Preprints: preprints.md
+ - Nuestras publicaciones: colecciones.md 
  - Búsqueda avanzada: explorar.md
  - Acerca de: acerca.md
- - TUL: tul.md
+ - Publicar en el IM: publicar.md
  - Contacto: contacto.md
 markdown_extensions:
  - admonition

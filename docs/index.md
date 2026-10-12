@@ -1,11 +1,8 @@
 <section class="home-hero">
-
 <div class="home-hero-text">
-
-<h1 class="home-title">TeXedores Preprints</h1>
-
+<h1 class="home-title">TeXedores</h1>
 <p class="home-lead">
-Repositorio de prepublicaciones y materiales académicos de matemáticas del Instituto de Matemáticas, UNAM.
+Editorial del Instituto de Matemáticas, UNAM.
 </p>
 
 <p>
