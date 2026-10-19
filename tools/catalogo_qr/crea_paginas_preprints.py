@@ -1,5 +1,10 @@
 import json
 import os
+import sys
+
+# Reutilizar el visor de PDF que ya existe en tools/.
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+from mostrador_PDF import bloque_pdf
 
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -393,6 +398,17 @@ title: "{id_preprint}"
 
 """
 
+
+    # Vista previa de la versión más reciente: mismo visor de la ficha oficial.
+    # No duplicamos los botones "Ver PDF" que ya ofrece esta ficha.
+    if version_actual:
+        url_vista_previa = f'../../archivos_preprints/{version_actual["archivo"]}'
+        contenido += f"""
+<section class="libro-seccion preprint-pdf-seccion">
+    <h2>Vista previa del PDF</h2>
+    {bloque_pdf(url_vista_previa, mostrar_botones=False)}
+</section>
+"""
 
     # =====================================================
     # HISTORIAL DE VERSIONES

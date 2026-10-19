@@ -3218,3 +3218,352 @@ textarea {
   }
 
 }
+
+/* =========================================
+   MENÚ DE PUBLICACIONES - TEXEDORES
+   ========================================= */
+
+/* Permitir que el menú salga de la barra */
+.md-tabs {
+  position: relative;
+  overflow: visible !important;
+  z-index: 20;
+}
+
+.md-tabs .md-grid,
+.md-tabs__list,
+.md-tabs__item {
+  overflow: visible !important;
+}
+
+/* Contenedor */
+.publicaciones-dropdown {
+  position: relative;
+}
+
+/* Pestaña superior */
+.publicaciones-dropdown__trigger {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 0 !important;
+  cursor: pointer;
+  list-style: none;
+}
+
+.publicaciones-dropdown__trigger::-webkit-details-marker {
+  display: none;
+}
+
+.publicaciones-dropdown__trigger::marker {
+  content: "";
+}
+
+/* Flecha */
+.publicaciones-dropdown__chevron {
+  width: 0.4rem;
+  height: 0.4rem;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(45deg);
+  transition: transform 0.2s ease;
+}
+
+.publicaciones-dropdown[open]
+.publicaciones-dropdown__chevron {
+  transform: rotate(225deg);
+}
+
+/* Pestaña abierta */
+.publicaciones-dropdown[open] > summary {
+  background: rgba(255, 255, 255, 0.14);
+  color: #ffffff;
+}
+
+/* Panel desplegable */
+.publicaciones-dropdown__menu {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  left: 0;
+  z-index: 100;
+
+  width: 17rem;
+  margin: 0;
+  padding: 0.7rem;
+
+  background: #ffffff;
+  border: 1px solid #e3e3e3;
+  border-top: 3px solid #d88a1d;
+  border-radius: 0.65rem;
+
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
+
+  list-style: none;
+}
+
+/* Título pequeño */
+.publicaciones-dropdown__heading {
+  padding: 0.5rem 0.7rem 0.8rem;
+  color: #888888;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+/* Enlaces */
+.publicaciones-dropdown__menu a {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+
+  padding: 0.85rem 0.7rem;
+  border-radius: 0.4rem;
+
+  color: #353535;
+  text-decoration: none;
+
+  transition: background 0.2s ease;
+}
+
+.publicaciones-dropdown__menu a:hover,
+.publicaciones-dropdown__menu a:focus-visible {
+  background: #f4f4f4;
+}
+
+.publicaciones-dropdown__menu a strong {
+  display: block;
+  color: #353535;
+  font-size: 0.82rem;
+}
+
+.publicaciones-dropdown__menu a small {
+  display: block;
+  margin-top: 0.2rem;
+  color: #777777;
+  font-size: 0.7rem;
+}
+
+/* Numeración */
+.publicaciones-dropdown__number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 2rem;
+  height: 2rem;
+  flex-shrink: 0;
+
+  border-radius: 0.4rem;
+  background: #f1ede7;
+  color: #a56d20;
+
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+/* Resaltar sección actual */
+.publicaciones-dropdown__menu a[aria-current="page"] {
+  background: #f4f4f4;
+}
+
+/* Accesibilidad */
+.publicaciones-dropdown__trigger:focus-visible {
+  outline: 2px solid #d88a1d;
+  outline-offset: 3px;
+}
+
+/* Pantallas pequeñas */
+@media screen and (max-width: 760px) {
+  .publicaciones-dropdown__menu {
+    width: min(17rem, calc(100vw - 1.5rem));
+  }
+}
+
+
+/* ===========================================
+   TEXEDORES - AJUSTES FINALES DE NAVEGACIÓN
+   =========================================== */
+
+/* MENÚ SUPERIOR */
+
+/* El panel se mueve al body mediante JavaScript */
+.publicaciones-dropdown__menu {
+  display: none !important;
+  position: fixed !important;
+  z-index: 9999 !important;
+
+  box-sizing: border-box;
+  overflow-y: auto;
+
+  background: #ffffff;
+  border: 1px solid #e7e2d9;
+  border-top: 3px solid #b48a4a;
+  border-radius: 0.65rem;
+
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+}
+
+.publicaciones-dropdown__menu.is-open {
+  display: block !important;
+}
+
+/* Flechita y botón superior */
+.publicaciones-dropdown__trigger {
+  cursor: pointer !important;
+}
+
+.publicaciones-dropdown__trigger:hover,
+.publicaciones-dropdown[open] > summary {
+  background: rgba(255, 255, 255, 0.14);
+  color: #ffffff;
+}
+
+
+/* ======================================
+   MENÚ LATERAL DE PUBLICACIONES
+   ====================================== */
+
+/* Ocultar el sistema de subnavegación original */
+.md-sidebar--primary
+.pub-acordeon > input.md-nav__toggle,
+.md-sidebar--primary
+.pub-acordeon > label.md-nav__link,
+.md-sidebar--primary
+.pub-acordeon > nav.md-nav {
+  display: none !important;
+}
+
+/* Permitir que la sección crezca verticalmente */
+.md-sidebar--primary
+.md-nav__list > li.pub-acordeon {
+  display: block !important;
+  flex: 0 0 auto !important;
+  width: 100%;
+  height: auto !important;
+  min-height: 0 !important;
+}
+
+/* Botón principal */
+.md-sidebar--primary
+.pub-acordeon__boton {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+  min-height: 3.25rem;
+  padding: 0.7rem 1rem;
+
+  border: none;
+  border-bottom: 1px solid var(--color-border);
+  border-radius: 0;
+
+  background: var(--color-white);
+  color: var(--color-ink);
+
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-align: left;
+
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+/* Mismo color de hover que las demás secciones */
+.md-sidebar--primary
+.pub-acordeon__boton:hover,
+.md-sidebar--primary
+.pub-acordeon.abierto > .pub-acordeon__boton {
+  background: var(--color-surface);
+}
+
+/* Flechita */
+.pub-acordeon__flecha {
+  width: 0.5rem;
+  height: 0.5rem;
+
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+
+  transform: rotate(45deg);
+  transition: transform 0.2s ease;
+}
+
+/* Girar al expandir */
+.pub-acordeon.abierto
+.pub-acordeon__flecha {
+  transform: rotate(225deg);
+}
+
+/* Lista de opciones inicialmente oculta */
+.md-sidebar--primary
+.pub-acordeon__opciones {
+  display: none;
+  width: 100%;
+  height: auto !important;
+
+  margin: 0 !important;
+  padding: 0.3rem 0 0.5rem 0.9rem !important;
+
+  background: var(--color-white);
+  list-style: none;
+  box-sizing: border-box;
+}
+
+/* Mostrar las opciones debajo */
+.md-sidebar--primary
+.pub-acordeon.abierto > .pub-acordeon__opciones {
+  display: block !important;
+}
+
+/* Evitar que las opciones se estiren */
+.md-sidebar--primary
+.pub-acordeon__opciones > li {
+  display: block !important;
+  flex: none !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Enlaces secundarios */
+.md-sidebar--primary
+.pub-acordeon__opciones a {
+  display: block;
+  padding: 0.7rem 1rem;
+
+  border-left: 2px solid var(--color-border);
+  border-radius: 0;
+
+  background: var(--color-white);
+  color: var(--color-ink);
+
+  font-size: 0.82rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+/* Hover */
+.md-sidebar--primary
+.pub-acordeon__opciones a:hover {
+  background: var(--color-surface);
+  border-left-color: var(--color-accent);
+}
+
+/* Página seleccionada */
+.md-sidebar--primary
+.pub-acordeon__opciones a.es-actual {
+  background: var(--color-ink);
+  color: var(--color-white);
+  border-left-color: var(--color-accent);
+}
+
+/* Ajustes en pantallas pequeñas */
+@media screen and (max-width: 76.1875em) {
+  .md-sidebar--primary
+  .pub-acordeon__boton {
+    min-height: 2.7rem;
+    border-radius: 0.4rem;
+  }
+}

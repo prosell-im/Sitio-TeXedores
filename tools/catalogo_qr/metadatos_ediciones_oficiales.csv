@@ -1,0 +1,23 @@
+﻿id_libro,id_edicion,edicion,anio,editorial,isbn_col,isbn_libro,tomo,reimpresiones,fuente,revision
+pap-not-1,ed-001,1,2017,"Instituto de Matemáticas, UNAM",978-607-02-5149-8,978-607-02-9845-5,,,Papirhos Digital (catálogo histórico),pendiente
+cuad-x-1,ed-002,2,2018,"Instituto de Matemáticas, UNAM",978-968-36-8599-5,978-607-02-85882,,,Papirhos Digital (catálogo histórico),pendiente
+pap-tex-6,ed-003,1,2017,"Instituto de Matemáticas, UNAM",978-607-02-5149-8,978-607-02-8824-1,1,,Papirhos Digital (catálogo histórico),pendiente
+pap-tex-10,ed-004,1,2020,"Instituto de Matemáticas, UNAM",978-607-02-5149-8,978-607-30-3681-8,2,,Papirhos Digital (catálogo histórico),pendiente
+pap-tex-1,ed-005,3,2014,"Instituto de Matemáticas, UNAM",978-607-02-9375-7,978-607-02-9435-8,1,,Papirhos Digital (catálogo histórico),pendiente
+pap-tex-4,ed-006,1,2016,"Instituto de Matemáticas, UNAM",978-607-02-5149-8,978-607-02-7814-3,2,,Papirhos Digital (catálogo histórico),pendiente
+pap-mix-1,ed-007,,,,,,,,Papirhos Digital (catálogo histórico),pendiente
+pap-ico-3,ed-008,,,"Instituto de Matemáticas, UNAM",,,,,Papirhos Digital (catálogo histórico),pendiente
+pap-tex-2,ed-009,,,"Instituto de Matemáticas, UNAM",,,,,Papirhos Digital (catálogo histórico),pendiente
+pap-tex-3,ed-010,,,"Instituto de Matemáticas, UNAM",,,,,Papirhos Digital (catálogo histórico),pendiente
+pap-tex-5,ed-011,,,"Instituto de Matemáticas, UNAM",,,,,Papirhos Digital (catálogo histórico),pendiente
+pap-tex-7,ed-012,,,"Instituto de Matemáticas, UNAM",,,,,Papirhos Digital (catálogo histórico),pendiente
+pap-tex-8,,,,,,,,,Sin datos editoriales históricos,pendiente
+pap-tex-9,ed-013,,,"Instituto de Matemáticas, UNAM",,,,,Papirhos Digital (catálogo histórico),pendiente
+pap-tex-11,ed-014,,,"Instituto de Matemáticas, UNAM",,,,,Papirhos Digital (catálogo histórico),pendiente
+pap-tex-12,ed-015,,,"Instituto de Matemáticas, UNAM",,,,,Papirhos Digital (catálogo histórico),pendiente
+pap-not-2,ed-016,,,"Instituto de Matemáticas, UNAM",,,,,Papirhos Digital (catálogo histórico),pendiente
+pap-not-3,ed-017,,,"Instituto de Matemáticas, UNAM",,,,,Papirhos Digital (catálogo histórico),pendiente
+pap-act-1,ed-018,,,"Instituto de Matemáticas, UNAM",,,,,Papirhos Digital (catálogo histórico),pendiente
+apor-tex-12,,,,,,,,,Sin datos editoriales históricos,pendiente
+pap-tex-17,,,,,,,,,Sin datos editoriales históricos,pendiente
+pap-tex-18,,,,,,,,,Sin datos editoriales históricos,pendiente

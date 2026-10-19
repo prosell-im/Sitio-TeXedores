@@ -219,6 +219,21 @@ title: "pap-tex-1"
 </section>
 
 
+<section class="libro-seccion preprint-pdf-seccion">
+    <h2>Vista previa del PDF</h2>
+    <div class="pdf-mostrador">
+
+  <details class="pdf-mostrador__desplegable">
+    <summary>Ver en línea (vista previa)</summary>
+    <div class="pdf-mostrador__contenido">
+      <object data="../../archivos_preprints/pap-tex-1-v1.pdf" type="application/pdf" class="pdf-mostrador__visor" aria-label="Vista previa del PDF">
+        <p>Tu navegador no permite mostrar PDF dentro de la página. <a href="../../archivos_preprints/pap-tex-1-v1.pdf" target="_blank" rel="noopener noreferrer">Abrir PDF en otra pestaña</a>.</p>
+      </object>
+    </div>
+  </details>
+</div>
+</section>
+
 <section class="libro-seccion preprint-history-section">
 
     <h2>

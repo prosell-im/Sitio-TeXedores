@@ -18,9 +18,12 @@ theme:
 extra_css:
  - stylesheets/extra.css
  - stylesheets/media.css
+ - stylesheets/catalogo-oficial.css
 nav:
  - Inicio: index.md
- - Nuestras publicaciones: colecciones.md 
+ - Nuestras publicaciones: 
+   - Publicaciones oficiales: catalogo.md
+   - Preprints: preprints.md
  - Búsqueda avanzada: explorar.md
  - Acerca de: acerca.md
  - Publicar en el IM: publicar.md
@@ -31,4 +34,5 @@ markdown_extensions:
  - pymdownx.superfences
 extra_javascript:
  - js/config.js
+ - js/publicaciones-menu.js
 

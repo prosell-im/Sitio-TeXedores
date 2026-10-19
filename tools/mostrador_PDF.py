@@ -1,29 +1,39 @@
-import os
-from textwrap import dedent
+"""Vista previa expandible para PDFs en fichas oficiales y de preprints.
 
-BASE = os.path.dirname(os.path.dirname(__file__))
-DOCS = os.path.join(BASE, "docs")
+La ruta recibida es una URL relativa a la ficha generada, por ejemplo:
+    ../../archivos_preprints/pap-tex-1-v1.pdf
 
-def pdf_en_ficha(_id: str) -> str:
-       """
-       Devuelve la ruta relativa al PDF marcado si existe, o un dirección dummy
-       """
-       rel = f"{_id}_mark.pdf"
-       #./<id>_mark.pdf
-       abs_path = os.path.join(DOCS, "libros", _id, rel)
-       return rel if os.path.exists(abs_path) else ""
+No busca archivos antiguos en docs/libros: el catálogo proporciona la ruta.
+"""
 
-def bloque_pdf(_id: str) -> str:
-       url = pdf_en_ficha(_id)
-       if not url: #Aunque no haya PDF aparece un placeholder
-              return '[Ver PDF](#) { .md-button .download-link data-book-id="{_id}" }<span class = "muted">(disponible próximamente)</span>'
-       return dedent(f"""
-<a class="md-button data-book-id={_id} download-link" data-book-id="{_id}" href = "{url}" target = "_blank" rel ="noopener" > Abrir PDF </a>
-<a class="md-button  data-book-id={_id} download-link" data-book-id="{_id}" href ="{url}" download> Descargar</a>
-<details>
-<summary> Ver en línea (vista previa)</summary>
-<object data = "{url}" type="application/pdf" width="100%" height="700" >
-<p> Tu navegador no puede mostrar PDF incrustado <a href="{url}" target="_blank" rel ="noopener"> Abrir PDF </a> o usa el botón "Descargar".</p>
-</object>
-</details>""").strip()
+from html import escape
 
+
+def bloque_pdf(url_pdf: str, mostrar_botones: bool = True) -> str:
+    """Construye botones y un visor PDF dentro de un desplegable nativo.
+
+    mostrar_botones=False sirve para Preprints, que ya tiene su botón Ver PDF.
+    """
+    if not url_pdf:
+        return '<p class="pdf-mostrador__vacio">PDF no disponible.</p>'
+
+    url = escape(url_pdf, quote=True)
+    botones = ""
+    if mostrar_botones:
+        botones = f'''
+  <div class="pdf-mostrador__acciones">
+    <a href="{url}" class="md-button md-button--primary" target="_blank" rel="noopener noreferrer">Abrir PDF</a>
+    <a href="{url}" class="md-button preprint-secondary-button" download>Descargar PDF</a>
+  </div>'''
+
+    return f'''<div class="pdf-mostrador">
+{botones}
+  <details class="pdf-mostrador__desplegable">
+    <summary>Ver en línea (vista previa)</summary>
+    <div class="pdf-mostrador__contenido">
+      <object data="{url}" type="application/pdf" class="pdf-mostrador__visor" aria-label="Vista previa del PDF">
+        <p>Tu navegador no permite mostrar PDF dentro de la página. <a href="{url}" target="_blank" rel="noopener noreferrer">Abrir PDF en otra pestaña</a>.</p>
+      </object>
+    </div>
+  </details>
+</div>'''
