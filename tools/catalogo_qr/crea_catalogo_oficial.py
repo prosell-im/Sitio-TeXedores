@@ -1,6 +1,6 @@
 """Genera docs/data/catalogo.json con las fuentes actuales de TeXedores.
 
-No modifica preprints.json ni los PDFs existentes.
+Usa una lista independiente de PDF oficiales; no modifica preprints.json ni los PDF.
 Ejecutar desde la raíz del repositorio:
     python tools/catalogo_qr/crea_catalogo_oficial.py
 """
@@ -28,7 +28,7 @@ libros = leer_csv('preprints_BD_completa.csv')
 autores = leer_csv('autores.csv')
 relaciones = leer_csv('preprints_autores.csv')
 resumenes = leer_csv('resumenes.csv')
-versiones = leer_csv('versiones.csv')
+pdfs_oficiales = leer_csv('pdfs_oficiales.csv')
 
 if libros['id_preprint'].duplicated().any():
     raise ValueError('Hay identificadores duplicados en preprints_BD_completa.csv')
@@ -54,30 +54,44 @@ autores_por_libro = (
 )
 resumen_por_libro = resumenes.set_index('id_preprint')['resumen'].to_dict()
 
-# Selecciona la versión con el número mayor solamente para encontrar el PDF.
-# NO significa que sea una edición editorial.
-versiones['numero_version'] = pd.to_numeric(
-    versiones['version'], errors='coerce'
-)
-versiones_ordenadas = versiones.sort_values(
-    ['id_preprint', 'numero_version'], na_position='first'
-)
-pdf_por_libro = (
-    versiones_ordenadas.drop_duplicates('id_preprint', keep='last')
-    .set_index('id_preprint')['archivo']
-    .to_dict()
-)
+# La ruta del PDF oficial se decide explícitamente y NO depende de versiones.csv.
+# Aunque mañana aparezca otro preprint con una versión nueva, esta tabla
+# conserva el PDF oficial hasta que alguien lo cambie expresamente.
+columnas_pdf = {'id_publicacion', 'pdf'}
+if not columnas_pdf.issubset(pdfs_oficiales.columns):
+    raise ValueError('pdfs_oficiales.csv necesita las columnas id_publicacion y pdf')
+
+if pdfs_oficiales['id_publicacion'].duplicated().any():
+    raise ValueError('Hay identificadores duplicados en pdfs_oficiales.csv')
+
+pdf_por_libro = pdfs_oficiales.set_index('id_publicacion')['pdf'].to_dict()
+
+# Evitamos datos que podrían quedar desactualizados silenciosamente.
+ids_libros = set(libros['id_preprint'])
+ids_pdfs = set(pdf_por_libro)
+faltantes = ids_libros - ids_pdfs
+if faltantes:
+    raise ValueError('Faltan PDF oficiales para: ' + ', '.join(sorted(faltantes)))
+sobrantes = ids_pdfs - ids_libros
+if sobrantes:
+    print('Aviso: hay PDF oficiales sin registro de publicación: ' + ', '.join(sorted(sobrantes)))
 
 catalogo = []
 for libro in libros.to_dict(orient='records'):
     identificador = libro['id_preprint']
-    archivo_pdf = pdf_por_libro.get(identificador, '')
-    if not archivo_pdf:
-        raise ValueError(f'Falta el PDF del registro {identificador}')
+    # Ruta relativa a docs/, por ejemplo: archivos_preprints/pap-tex-1-v1.pdf
+    ruta_relativa = pdf_por_libro[identificador].replace('\\', '/').strip()
+    if not ruta_relativa.lower().endswith('.pdf'):
+        raise ValueError(f'El archivo oficial debe ser un PDF ({identificador}): {ruta_relativa!r}')
+    if ruta_relativa.startswith('/') or ':' in ruta_relativa:
+        raise ValueError(f'Ruta PDF no permitida para {identificador}: {ruta_relativa!r}')
 
-    ruta_pdf = os.path.join(DOCS_DIR, 'archivos_preprints', archivo_pdf)
+    ruta_pdf = os.path.realpath(os.path.join(DOCS_DIR, ruta_relativa))
+    docs_real = os.path.realpath(DOCS_DIR)
+    if os.path.commonpath([docs_real, ruta_pdf]) != docs_real:
+        raise ValueError(f'El PDF debe estar dentro de docs/ ({identificador}): {ruta_relativa!r}')
     if not os.path.isfile(ruta_pdf):
-        raise FileNotFoundError(f'No existe el PDF: {ruta_pdf}')
+        raise FileNotFoundError(f'No existe el PDF oficial de {identificador}: {ruta_pdf}')
 
     catalogo.append({
         'id': identificador,
@@ -88,8 +102,8 @@ for libro in libros.to_dict(orient='records'):
         'portada': libro['portada'],
         'autores': autores_por_libro.get(identificador, []),
         'resumen': resumen_por_libro.get(identificador, ''),
-        # Ruta relativa a docs/. Se actualizará cuando reorganicemos PDFs.
-        'pdf': f'archivos_preprints/{archivo_pdf}',
+        # Ruta fija, definida en pdfs_oficiales.csv.
+        'pdf': ruta_relativa,
     })
 
 os.makedirs(os.path.join(DOCS_DIR, 'data'), exist_ok=True)

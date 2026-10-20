@@ -37,6 +37,18 @@ os.makedirs(OUTPUT_DIR, exist_ok=True)
 with open(JSON_PATH, "r", encoding="utf-8") as archivo:
     preprints = json.load(archivo)
 
+# Un preprint puede enlazar a su ficha oficial si existe en el catálogo general.
+CATALOGO_OFICIAL_PATH = os.path.join(PROJECT_DIR, "docs", "data", "catalogo.json")
+if os.path.isfile(CATALOGO_OFICIAL_PATH):
+    with open(CATALOGO_OFICIAL_PATH, "r", encoding="utf-8") as archivo:
+        catalogo_oficial = json.load(archivo)
+    if not isinstance(catalogo_oficial, list):
+        raise ValueError("catalogo.json debe contener una lista")
+    ids_oficiales = {str(libro["id"]) for libro in catalogo_oficial if libro.get("id")}
+else:
+    ids_oficiales = set()
+
+
 
 # =========================================================
 # GENERAMOS UNA FICHA PARA CADA PREPRINT
@@ -45,6 +57,17 @@ with open(JSON_PATH, "r", encoding="utf-8") as archivo:
 for preprint in preprints:
 
     id_preprint = preprint["id_preprint"]
+    relacion_oficial = ""
+    if id_preprint in ids_oficiales:
+        relacion_oficial = f'''
+<section class="libro-seccion relacion-fichas">
+  <h2>Publicación oficial relacionada</h2>
+  <p>Este preprint contiene cambios todavía no incorporados a la
+     publicación oficial. Puedes consultar ambas versiones por separado.</p>
+  <a class="md-button md-button--primary" href="../../publicaciones/{id_preprint}/">
+    Consultar publicación oficial
+  </a>
+</section>'''
     url_preprint = f"{SITE_URL}/preprints/{id_preprint}/"
 
     titulo = preprint["titulo"]
@@ -220,6 +243,8 @@ title: "{id_preprint}"
     </p>
 
 </section>
+
+{relacion_oficial}
 
 """
 

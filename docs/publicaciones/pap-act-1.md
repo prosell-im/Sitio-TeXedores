@@ -29,12 +29,11 @@ title: "Proceedings of the Workshop on Holomorphic Dynamics"
 <div class="edition-panel" id="oficial-edicion-pap-act-1-0">
   <section class="libro-subseccion libro-metadatos">
     <h3>Metadatos</h3>
-    <p class='oficial-aviso-revision'>Estos datos editoriales proceden de Papirhos Digital y deben verificarse. No necesariamente describen el PDF actual.</p>
+    
     <div class="oficial-tabla-contenedor"><table><tbody><tr><th scope="row">Autores</th><td>Patricia Dominguez Soto, Peter Makienko, Carlos Cabrera Ocañas</td></tr><tr><th scope="row">Colección</th><td>Papirhos</td></tr><tr><th scope="row">Serie</th><td>Actas</td></tr><tr><th scope="row">Número de serie</th><td>1</td></tr><tr><th scope="row">Editorial</th><td>Instituto de Matemáticas, UNAM</td></tr></tbody></table></div>
   </section>
   <section class="libro-subseccion libro-cita">
     <h3>Cómo citar</h3>
-    <p class="oficial-nota-cita">Cita orientativa: confirma la edición y los datos antes de utilizarla.</p>
     <div class="citation-box">
       <blockquote id="oficial-cita-pap-act-1-0">Patricia Dominguez Soto, Peter Makienko, Carlos Cabrera Ocañas. (s. f.). <em>Proceedings of the Workshop on Holomorphic Dynamics</em>. Instituto de Matemáticas, UNAM.</blockquote>
       <button type="button" class="citation-copy-button" data-copy-id="oficial-cita-pap-act-1-0" data-copy-type="text">Copiar cita</button>
@@ -54,6 +53,8 @@ title: "Proceedings of the Workshop on Holomorphic Dynamics"
 </div></div>
   </div>
 </section>
+
+
 
 <section class="libro-seccion libro-seccion-descargas oficial-pdf-seccion">
   <h2>Descargas</h2>

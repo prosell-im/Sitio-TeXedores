@@ -26,6 +26,7 @@ JSON_PATH = DOCS_DIR / "data" / "catalogo.json"
 OUTPUT_DIR = DOCS_DIR / "publicaciones"
 CATALOG_PATH = DOCS_DIR / "catalogo.md"
 METADATA_PATH = BASE_DIR / "metadatos_ediciones_oficiales.csv"
+PREPRINTS_JSON_PATH = DOCS_DIR / "data" / "preprints.json"
 
 
 def texto(valor):
@@ -85,6 +86,24 @@ def validar_y_leer():
         if not archivo_pdf.is_relative_to(DOCS_DIR.resolve()) or not archivo_pdf.is_file():
             raise FileNotFoundError(f"No existe el PDF de {identificador}: {archivo_pdf}")
     return libros
+
+
+def cargar_preprints_relacionados():
+    """IDs que tienen una ficha de preprint con al menos una versión disponible.
+
+    Solo consultamos el JSON; no mezclamos ni sobrescribimos los PDF oficiales.
+    """
+    if not PREPRINTS_JSON_PATH.is_file():
+        print("Aviso: no se encontró preprints.json; las fichas oficiales no mostrarán vínculos.")
+        return set()
+    registros = json.loads(PREPRINTS_JSON_PATH.read_text(encoding="utf-8"))
+    if not isinstance(registros, list):
+        raise ValueError("preprints.json debe contener una lista")
+    return {
+        str(preprint["id_preprint"])
+        for preprint in registros
+        if preprint.get("id_preprint") and preprint.get("versiones")
+    }
 
 
 def cargar_ediciones():
@@ -188,24 +207,7 @@ def seccion_ediciones(libro, ediciones):
             fila_metadato("ISBN (libro)", ed.get("isbn_libro")),
             fila_metadato("Reimpresiones", ed.get("reimpresiones")),
         ])
-        # Los metadatos antiguos se ofrecen como referencia editable, no como
-        # prueba de que el PDF actual corresponde a esa edición histórica.
-        revision = ed.get("revision", "").casefold()
-        if revision != "validado":
-            origen = ed.get("fuente", "")
-            if origen.startswith("Papirhos Digital"):
-                mensaje = (
-                    "Estos datos editoriales proceden de Papirhos Digital y deben verificarse. "
-                    "No necesariamente describen el PDF actual."
-                )
-            else:
-                mensaje = (
-                    "Aún no hay datos editoriales completos y validados para esta obra. "
-                    "Se muestran los metadatos disponibles."
-                )
-            aviso = f"<p class='oficial-aviso-revision'>{texto(mensaje)}</p>"
-        else:
-            aviso = ""
+        aviso = ""  # Los datos del catálogo se muestran tal como fueron proporcionados.
         cita = citar(libro, ed)
         bib = texto(generar_bibtex(libro, ed))
         paneles.append(f'''
@@ -217,7 +219,6 @@ def seccion_ediciones(libro, ediciones):
   </section>
   <section class="libro-subseccion libro-cita">
     <h3>Cómo citar</h3>
-    <p class="oficial-nota-cita">Cita orientativa: confirma la edición y los datos antes de utilizarla.</p>
     <div class="citation-box">
       <blockquote id="oficial-cita-{ident}-{i}">{cita}</blockquote>
       <button type="button" class="citation-copy-button" data-copy-id="oficial-cita-{ident}-{i}" data-copy-type="text">Copiar cita</button>
@@ -280,7 +281,7 @@ JS_FICHA = r'''
 '''
 
 
-def ficha(libro, ediciones):
+def ficha(libro, ediciones, preprints_relacionados):
     identificador = texto(libro["id"])
     titulo = texto(libro["titulo"])
     autores = " · ".join(texto(a) for a in libro.get("autores", []) if a)
@@ -292,6 +293,19 @@ def ficha(libro, ediciones):
     serie = texto(libro.get("serie") or "")
     numero = texto(libro.get("num_serie") or "")
     ediciones_html = seccion_ediciones(libro, ediciones)
+    # Una ficha de preprint solo existe mientras haya cambios pendientes.
+    # Su presencia en preprints.json es la condición para mostrar el enlace.
+    seccion_preprint = ""
+    if libro["id"] in preprints_relacionados:
+        seccion_preprint = f'''
+<section class="libro-seccion relacion-fichas">
+  <h2>Preprint relacionado</h2>
+  <p>Esta publicación cuenta con una versión preliminar que incluye cambios
+     todavía no incorporados a la publicación oficial.</p>
+  <a class="md-button md-button--primary" href="../../preprints/{identificador}/">
+    Consultar preprint
+  </a>
+</section>'''
     chips = "".join(
         f'<span class="chip">{valor}</span>'
         for valor in (coleccion, serie, ("Núm. " + numero if numero else ""))
@@ -318,6 +332,8 @@ title: {json.dumps(libro['titulo'], ensure_ascii=False)}
 </section>
 
 {ediciones_html}
+
+{seccion_preprint}
 
 <section class="libro-seccion libro-seccion-descargas oficial-pdf-seccion">
   <h2>Descargas</h2>
@@ -445,10 +461,11 @@ def pagina_catalogo(libros):
 def main():
     libros = validar_y_leer()
     ediciones = cargar_ediciones()
+    preprints_relacionados = cargar_preprints_relacionados()
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     for libro in libros:
         salida = OUTPUT_DIR / f"{libro['id']}.md"
-        salida.write_text(ficha(libro, ediciones.get(libro["id"], [])), encoding="utf-8")
+        salida.write_text(ficha(libro, ediciones.get(libro["id"], []), preprints_relacionados), encoding="utf-8")
     CATALOG_PATH.write_text(pagina_catalogo(libros), encoding="utf-8")
     print(f"Catálogo oficial: {len(libros)} publicaciones")
     print(f"Página principal: {CATALOG_PATH}")

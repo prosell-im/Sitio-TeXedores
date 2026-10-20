@@ -203,3 +203,26 @@
   .oficial-detalle .libro-metadatos th,
   .oficial-detalle .libro-metadatos td { padding: .65rem .5rem; }
 }
+
+/* Vínculo editorial entre la publicación oficial y su preprint. */
+.relacion-fichas {
+  padding: 1.35rem 1.5rem;
+  margin-block: 1.5rem;
+  background: var(--color-surface, #f4f4f4);
+  border: 1px solid var(--color-border, #d7d7d7);
+  border-left: 3px solid var(--color-ink, #353535);
+  border-radius: .45rem;
+}
+.relacion-fichas h2 {
+  margin-top: 0;
+}
+.relacion-fichas p {
+  line-height: 1.65;
+}
+.relacion-fichas .md-button {
+  margin-top: .5rem;
+}
+@media (max-width: 600px) {
+  .relacion-fichas { padding: 1rem; }
+  .relacion-fichas .md-button { width: 100%; text-align: center; }
+}

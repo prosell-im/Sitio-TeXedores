@@ -29,12 +29,11 @@ title: "Teoría de singularidades en topología, geometría y foliaciones I"
 <div class="edition-panel" id="oficial-edicion-pap-not-1-0">
   <section class="libro-subseccion libro-metadatos">
     <h3>Metadatos</h3>
-    <p class='oficial-aviso-revision'>Estos datos editoriales proceden de Papirhos Digital y deben verificarse. No necesariamente describen el PDF actual.</p>
+    
     <div class="oficial-tabla-contenedor"><table><tbody><tr><th scope="row">Autores</th><td>Jean-Paul Brasselet, Felipe Cano, Dominique Cerveau, Dung Tráng Lê, Frank Loray, Mutsuo Oka, José Seade, Mark Spivakovsky</td></tr><tr><th scope="row">Colección</th><td>Papirhos</td></tr><tr><th scope="row">Serie</th><td>Notas</td></tr><tr><th scope="row">Número de serie</th><td>1</td></tr><tr><th scope="row">Año</th><td>2017</td></tr><tr><th scope="row">Editorial</th><td>Instituto de Matemáticas, UNAM</td></tr><tr><th scope="row">Edición</th><td>1</td></tr><tr><th scope="row">ISBN (colección)</th><td>978-607-02-5149-8</td></tr><tr><th scope="row">ISBN (libro)</th><td>978-607-02-9845-5</td></tr></tbody></table></div>
   </section>
   <section class="libro-subseccion libro-cita">
     <h3>Cómo citar</h3>
-    <p class="oficial-nota-cita">Cita orientativa: confirma la edición y los datos antes de utilizarla.</p>
     <div class="citation-box">
       <blockquote id="oficial-cita-pap-not-1-0">Jean-Paul Brasselet, Felipe Cano, Dominique Cerveau, Dung Tráng Lê, Frank Loray, Mutsuo Oka, José Seade, Mark Spivakovsky. (2017). <em>Teoría de singularidades en topología, geometría y foliaciones I</em>. Instituto de Matemáticas, UNAM. Edición 1.</blockquote>
       <button type="button" class="citation-copy-button" data-copy-id="oficial-cita-pap-not-1-0" data-copy-type="text">Copiar cita</button>
@@ -57,6 +56,8 @@ title: "Teoría de singularidades en topología, geometría y foliaciones I"
 </div></div>
   </div>
 </section>
+
+
 
 <section class="libro-seccion libro-seccion-descargas oficial-pdf-seccion">
   <h2>Descargas</h2>

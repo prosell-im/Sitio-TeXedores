@@ -29,12 +29,11 @@ title: "Por la senda de los círculos"
 <div class="edition-panel" id="oficial-edicion-pap-mix-1-0">
   <section class="libro-subseccion libro-metadatos">
     <h3>Metadatos</h3>
-    <p class='oficial-aviso-revision'>Estos datos editoriales proceden de Papirhos Digital y deben verificarse. No necesariamente describen el PDF actual.</p>
+    
     <div class="oficial-tabla-contenedor"><table><tbody><tr><th scope="row">Autores</th><td>Cecilia Neve Jimenez, Laura Rosales Ortiz</td></tr><tr><th scope="row">Colección</th><td>Papirhos</td></tr><tr><th scope="row">Serie</th><td>Mixbaal</td></tr><tr><th scope="row">Número de serie</th><td>1</td></tr></tbody></table></div>
   </section>
   <section class="libro-subseccion libro-cita">
     <h3>Cómo citar</h3>
-    <p class="oficial-nota-cita">Cita orientativa: confirma la edición y los datos antes de utilizarla.</p>
     <div class="citation-box">
       <blockquote id="oficial-cita-pap-mix-1-0">Cecilia Neve Jimenez, Laura Rosales Ortiz. (s. f.). <em>Por la senda de los círculos</em>.</blockquote>
       <button type="button" class="citation-copy-button" data-copy-id="oficial-cita-pap-mix-1-0" data-copy-type="text">Copiar cita</button>
@@ -53,6 +52,8 @@ title: "Por la senda de los círculos"
 </div></div>
   </div>
 </section>
+
+
 
 <section class="libro-seccion libro-seccion-descargas oficial-pdf-seccion">
   <h2>Descargas</h2>

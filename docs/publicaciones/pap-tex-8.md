@@ -29,12 +29,11 @@ title: "Introducción a la teoría de Galois"
 <div class="edition-panel" id="oficial-edicion-pap-tex-8-0">
   <section class="libro-subseccion libro-metadatos">
     <h3>Metadatos</h3>
-    <p class='oficial-aviso-revision'>Aún no hay datos editoriales completos y validados para esta obra. Se muestran los metadatos disponibles.</p>
+    
     <div class="oficial-tabla-contenedor"><table><tbody><tr><th scope="row">Autores</th><td>Felipe Zaldivar</td></tr><tr><th scope="row">Colección</th><td>Papirhos</td></tr><tr><th scope="row">Serie</th><td>Textos</td></tr><tr><th scope="row">Número de serie</th><td>8</td></tr></tbody></table></div>
   </section>
   <section class="libro-subseccion libro-cita">
     <h3>Cómo citar</h3>
-    <p class="oficial-nota-cita">Cita orientativa: confirma la edición y los datos antes de utilizarla.</p>
     <div class="citation-box">
       <blockquote id="oficial-cita-pap-tex-8-0">Felipe Zaldivar. (s. f.). <em>Introducción a la teoría de Galois</em>.</blockquote>
       <button type="button" class="citation-copy-button" data-copy-id="oficial-cita-pap-tex-8-0" data-copy-type="text">Copiar cita</button>
@@ -52,6 +51,16 @@ title: "Introducción a la teoría de Galois"
   </section>
 </div></div>
   </div>
+</section>
+
+
+<section class="libro-seccion relacion-fichas">
+  <h2>Preprint relacionado</h2>
+  <p>Esta publicación cuenta con una versión preliminar que incluye cambios
+     todavía no incorporados a la publicación oficial.</p>
+  <a class="md-button md-button--primary" href="../../preprints/pap-tex-8/">
+    Consultar preprint
+  </a>
 </section>
 
 <section class="libro-seccion libro-seccion-descargas oficial-pdf-seccion">

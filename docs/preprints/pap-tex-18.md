@@ -86,6 +86,16 @@ title: "pap-tex-18"
 </section>
 
 
+<section class="libro-seccion relacion-fichas">
+  <h2>Publicación oficial relacionada</h2>
+  <p>Este preprint contiene cambios todavía no incorporados a la
+     publicación oficial. Puedes consultar ambas versiones por separado.</p>
+  <a class="md-button md-button--primary" href="../../publicaciones/pap-tex-18/">
+    Consultar publicación oficial
+  </a>
+</section>
+
+
 <section class="libro-seccion preprint-version-section">
 
     <h2>
