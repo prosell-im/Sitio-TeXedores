@@ -30,6 +30,31 @@ relaciones = leer_csv('preprints_autores.csv')
 resumenes = leer_csv('resumenes.csv')
 pdfs_oficiales = leer_csv('pdfs_oficiales.csv')
 
+# Los años de las ediciones se usan en el filtro de búsqueda avanzada.
+# Los campos pueden estar vacíos; no se inventan fechas.
+metadatos = leer_csv('metadatos_ediciones_oficiales.csv')
+if not {'id_libro', 'anio'}.issubset(metadatos.columns):
+    raise ValueError('metadatos_ediciones_oficiales.csv debe contener id_libro y anio')
+anios_por_libro = (
+    metadatos.assign(anio=metadatos['anio'].str.strip())
+    .loc[lambda t: t['anio'].str.fullmatch(r"\d{4}")]
+    .groupby('id_libro')['anio']
+    .apply(lambda valores: sorted(set(valores)))
+    .to_dict()
+)
+
+# Incorporamos también datos bibliográficos al índice para permitir búsquedas
+# por ISBN, editorial y edición. Los valores vacíos se mantienen vacíos.
+campos_indice = ('isbn_libro', 'isbn_col', 'editorial', 'edicion')
+datos_bibliograficos = {}
+for identificador, filas in metadatos.groupby('id_libro'):
+    datos_bibliograficos[identificador] = {
+        campo: ' '.join(dict.fromkeys(
+            valor.strip() for valor in filas[campo].tolist() if valor.strip()
+        )) if campo in metadatos.columns else ''
+        for campo in campos_indice
+    }
+
 if libros['id_preprint'].duplicated().any():
     raise ValueError('Hay identificadores duplicados en preprints_BD_completa.csv')
 
@@ -102,6 +127,8 @@ for libro in libros.to_dict(orient='records'):
         'portada': libro['portada'],
         'autores': autores_por_libro.get(identificador, []),
         'resumen': resumen_por_libro.get(identificador, ''),
+        'anios_edicion': anios_por_libro.get(identificador, []),
+        **datos_bibliograficos.get(identificador, {}),
         # Ruta fija, definida en pdfs_oficiales.csv.
         'pdf': ruta_relativa,
     })
