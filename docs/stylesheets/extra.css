@@ -276,19 +276,6 @@ details > summary { cursor: pointer;
   background: var(--color-accent);
 }
 
-@media screen and (max-width: 76.1875em) {
-  .md-tabs {
-    display: block;
-  }
-
-  .md-tabs__list {
-    width: 100%;
-    min-width: 0;
-    justify-content: flex-start;
-    scroll-padding-inline: 0.5rem;
-  }
-}
-
 @media screen and (max-width: 400px) {
   .md-header__button.md-logo img {
     width: 72px;
@@ -1574,54 +1561,6 @@ body:has(.home-hero) .md-top {
   text-decoration: none !important;
   color: inherit !important;
 }
-
-@media screen and (min-width: 76.25em) {
-  .md-header__button[for="__drawer"] {
-    display: inline-flex;
-  }
-
-  .md-sidebar--primary {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: -15rem;
-    width: 15rem;
-    height: 100dvh;
-    box-sizing: border-box;
-    overflow-y: auto;
-    transform: translateX(0);
-    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s, visibility 0s linear 0.25s;
-    z-index: 20;
-    background: var(--md-default-bg-color);
-    visibility: hidden;
-    pointer-events: none;
-  }
-
-  [data-md-toggle="drawer"]:checked ~ .md-container .md-sidebar--primary {
-    transform: translateX(15rem);
-    box-shadow: var(--md-shadow-z3);
-    visibility: visible;
-    pointer-events: auto;
-    transition-delay: 0s;
-  }
-
-  .md-overlay {
-    display: block !important;
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-    transition: opacity 0.25s ease, visibility 0s linear 0.25s;
-  }
-
-  [data-md-toggle="drawer"]:checked ~ .md-overlay {
-    display: block;
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-    transition-delay: 0s;
-  }
-}
-
 /* =========================
    Preprints
    ========================= */
@@ -3568,4 +3507,31 @@ textarea {
   }
 }
 
+
+/* ==========================================
+   NAVEGACIÓN RESPONSIVA - TEXEDORES
+   ========================================== */
+
+/* Pantallas grandes: solo navegación superior */
+@media screen and (min-width: 76.25em) {
+
+  /* Ocultar completamente el menú lateral */
+  .md-main .md-sidebar--primary {
+    display: none !important;
+  }
+
+  /* Evitar que quede espacio reservado a la izquierda */
+  .md-main__inner {
+    display: block;
+    width: 100%;
+  }
+
+  /* Permitir que el contenido ocupe el espacio disponible */
+  .md-main .md-content {
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+    margin: 0 auto;
+  }
+}
 
