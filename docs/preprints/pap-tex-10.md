@@ -2,6 +2,8 @@
 title: "pap-tex-10"
 ---
 
+<div class="preprint-detalle">
+
 <section class="preprint-detail-hero">
 
     
@@ -83,16 +85,6 @@ title: "pap-tex-10"
         El presente texto, segundo tomo de la serie, está dirigido a estudiantes del primer semestre de carreras en ciencias exactas. Contiene temas que los introducen al Álgebra y busca incorporar, a través de su tratamiento, una descripción minuciosa y rigurosa de los procedimientos de demostración y deducción necesarios para formar a los estudiantes en el pensamiento matemático abstracto. Es un texto con un grado elevado de rigor, claridad y pedagogía, que puede ser utilizado de manera autodidacta o como un complemento necesario para las clases en aula.<br> Este tomo está conformado por cuatro capítulos; cada capítulo contiene bloques de ejercicios cuidadosamente seleccionados. En ellos se desarrolla la construcción de los números enteros y temas relacionados con esta estructura numérica. Una vez expuesta dicha construcción, se describen a detalle las características que lo llevan a ser un dominio entero. Posteriormente damos una introducción a estructuras algebraicas como son un grupo, un anillo y un dominio entero. El tercer capítulo versa sobre la noción de divisibilidad en los enteros, que incluye una exposición del algoritmo de la división, los conceptos de máximo común divisor, de mínimo común múltiplo, y de número primo. El cuarto capítulo expone el tema de congruencias en los enteros, visitando el anillo formado por las clases de equivalencia de los enteros módulo un entero positivo, además de explorar las ecuaciones con congruencias y sistemas formados con estas ecuaciones.
     </p>
 
-</section>
-
-
-<section class="libro-seccion relacion-fichas">
-  <h2>Publicación oficial relacionada</h2>
-  <p>Este preprint contiene cambios todavía no incorporados a la
-     publicación oficial. Puedes consultar ambas versiones por separado.</p>
-  <a class="md-button md-button--primary" href="../../publicaciones/pap-tex-10/">
-    Consultar publicación oficial
-  </a>
 </section>
 
 
@@ -386,6 +378,24 @@ title: "pap-tex-10"
 
 </section>
 
+
+<section class="relacion-fichas" aria-label="Contenido relacionado">
+  <div class="relacion-fichas__marco">
+    <p class="relacion-fichas__etiqueta">Contenido relacionado</p>
+    <div class="relacion-fichas__contenido">
+      <div class="relacion-fichas__descripcion">
+        <h2>Publicación oficial relacionada</h2>
+        <p>Este preprint contiene cambios todavía no incorporados a la
+           edición oficial. Puedes consultar la publicación oficial por separado.</p>
+      </div>
+      <a class="md-button md-button--primary relacion-fichas__enlace"
+         href="../../publicaciones/pap-tex-10/">
+        Consultar publicación oficial <span aria-hidden="true">→</span>
+      </a>
+    </div>
+  </div>
+</section>
+</div>
 
 <script>
 (() => {

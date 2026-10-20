@@ -2,6 +2,8 @@
 title: "pap-tex-8"
 ---
 
+<div class="preprint-detalle">
+
 <section class="preprint-detail-hero">
 
     
@@ -83,16 +85,6 @@ title: "pap-tex-8"
         La teoría de Galois, cuyos orígenes se encuentran en el problema de la solubilidad de ecuaciones polinomiales mediante radicales, es una parte de la matemática con conexiones profundas a otras partes de la misma, como teoría de grupos, álgebra lineal, teoría de números y geometría algebraica, lo cual le da una riqueza y elegancia inigualables.<br>En este libro se comienza introduciendo los resultados básicos de la teoría de anillos y campos eligiendo los aspectos que serán de utilidad en los temas de teoría de Galois que se tratan en el texto. El libro incluye ejemplos escogidos cuidadosamente para ilustrar la teoría desarrollada y motivar desarrollos posteriores. También se tiene un buen número de ejercicios que invitan al lector a participar activamente, ya sea en un curso de licenciatura o como auxiliar en autoestudio.
     </p>
 
-</section>
-
-
-<section class="libro-seccion relacion-fichas">
-  <h2>Publicación oficial relacionada</h2>
-  <p>Este preprint contiene cambios todavía no incorporados a la
-     publicación oficial. Puedes consultar ambas versiones por separado.</p>
-  <a class="md-button md-button--primary" href="../../publicaciones/pap-tex-8/">
-    Consultar publicación oficial
-  </a>
 </section>
 
 
@@ -386,6 +378,24 @@ title: "pap-tex-8"
 
 </section>
 
+
+<section class="relacion-fichas" aria-label="Contenido relacionado">
+  <div class="relacion-fichas__marco">
+    <p class="relacion-fichas__etiqueta">Contenido relacionado</p>
+    <div class="relacion-fichas__contenido">
+      <div class="relacion-fichas__descripcion">
+        <h2>Publicación oficial relacionada</h2>
+        <p>Este preprint contiene cambios todavía no incorporados a la
+           edición oficial. Puedes consultar la publicación oficial por separado.</p>
+      </div>
+      <a class="md-button md-button--primary relacion-fichas__enlace"
+         href="../../publicaciones/pap-tex-8/">
+        Consultar publicación oficial <span aria-hidden="true">→</span>
+      </a>
+    </div>
+  </div>
+</section>
+</div>
 
 <script>
 (() => {

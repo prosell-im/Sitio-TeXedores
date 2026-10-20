@@ -298,13 +298,22 @@ def ficha(libro, ediciones, preprints_relacionados):
     seccion_preprint = ""
     if libro["id"] in preprints_relacionados:
         seccion_preprint = f'''
-<section class="libro-seccion relacion-fichas">
-  <h2>Preprint relacionado</h2>
-  <p>Esta publicación cuenta con una versión preliminar que incluye cambios
-     todavía no incorporados a la publicación oficial.</p>
-  <a class="md-button md-button--primary" href="../../preprints/{identificador}/">
-    Consultar preprint
-  </a>
+<section class="relacion-fichas" aria-label="Contenido relacionado">
+  <div class="relacion-fichas__marco">
+    <p class="relacion-fichas__etiqueta">Contenido relacionado</p>
+    <div class="relacion-fichas__contenido">
+      <div class="relacion-fichas__descripcion">
+        <h2>Preprint relacionado</h2>
+        <p>Esta obra tiene un preprint con cambios que todavía no se han
+           incorporado a la publicación oficial. Puedes consultar esa
+           versión por separado.</p>
+      </div>
+      <a class="md-button md-button--primary relacion-fichas__enlace"
+         href="../../preprints/{identificador}/">
+        Consultar preprint <span aria-hidden="true">→</span>
+      </a>
+    </div>
+  </div>
 </section>'''
     chips = "".join(
         f'<span class="chip">{valor}</span>'
@@ -333,8 +342,6 @@ title: {json.dumps(libro['titulo'], ensure_ascii=False)}
 
 {ediciones_html}
 
-{seccion_preprint}
-
 <section class="libro-seccion libro-seccion-descargas oficial-pdf-seccion">
   <h2>Descargas</h2>
   <p>Abre, descarga o consulta el PDF de la publicación desde aquí.</p>
@@ -344,6 +351,8 @@ title: {json.dumps(libro['titulo'], ensure_ascii=False)}
 <div class="libro-navegacion">
   <a class="md-button md-button--primary" href="../../catalogo/">Volver al catálogo</a>
 </div>
+
+{seccion_preprint}
 </div>
 {JS_FICHA}
 '''

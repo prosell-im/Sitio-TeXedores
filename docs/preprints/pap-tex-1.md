@@ -2,6 +2,8 @@
 title: "pap-tex-1"
 ---
 
+<div class="preprint-detalle">
+
 <section class="preprint-detail-hero">
 
     
@@ -83,16 +85,6 @@ title: "pap-tex-1"
         Grupos I es el primero de dos libros dedicados a uno de los hitos que revolucionaron el pensamiento matemático de su época, y que hasta nuestros días juega un papel esencial en el estudio sistemático de las ciencias: la Teoría de Grupos.<br>En este tomo, los autores se dirigen al público en general al explicar de manera accesible algunos de los resultados clásicos de dicha teoría. Con años de experiencia docente, introducen también a los lectores en la abstracción y el arte de las demostraciones rigurosas. Además, el texto contiene una gran cantidad de notas históricas, ejemplos trabajados y ejercicios: inicia al revisar el conjunto de los números enteros que forman un grupo con la suma usual y, de manera paulatina, desarrolla una travesía por este apasionante tema.<br>El presente volumen abarca la aritmética en el conjunto de los números enteros, por ejemplo, la divisibilidad, el algoritmo de la división y el de Euclides, las congruencias y la función φ de Euler. Asimismo, se analizan los grupos de permutaciones, los cíclicos, los normales y el grupo cociente. Finalmente, se introduce el concepto de homomorfismo de grupos y se demuestran los —tan usados en matemáticas— teoremas de isomorfismo.
     </p>
 
-</section>
-
-
-<section class="libro-seccion relacion-fichas">
-  <h2>Publicación oficial relacionada</h2>
-  <p>Este preprint contiene cambios todavía no incorporados a la
-     publicación oficial. Puedes consultar ambas versiones por separado.</p>
-  <a class="md-button md-button--primary" href="../../publicaciones/pap-tex-1/">
-    Consultar publicación oficial
-  </a>
 </section>
 
 
@@ -386,6 +378,24 @@ title: "pap-tex-1"
 
 </section>
 
+
+<section class="relacion-fichas" aria-label="Contenido relacionado">
+  <div class="relacion-fichas__marco">
+    <p class="relacion-fichas__etiqueta">Contenido relacionado</p>
+    <div class="relacion-fichas__contenido">
+      <div class="relacion-fichas__descripcion">
+        <h2>Publicación oficial relacionada</h2>
+        <p>Este preprint contiene cambios todavía no incorporados a la
+           edición oficial. Puedes consultar la publicación oficial por separado.</p>
+      </div>
+      <a class="md-button md-button--primary relacion-fichas__enlace"
+         href="../../publicaciones/pap-tex-1/">
+        Consultar publicación oficial <span aria-hidden="true">→</span>
+      </a>
+    </div>
+  </div>
+</section>
+</div>
 
 <script>
 (() => {

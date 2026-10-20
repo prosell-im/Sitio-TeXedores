@@ -54,8 +54,6 @@ title: "Teoría de singularidades en topología, geometría y foliaciones II"
   </div>
 </section>
 
-
-
 <section class="libro-seccion libro-seccion-descargas oficial-pdf-seccion">
   <h2>Descargas</h2>
   <p>Abre, descarga o consulta el PDF de la publicación desde aquí.</p>
@@ -79,6 +77,8 @@ title: "Teoría de singularidades en topología, geometría y foliaciones II"
 <div class="libro-navegacion">
   <a class="md-button md-button--primary" href="../../catalogo/">Volver al catálogo</a>
 </div>
+
+
 </div>
 
 <script>

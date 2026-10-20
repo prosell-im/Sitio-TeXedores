@@ -2,6 +2,8 @@
 title: "apor-tex-12"
 ---
 
+<div class="preprint-detalle">
+
 <section class="preprint-detail-hero">
 
     
@@ -83,16 +85,6 @@ title: "apor-tex-12"
         Este libro está enfocado a los temas básicos de teoría de redes. Se presentan tanto teoría general y características de los problemas de optimización de esta rama como algoritmos para resolverlos.<br>Se exponen cuatro problemas básicos: árbol de peso mínimo, ruta más corta, flujo máximo y flujo a costo mínimo; estos problemas han sido resueltos principalmente mediante dos enfoques generales. Uno consiste en especializar los algoritmos de programación lineal aprovechando la estructura de cada problema y el otro en aplicar resultados de teoría de gráficas. En los primeros cinco capítulos se presentan algunos algoritmos para resolver problemas de flujo en redes según el enfoque clásico de la programación lineal. En los últimos dos capítulos se presentan generalizaciones de dos de estos problemas según el enfoque de coloración en gráficas.<br>La teoría de dualidad ha sido estudiada para el caso de los modelos de redes; con esto se han generado algoritmos de solución simultánea para el par de problemas duales. Este es el caso de los problemas de flujo máximo y de cadena mínima.<br>En cada capítulo se incluyen conceptos, resultados teóricos rigurosamente demostrados, técnicas, ejemplos numéricos y una series de ejercicios propuestos.
     </p>
 
-</section>
-
-
-<section class="libro-seccion relacion-fichas">
-  <h2>Publicación oficial relacionada</h2>
-  <p>Este preprint contiene cambios todavía no incorporados a la
-     publicación oficial. Puedes consultar ambas versiones por separado.</p>
-  <a class="md-button md-button--primary" href="../../publicaciones/apor-tex-12/">
-    Consultar publicación oficial
-  </a>
 </section>
 
 
@@ -386,6 +378,24 @@ title: "apor-tex-12"
 
 </section>
 
+
+<section class="relacion-fichas" aria-label="Contenido relacionado">
+  <div class="relacion-fichas__marco">
+    <p class="relacion-fichas__etiqueta">Contenido relacionado</p>
+    <div class="relacion-fichas__contenido">
+      <div class="relacion-fichas__descripcion">
+        <h2>Publicación oficial relacionada</h2>
+        <p>Este preprint contiene cambios todavía no incorporados a la
+           edición oficial. Puedes consultar la publicación oficial por separado.</p>
+      </div>
+      <a class="md-button md-button--primary relacion-fichas__enlace"
+         href="../../publicaciones/apor-tex-12/">
+        Consultar publicación oficial <span aria-hidden="true">→</span>
+      </a>
+    </div>
+  </div>
+</section>
+</div>
 
 <script>
 (() => {

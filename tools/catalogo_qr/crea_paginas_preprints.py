@@ -60,13 +60,21 @@ for preprint in preprints:
     relacion_oficial = ""
     if id_preprint in ids_oficiales:
         relacion_oficial = f'''
-<section class="libro-seccion relacion-fichas">
-  <h2>Publicación oficial relacionada</h2>
-  <p>Este preprint contiene cambios todavía no incorporados a la
-     publicación oficial. Puedes consultar ambas versiones por separado.</p>
-  <a class="md-button md-button--primary" href="../../publicaciones/{id_preprint}/">
-    Consultar publicación oficial
-  </a>
+<section class="relacion-fichas" aria-label="Contenido relacionado">
+  <div class="relacion-fichas__marco">
+    <p class="relacion-fichas__etiqueta">Contenido relacionado</p>
+    <div class="relacion-fichas__contenido">
+      <div class="relacion-fichas__descripcion">
+        <h2>Publicación oficial relacionada</h2>
+        <p>Este preprint contiene cambios todavía no incorporados a la
+           edición oficial. Puedes consultar la publicación oficial por separado.</p>
+      </div>
+      <a class="md-button md-button--primary relacion-fichas__enlace"
+         href="../../publicaciones/{id_preprint}/">
+        Consultar publicación oficial <span aria-hidden="true">→</span>
+      </a>
+    </div>
+  </div>
 </section>'''
     url_preprint = f"{SITE_URL}/preprints/{id_preprint}/"
 
@@ -178,6 +186,8 @@ for preprint in preprints:
 title: "{id_preprint}"
 ---
 
+<div class="preprint-detalle">
+
 <section class="preprint-detail-hero">
 
     {portada_ficha}
@@ -243,8 +253,6 @@ title: "{id_preprint}"
     </p>
 
 </section>
-
-{relacion_oficial}
 
 """
 
@@ -642,6 +650,10 @@ title: "{id_preprint}"
 </section>
 
 """
+
+    # Sección complementaria al final de la ficha, fuera del historial
+    # y de las secciones bibliográficas.
+    contenido += relacion_oficial + "\n</div>\n"
 
     # JavaScript para copiar citas y BibTeX
     contenido += """

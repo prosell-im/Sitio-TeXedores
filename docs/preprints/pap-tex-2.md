@@ -2,6 +2,8 @@
 title: "pap-tex-2"
 ---
 
+<div class="preprint-detalle">
+
 <section class="preprint-detail-hero">
 
     
@@ -83,16 +85,6 @@ title: "pap-tex-2"
         Este libro tan esperado en la Facultad de Ciencias de la Universidad Nacional Autónoma de México, y en diversas universidades de México y de países hispanoparlantes, es el resultado de muchos años de experiencia docente y de investigación por parte de la autora. Reúne material clave en la formación en análisis de los estudiantes dematemáticas y de otras carreras afines.<br>Motivándolos por un problema concreto —la existencia de trayectorias de longitud mínima— la obra introduce gradualmente los conceptos básicos del análisis hasta llegar a los teoremas de punto fijo de Banach y de Arzelà-Azcoli, así como a diversas aplicaciones de ellos a la existencia de soluciones de ecuaciones diferenciales e integrales. Posteriormente presenta el concepto de diferenciabilidad en espacios de Banach y demuestra el teorema de la función implícita, que permite introducir el concepto de variedad y el estudio de problemas de minimización en variedades. La última parte de este texto se dedica a la teoría de integración de Lebesgue; introduce los espacios de Lebesgue y de Sobolev para concluir con algunas aplicaciones a la existencia de soluciones de problemas elípticos con condición de frontera.
     </p>
 
-</section>
-
-
-<section class="libro-seccion relacion-fichas">
-  <h2>Publicación oficial relacionada</h2>
-  <p>Este preprint contiene cambios todavía no incorporados a la
-     publicación oficial. Puedes consultar ambas versiones por separado.</p>
-  <a class="md-button md-button--primary" href="../../publicaciones/pap-tex-2/">
-    Consultar publicación oficial
-  </a>
 </section>
 
 
@@ -386,6 +378,24 @@ title: "pap-tex-2"
 
 </section>
 
+
+<section class="relacion-fichas" aria-label="Contenido relacionado">
+  <div class="relacion-fichas__marco">
+    <p class="relacion-fichas__etiqueta">Contenido relacionado</p>
+    <div class="relacion-fichas__contenido">
+      <div class="relacion-fichas__descripcion">
+        <h2>Publicación oficial relacionada</h2>
+        <p>Este preprint contiene cambios todavía no incorporados a la
+           edición oficial. Puedes consultar la publicación oficial por separado.</p>
+      </div>
+      <a class="md-button md-button--primary relacion-fichas__enlace"
+         href="../../publicaciones/pap-tex-2/">
+        Consultar publicación oficial <span aria-hidden="true">→</span>
+      </a>
+    </div>
+  </div>
+</section>
+</div>
 
 <script>
 (() => {

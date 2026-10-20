@@ -2,6 +2,8 @@
 title: "pap-tex-6"
 ---
 
+<div class="preprint-detalle">
+
 <section class="preprint-detail-hero">
 
     
@@ -83,16 +85,6 @@ title: "pap-tex-6"
         El presente texto está dirigido a estudiantes del primer semestre de carreras en ciencias exactas. Contiene temas que los introducen al Álgebra y busca incorporar, a través de su tratamiento, una descripción minuciosa y rigurosa de los procedimientos de demostración y deducción necesarios para formar a los estudiantes en el pensamiento matemático abstracto. Conforme se presenta el material, se introduce al lector no sólo en el lenguaje de las matemáticas, sino en la forma de estructurar las ideas, desarrollarlas y escribir los diversos resultados. Es un texto con un grado elevado de rigor, claridad y pedagogía, que puede ser utilizado de manera autodidacta o como un complemento necesario para las clases en aula.<br> Este primer tomo está conformado por seis capítulos, cada uno con diversas secciones y un bloque de ejercicios cuidadosamente seleccionados; incluye nociones de lógica matemática y una introducción al manejo correcto de los conjuntos. Se expone también el concepto matemático de relación, dando un especial énfasis a las relaciones de equivalencia, y se aborda a profundidad el concepto de función. El capítulo quinto se centra en los números naturales, sus operaciones y su orden, inspeccionando detenidamente los principios de inducción y del buen orden, con numerosas demostraciones. El último capítulo versa sobre combinatoria finita, incorporando primero el concepto de cardinalidad en conjuntos finitos y los principios formales para contar de manera correcta.
     </p>
 
-</section>
-
-
-<section class="libro-seccion relacion-fichas">
-  <h2>Publicación oficial relacionada</h2>
-  <p>Este preprint contiene cambios todavía no incorporados a la
-     publicación oficial. Puedes consultar ambas versiones por separado.</p>
-  <a class="md-button md-button--primary" href="../../publicaciones/pap-tex-6/">
-    Consultar publicación oficial
-  </a>
 </section>
 
 
@@ -386,6 +378,24 @@ title: "pap-tex-6"
 
 </section>
 
+
+<section class="relacion-fichas" aria-label="Contenido relacionado">
+  <div class="relacion-fichas__marco">
+    <p class="relacion-fichas__etiqueta">Contenido relacionado</p>
+    <div class="relacion-fichas__contenido">
+      <div class="relacion-fichas__descripcion">
+        <h2>Publicación oficial relacionada</h2>
+        <p>Este preprint contiene cambios todavía no incorporados a la
+           edición oficial. Puedes consultar la publicación oficial por separado.</p>
+      </div>
+      <a class="md-button md-button--primary relacion-fichas__enlace"
+         href="../../publicaciones/pap-tex-6/">
+        Consultar publicación oficial <span aria-hidden="true">→</span>
+      </a>
+    </div>
+  </div>
+</section>
+</div>
 
 <script>
 (() => {

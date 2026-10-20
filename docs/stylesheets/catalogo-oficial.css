@@ -204,25 +204,380 @@
   .oficial-detalle .libro-metadatos td { padding: .65rem .5rem; }
 }
 
-/* Vínculo editorial entre la publicación oficial y su preprint. */
-.relacion-fichas {
-  padding: 1.35rem 1.5rem;
-  margin-block: 1.5rem;
-  background: var(--color-surface, #f4f4f4);
+/* ===============================================================
+   FICHAS OFICIALES Y PREPRINTS · DISEÑO COMPARTIDO
+   Usa el CSS ya cargado en mkdocs.yml, sin agregar dependencias.
+   =============================================================== */
+
+/* Encabezados con una apariencia consistente, sin eliminar las
+   diferencias entre información editorial e historial de versiones. */
+.oficial-detalle .libro-hero,
+.preprint-detalle .preprint-detail-hero {
+  background: var(--color-white, #fff);
   border: 1px solid var(--color-border, #d7d7d7);
-  border-left: 3px solid var(--color-ink, #353535);
-  border-radius: .45rem;
+  border-radius: 1rem;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, .045);
 }
-.relacion-fichas h2 {
+
+/* Las secciones comparten fondo, márgenes y jerarquía visual. */
+.oficial-detalle > .libro-seccion,
+.preprint-detalle > .libro-seccion {
+  box-sizing: border-box;
+  margin: 0 0 1.2rem;
+  padding: 1.5rem 1.7rem;
+  background: var(--color-white, #fff);
+  border: 1px solid var(--color-border, #d7d7d7);
+  border-radius: .85rem;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, .025);
+}
+
+.oficial-detalle > .libro-seccion > h2,
+.preprint-detalle > .libro-seccion > h2 {
+  margin: 0 0 1.1rem;
+  padding: 0 0 .7rem;
+  border-bottom: 1px solid var(--color-border, #d7d7d7);
+  color: var(--color-ink, #353535);
+  font-size: clamp(1.25rem, 2.1vw, 1.5rem);
+  line-height: 1.3;
+  font-weight: 700;
+}
+
+/* El resumen es exactamente el mismo componente visual en ambos. */
+.preprint-detalle > .preprint-resumen::before,
+.preprint-detalle > .preprint-resumen::after {
+  display: none;
+}
+
+.oficial-detalle > .libro-resumen,
+.preprint-detalle > .libro-resumen {
+  background: var(--color-white, #fff);
+  border-left: 4px solid var(--color-border-strong, #b7b7b7);
+}
+
+/* Evita el título en forma de píldora del diseño anterior. */
+.preprint-detalle > .preprint-resumen h2 {
+  display: block;
+  background: transparent;
+  border-radius: 0;
+}
+
+.oficial-detalle > .libro-resumen p,
+.preprint-detalle > .libro-resumen p {
+  margin: 0;
+  color: var(--color-ink, #353535);
+  font-size: .94rem;
+  font-weight: 400;
+  line-height: 1.8;
+  letter-spacing: normal;
+  text-align: justify;
+  text-justify: inter-word;
+  overflow-wrap: anywhere;
+}
+
+/* ===============================================================
+   SOLO PUBLICACIONES OFICIALES · METADATOS POR EDICIÓN
+   =============================================================== */
+
+.oficial-detalle .edition-selector {
+  margin-top: .8rem;
+}
+
+.oficial-detalle .edition-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .55rem;
+  margin: 0 0 1rem;
+}
+
+.oficial-detalle .edition-button {
+  margin: 0;
+  padding: .55rem 1.05rem;
+  border: 1px solid var(--color-border-strong, #b7b7b7);
+  border-radius: 2rem;
+  background: var(--color-white, #fff);
+  color: var(--color-ink, #353535);
+  font: inherit;
+  font-size: .82rem;
+  font-weight: 650;
+  line-height: 1.4;
+  cursor: pointer;
+  transition: background .18s ease, color .18s ease, border-color .18s ease;
+}
+
+.oficial-detalle .edition-button:hover {
+  background: var(--color-surface, #f4f4f4);
+  border-color: var(--color-ink, #353535);
+}
+
+.oficial-detalle .edition-button.active,
+.oficial-detalle .edition-button[aria-expanded="true"] {
+  background: var(--color-ink, #353535);
+  border-color: var(--color-ink, #353535);
+  color: var(--color-white, #fff);
+}
+
+.oficial-detalle .edition-button:focus-visible,
+.relacion-fichas__enlace:focus-visible {
+  outline: 3px solid var(--color-accent, #d88a1d);
+  outline-offset: 3px;
+}
+
+.oficial-detalle .edition-content {
   margin-top: 0;
 }
-.relacion-fichas p {
+
+.oficial-detalle .edition-panel {
+  padding: .25rem 0 0;
+}
+
+/* Sobrescribimos los bordes y fondos del estilo histórico
+   para que el contenido de las ediciones no parezca un formulario. */
+.oficial-detalle .edition-panel .libro-subseccion {
+  padding: 0;
+  margin: 0 0 1.5rem;
+  border: 0;
+  background: transparent;
+}
+
+.oficial-detalle .edition-panel .libro-subseccion > h3 {
+  margin: 0 0 .85rem;
+  padding: 0;
+  color: var(--color-ink, #353535);
+  font-size: 1.06rem;
+  font-weight: 700;
+}
+
+.oficial-detalle .libro-metadatos .oficial-tabla-contenedor {
+  max-width: 100%;
+  overflow-x: auto;
+  border: 1px solid var(--color-border, #d7d7d7);
+  border-radius: .7rem;
+  background: var(--color-white, #fff);
+}
+
+.oficial-detalle .libro-metadatos table {
+  width: 100%;
+  margin: 0;
+  border: 0;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: transparent;
+  table-layout: fixed;
+}
+
+.oficial-detalle .libro-metadatos tr:nth-child(even) {
+  background: var(--color-surface, #f4f4f4);
+}
+
+.oficial-detalle .libro-metadatos tr:hover {
+  background: #eaeaea;
+}
+
+.oficial-detalle .libro-metadatos th,
+.oficial-detalle .libro-metadatos td {
+  box-sizing: border-box;
+  padding: .85rem 1rem;
+  border: 0;
+  border-bottom: 1px solid var(--color-border, #d7d7d7);
+  line-height: 1.55;
+  vertical-align: top;
+  overflow-wrap: anywhere;
+}
+
+.oficial-detalle .libro-metadatos tr:last-child > * {
+  border-bottom: 0;
+}
+
+.oficial-detalle .libro-metadatos th {
+  width: 38%;
+  color: var(--color-muted, #696969);
+  font-size: .78rem;
+  font-weight: 700;
+  text-align: left;
+}
+
+.oficial-detalle .libro-metadatos td {
+  color: var(--color-ink, #353535);
+  font-size: .87rem;
+  font-weight: 500;
+}
+
+/* Citas legibles y alineadas con los bloques de Preprints. */
+.oficial-detalle .libro-cita .citation-box {
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin: 0 0 .85rem;
+  background: var(--color-surface, #f4f4f4);
+}
+
+.oficial-detalle .libro-cita .citation-box blockquote {
+  flex: 1 1 250px;
+  margin: 0;
+  padding: .25rem .7rem;
+  background: transparent;
+  border-left: 3px solid var(--color-border-strong, #b7b7b7);
+  color: var(--color-ink, #353535);
   line-height: 1.65;
 }
-.relacion-fichas .md-button {
-  margin-top: .5rem;
+
+.oficial-detalle .libro-cita .oficial-bibtex {
+  margin-top: .7rem;
 }
-@media (max-width: 600px) {
-  .relacion-fichas { padding: 1rem; }
-  .relacion-fichas .md-button { width: 100%; text-align: center; }
+
+/* ===============================================================
+   SECCIÓN COMPLEMENTARIA · ÚLTIMO BLOQUE DE CADA FICHA
+   =============================================================== */
+
+.oficial-detalle > .relacion-fichas,
+.preprint-detalle > .relacion-fichas {
+  margin: 2.7rem 0 .8rem;
+  padding: 1.8rem 0 0;
+  border-top: 1px solid var(--color-border-strong, #b7b7b7);
+}
+
+.relacion-fichas__marco {
+  box-sizing: border-box;
+  padding: 1.3rem 1.5rem;
+  border: 1px solid var(--color-border, #d7d7d7);
+  border-radius: .85rem;
+  background: var(--color-surface, #f4f4f4);
+}
+
+.md-typeset .relacion-fichas__etiqueta {
+  margin: 0 0 .65rem;
+  color: var(--color-muted, #696969);
+  font-size: .7rem;
+  font-weight: 800;
+  letter-spacing: .11em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.relacion-fichas__contenido {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem 2rem;
+}
+
+.relacion-fichas__descripcion {
+  min-width: 0;
+  flex: 1 1 290px;
+}
+
+.md-typeset .relacion-fichas__descripcion h2 {
+  margin: 0 0 .4rem;
+  padding: 0;
+  border: 0;
+  color: var(--color-ink, #353535);
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.md-typeset .relacion-fichas__descripcion p {
+  max-width: 65ch;
+  margin: 0;
+  color: var(--color-muted, #696969);
+  font-size: .87rem;
+  line-height: 1.65;
+}
+
+.md-typeset .relacion-fichas__enlace {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  gap: .75rem;
+  margin: 0;
+  padding: .7rem 1rem;
+  border-radius: .45rem;
+  background: var(--color-ink, #353535);
+  border-color: var(--color-ink, #353535);
+  color: var(--color-white, #fff);
+  font-size: .78rem;
+  font-weight: 650;
+  text-decoration: none;
+}
+
+.md-typeset .relacion-fichas__enlace:hover {
+  background: #505050;
+  border-color: #505050;
+  color: #fff;
+}
+
+@media screen and (max-width: 680px) {
+  .oficial-detalle > .libro-seccion,
+  .preprint-detalle > .libro-seccion {
+    padding: 1.1rem 1rem;
+  }
+
+  .oficial-detalle .libro-metadatos table,
+  .oficial-detalle .libro-metadatos tbody,
+  .oficial-detalle .libro-metadatos tr {
+    display: block;
+    width: 100%;
+  }
+
+  .oficial-detalle .libro-metadatos th,
+  .oficial-detalle .libro-metadatos td {
+    display: block;
+    width: 100%;
+    padding: .55rem .85rem;
+    border-bottom: 0;
+  }
+
+  .oficial-detalle .libro-metadatos th {
+    padding-bottom: .1rem;
+  }
+
+  .oficial-detalle .libro-metadatos td {
+    padding-top: .1rem;
+    padding-bottom: .85rem;
+    border-bottom: 1px solid var(--color-border, #d7d7d7);
+  }
+
+  .oficial-detalle .libro-metadatos tr:last-child td {
+    border-bottom: 0;
+  }
+
+  .relacion-fichas__marco {
+    padding: 1rem;
+  }
+
+  .relacion-fichas__enlace {
+    width: 100%;
+  }
+}
+
+
+/* ==========================================
+   CORRECCIÓN DE ÍCONOS EN LAS FICHAS
+   ========================================== */
+
+/* Eliminar el ícono azul automático de MkDocs */
+.md-typeset .oficial-detalle details > summary::before,
+.md-typeset .preprint-detalle details > summary::before {
+    content: none !important;
+    display: none !important;
+}
+
+/* Corregir el contenedor de vista previa */
+.md-typeset details.pdf-mostrador__desplegable {
+    padding: 0 !important;
+    border: 1px solid var(--color-border, #d7d7d7) !important;
+    border-radius: 0.65rem;
+    background: var(--color-white, #ffffff);
+    box-shadow: none !important;
+    overflow: hidden;
+}
+
+/* Alinear correctamente el texto */
+.md-typeset .pdf-mostrador__desplegable > summary {
+    position: relative;
+    margin: 0 !important;
+    padding: 0.9rem 1rem !important;
+    background: var(--color-white, #ffffff);
+    color: var(--color-ink, #353535);
 }
