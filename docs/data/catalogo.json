@@ -24,7 +24,9 @@
     "isbn_col": "978-607-02-5149-8",
     "editorial": "Instituto de Matemáticas, UNAM",
     "edicion": "1",
-    "pdf": "archivos_preprints/pap-not-1-v1.pdf"
+    "pdf": "archivos_preprints/pap-not-1-v1.pdf",
+    "impreso_disponible": false,
+    "preprint_disponible": false
   },
   {
     "id": "cuad-x-1",
@@ -44,7 +46,9 @@
     "isbn_col": "978-968-36-8599-5",
     "editorial": "Instituto de Matemáticas, UNAM",
     "edicion": "2",
-    "pdf": "archivos_preprints/cuad-x-1-v1.pdf"
+    "pdf": "archivos_preprints/cuad-x-1-v1.pdf",
+    "impreso_disponible": false,
+    "preprint_disponible": false
   },
   {
     "id": "pap-tex-6",
@@ -65,7 +69,9 @@
     "isbn_col": "978-607-02-5149-8",
     "editorial": "Instituto de Matemáticas, UNAM",
     "edicion": "1",
-    "pdf": "archivos_preprints/pap-tex-6-v1.pdf"
+    "pdf": "archivos_preprints/pap-tex-6-v1.pdf",
+    "impreso_disponible": false,
+    "preprint_disponible": true
   },
   {
     "id": "pap-tex-10",
@@ -87,7 +93,9 @@
     "isbn_col": "978-607-02-5149-8",
     "editorial": "Instituto de Matemáticas, UNAM",
     "edicion": "1",
-    "pdf": "archivos_preprints/pap-tex-10-v1.pdf"
+    "pdf": "archivos_preprints/pap-tex-10-v1.pdf",
+    "impreso_disponible": false,
+    "preprint_disponible": true
   },
   {
     "id": "pap-tex-1",
@@ -110,7 +118,9 @@
     "isbn_col": "978-607-02-9375-7",
     "editorial": "Instituto de Matemáticas, UNAM",
     "edicion": "3",
-    "pdf": "archivos_preprints/pap-tex-1-v1.pdf"
+    "pdf": "archivos_preprints/pap-tex-1-v1.pdf",
+    "impreso_disponible": false,
+    "preprint_disponible": true
   },
   {
     "id": "pap-tex-4",
@@ -133,7 +143,9 @@
     "isbn_col": "978-607-02-5149-8",
     "editorial": "Instituto de Matemáticas, UNAM",
     "edicion": "1",
-    "pdf": "archivos_preprints/pap-tex-4-v1.pdf"
+    "pdf": "archivos_preprints/pap-tex-4-v1.pdf",
+    "impreso_disponible": false,
+    "preprint_disponible": true
   },
   {
     "id": "pap-mix-1",
@@ -152,7 +164,9 @@
     "isbn_col": "",
     "editorial": "",
     "edicion": "",
-    "pdf": "archivos_preprints/pap-mix-1-v1.pdf"
+    "pdf": "archivos_preprints/pap-mix-1-v1.pdf",
+    "impreso_disponible": false,
+    "preprint_disponible": false
   },
   {
     "id": "pap-ico-3",
@@ -172,7 +186,9 @@
     "isbn_col": "",
     "editorial": "Instituto de Matemáticas, UNAM",
     "edicion": "",
-    "pdf": "archivos_preprints/pap-ico-3-v1.pdf"
+    "pdf": "archivos_preprints/pap-ico-3-v1.pdf",
+    "impreso_disponible": false,
+    "preprint_disponible": false
   },
   {
     "id": "pap-tex-2",
@@ -190,7 +206,9 @@
     "isbn_col": "",
     "editorial": "Instituto de Matemáticas, UNAM",
     "edicion": "",
-    "pdf": "archivos_preprints/pap-tex-2-v1.pdf"
+    "pdf": "archivos_preprints/pap-tex-2-v1.pdf",
+    "impreso_disponible": false,
+    "preprint_disponible": true
   },
   {
     "id": "pap-tex-3",
@@ -209,7 +227,9 @@
     "isbn_col": "",
     "editorial": "Instituto de Matemáticas, UNAM",
     "edicion": "",
-    "pdf": "archivos_preprints/pap-tex-3-v1.pdf"
+    "pdf": "archivos_preprints/pap-tex-3-v1.pdf",
+    "impreso_disponible": false,
+    "preprint_disponible": false
   },
   {
     "id": "pap-tex-5",
@@ -228,7 +248,9 @@
     "isbn_col": "",
     "editorial": "Instituto de Matemáticas, UNAM",
     "edicion": "",
-    "pdf": "archivos_preprints/pap-tex-5-v1.pdf"
+    "pdf": "archivos_preprints/pap-tex-5-v1.pdf",
+    "impreso_disponible": false,
+    "preprint_disponible": false
   },
   {
     "id": "pap-tex-7",
@@ -247,7 +269,9 @@
     "isbn_col": "",
     "editorial": "Instituto de Matemáticas, UNAM",
     "edicion": "",
-    "pdf": "archivos_preprints/pap-tex-7-v1.pdf"
+    "pdf": "archivos_preprints/pap-tex-7-v1.pdf",
+    "impreso_disponible": false,
+    "preprint_disponible": false
   },
   {
     "id": "pap-tex-8",
@@ -265,7 +289,9 @@
     "isbn_col": "",
     "editorial": "",
     "edicion": "",
-    "pdf": "archivos_preprints/pap-tex-8-v1.pdf"
+    "pdf": "archivos_preprints/pap-tex-8-v1.pdf",
+    "impreso_disponible": false,
+    "preprint_disponible": true
   },
   {
     "id": "pap-tex-9",
@@ -283,7 +309,9 @@
     "isbn_col": "",
     "editorial": "Instituto de Matemáticas, UNAM",
     "edicion": "",
-    "pdf": "archivos_preprints/pap-tex-9-v1.pdf"
+    "pdf": "archivos_preprints/pap-tex-9-v1.pdf",
+    "impreso_disponible": false,
+    "preprint_disponible": false
   },
   {
     "id": "pap-tex-11",
@@ -303,7 +331,9 @@
     "isbn_col": "",
     "editorial": "Instituto de Matemáticas, UNAM",
     "edicion": "",
-    "pdf": "archivos_preprints/pap-tex-11-v1.pdf"
+    "pdf": "archivos_preprints/pap-tex-11-v1.pdf",
+    "impreso_disponible": false,
+    "preprint_disponible": false
   },
   {
     "id": "pap-tex-12",
@@ -321,7 +351,9 @@
     "isbn_col": "",
     "editorial": "Instituto de Matemáticas, UNAM",
     "edicion": "",
-    "pdf": "archivos_preprints/pap-tex-12-v1.pdf"
+    "pdf": "archivos_preprints/pap-tex-12-v1.pdf",
+    "impreso_disponible": false,
+    "preprint_disponible": false
   },
   {
     "id": "pap-not-2",
@@ -346,7 +378,9 @@
     "isbn_col": "",
     "editorial": "Instituto de Matemáticas, UNAM",
     "edicion": "",
-    "pdf": "archivos_preprints/pap-not-2-v1.pdf"
+    "pdf": "archivos_preprints/pap-not-2-v1.pdf",
+    "impreso_disponible": false,
+    "preprint_disponible": false
   },
   {
     "id": "pap-not-3",
@@ -367,7 +401,9 @@
     "isbn_col": "",
     "editorial": "Instituto de Matemáticas, UNAM",
     "edicion": "",
-    "pdf": "archivos_preprints/pap-not-3-v1.pdf"
+    "pdf": "archivos_preprints/pap-not-3-v1.pdf",
+    "impreso_disponible": false,
+    "preprint_disponible": false
   },
   {
     "id": "pap-act-1",
@@ -387,7 +423,9 @@
     "isbn_col": "",
     "editorial": "Instituto de Matemáticas, UNAM",
     "edicion": "",
-    "pdf": "archivos_preprints/pap-act-1-v1.pdf"
+    "pdf": "archivos_preprints/pap-act-1-v1.pdf",
+    "impreso_disponible": false,
+    "preprint_disponible": false
   },
   {
     "id": "apor-tex-12",
@@ -405,7 +443,9 @@
     "isbn_col": "",
     "editorial": "",
     "edicion": "",
-    "pdf": "archivos_preprints/apor-tex-12-v1.pdf"
+    "pdf": "archivos_preprints/apor-tex-12-v1.pdf",
+    "impreso_disponible": false,
+    "preprint_disponible": true
   },
   {
     "id": "pap-tex-17",
@@ -423,7 +463,9 @@
     "isbn_col": "",
     "editorial": "",
     "edicion": "",
-    "pdf": "archivos_preprints/pap-tex-17-v1.pdf"
+    "pdf": "archivos_preprints/pap-tex-17-v1.pdf",
+    "impreso_disponible": false,
+    "preprint_disponible": true
   },
   {
     "id": "pap-tex-18",
@@ -441,6 +483,8 @@
     "isbn_col": "",
     "editorial": "",
     "edicion": "",
-    "pdf": "archivos_preprints/pap-tex-18-v1.pdf"
+    "pdf": "archivos_preprints/pap-tex-18-v1.pdf",
+    "impreso_disponible": false,
+    "preprint_disponible": true
   }
 ]

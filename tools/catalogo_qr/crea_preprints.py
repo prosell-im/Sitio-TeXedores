@@ -1,261 +1,85 @@
-import pandas as pd
-import os
+"""Genera preprints.json sin historial de versiones.
+
+Los preprints solo pertenecen a una colección/serie si ya existe publicación
+oficial con el mismo ID. El PDF se controla por pdfs_preprints.csv.
+"""
+import csv
 import json
-
-
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-
-
-# =========================================================
-# LEEMOS LOS PREPRINTS
-# =========================================================
-
-preprints = pd.read_csv(
-    os.path.join(BASE_DIR, "preprints.csv"),
-    dtype=str
-)
-
-# Limpiamos posibles espacios en los nombres de las columnas
-preprints.columns = preprints.columns.str.strip()
-
-
-# Normalizamos las columnas de texto de preprints.
-columnas_texto = [
-    "id_preprint",
-    "titulo",
-    "coleccion",
-    "serie",
-    "num_serie",
-    "portada",
-]
-
-
-for columna in columnas_texto:
-
-    if columna not in preprints.columns:
-
-        preprints[columna] = ""
-
-    else:
-
-        preprints[columna] = (
-            preprints[columna]
-            .fillna("")
-            .astype(str)
-            .str.strip()
-        )
-
-
-# =========================================================
-# LEEMOS LOS RESÚMENES
-# =========================================================
-
-resumenes = pd.read_csv(
-    os.path.join(BASE_DIR, "resumenes.csv"),
-    dtype=str
-)
-
-resumenes.columns = resumenes.columns.str.strip()
-
-
-for columna in ["id_preprint", "resumen"]:
-
-    if columna not in resumenes.columns:
-
-        resumenes[columna] = ""
-
-    else:
-
-        resumenes[columna] = (
-            resumenes[columna]
-            .fillna("")
-            .astype(str)
-            .str.strip()
-        )
-
-
-# Unimos cada resumen con su preprint
-preprints = preprints.merge(
-    resumenes[["id_preprint", "resumen"]],
-    on="id_preprint",
-    how="left",
-    suffixes=("_anterior", "")
-)
-
-
-# Si todavía existe la columna resumen en preprints.csv,
-# ignoramos esa versión y usamos la de resumenes.csv.
-if "resumen_anterior" in preprints.columns:
-
-    preprints = preprints.drop(
-        columns=["resumen_anterior"]
-    )
-
-
-# Si algún preprint no tiene resumen, mostramos un texto provisional.
-preprints["resumen"] = (
-    preprints["resumen"]
-    .fillna("")
-    .astype(str)
-    .str.strip()
-)
-
-preprints.loc[
-    preprints["resumen"] == "",
-    "resumen"
-] = "Resumen no disponible por el momento."
-
-
-# =========================================================
-# LEEMOS AUTORES Y VERSIONES
-# =========================================================
-
-autores = pd.read_csv(
-    os.path.join(BASE_DIR, "autores.csv"),
-    dtype=str
-)
-
-preprints_autores = pd.read_csv(
-    os.path.join(BASE_DIR, "preprints_autores.csv"),
-    dtype=str
-)
-
-versiones = pd.read_csv(
-    os.path.join(BASE_DIR, "versiones.csv"),
-    dtype=str
-)
-
-
-# =========================================================
-# AUTORES
-# =========================================================
-
-# Creamos el nombre completo de cada autor
-autores["autor_fmt"] = (
-    autores["nombres"].fillna("").str.strip()
-    + " "
-    + autores["apellidos"].fillna("").str.strip()
-).str.strip()
-
-
-# Unimos la tabla intermedia con la información de los autores
-pa = preprints_autores.merge(
-    autores[["id_autor", "autor_fmt"]],
-    on="id_autor",
-    how="left"
-)
-
-print("\nRELACIÓN PREPRINTS - AUTORES")
-print(pa)
-
-
-# Agrupamos todos los autores de cada preprint
-autores_por_preprint = (
-    pa.groupby("id_preprint")["autor_fmt"]
-    .apply(lambda s: [x for x in s if x != ""])
-    .reset_index(name="autores")
-)
-
-print("\nAUTORES AGRUPADOS")
-print(autores_por_preprint)
-
-
-# Añadimos los autores a la tabla principal de preprints
-catalogo_preprints = preprints.merge(
-    autores_por_preprint,
-    on="id_preprint",
-    how="left"
-)
-
-print("\nCATÁLOGO DE PREPRINTS")
-print(catalogo_preprints)
-
-
-# =========================================================
-# VERSIONES
-# =========================================================
-
-# Convertimos cada fila de versiones en un diccionario
-versiones["version_info"] = versiones.apply(
-    lambda fila: {
-        "id_version": fila["id_version"],
-        "version": fila["version"],
-        "fecha": fila["fecha"],
-        "archivo": fila["archivo"],
-        "nota_version": fila["nota_version"],
-    },
-    axis=1
-)
-
-
-# Agrupamos todas las versiones de cada preprint
-versiones_por_preprint = (
-    versiones.groupby("id_preprint")["version_info"]
-    .apply(list)
-    .reset_index(name="versiones")
-)
-
-print("\nVERSIONES AGRUPADAS")
-print(versiones_por_preprint)
-
-
-# Añadimos las versiones al catálogo de preprints
-catalogo_preprints = catalogo_preprints.merge(
-    versiones_por_preprint,
-    on="id_preprint",
-    how="left"
-)
-
-print("\nCATÁLOGO COMPLETO")
-print(catalogo_preprints)
-
-
-# =========================================================
-# GENERAMOS EL JSON
-# =========================================================
-
-PROJECT_DIR = os.path.abspath(
-    os.path.join(BASE_DIR, "..", "..")
-)
-
-DATA_DIR = os.path.join(
-    PROJECT_DIR,
-    "docs",
-    "data"
-)
-
-os.makedirs(
-    DATA_DIR,
-    exist_ok=True
-)
-
-OUTPUT_JSON = os.path.join(
-    DATA_DIR,
-    "preprints.json"
-)
-
-
-# Convertimos el catálogo a una lista de diccionarios
-registros = catalogo_preprints.to_dict(
-    orient="records"
-)
-
-
-# Guardamos el JSON
-with open(
-    OUTPUT_JSON,
-    "w",
-    encoding="utf-8"
-) as archivo:
-
-    json.dump(
-        registros,
-        archivo,
-        ensure_ascii=False,
-        indent=2
-    )
-
-
-print(
-    f"\nJSON generado en: {OUTPUT_JSON}"
-)
+from pathlib import Path
+
+BASE = Path(__file__).resolve().parent
+DOCS = BASE.parent.parent / "docs"
+
+
+def tabla(nombre):
+    with (BASE / nombre).open(encoding="utf-8-sig", newline="") as archivo:
+        return [{k.strip(): (v or "").strip() for k,v in fila.items() if k}
+                for fila in csv.DictReader(archivo)]
+
+
+def registros_unicos(filas, campo, nombre):
+    registros = {}
+    for fila in filas:
+        ident = fila[campo]
+        if not ident or ident in registros:
+            raise ValueError(f"Identificador vacío o duplicado en {nombre}: {ident!r}")
+        registros[ident] = fila
+    return registros
+
+
+def main():
+    datos = tabla("preprints.csv")
+    autores = registros_unicos(tabla("autores.csv"), "id_autor", "autores.csv")
+    relaciones = tabla("preprints_autores.csv")
+    resumenes = {r["id_preprint"]: r["resumen"] for r in tabla("resumenes.csv")}
+    pdfs = registros_unicos(tabla("pdfs_preprints.csv"), "id_preprint", "pdfs_preprints.csv")
+    oficiales_path = DOCS / "data" / "catalogo.json"
+    if not oficiales_path.is_file():
+        raise FileNotFoundError("Primero ejecuta crea_catalogo_oficial.py")
+    oficiales = {str(libro["id"]): libro
+                 for libro in json.loads(oficiales_path.read_text(encoding="utf-8"))}
+    autores_por_id = {}
+    for r in relaciones:
+        if r["id_autor"] not in autores:
+            raise ValueError("Autor inexistente: " + r["id_autor"])
+        a = autores[r["id_autor"]]
+        nombre = (a["nombres"] + " " + a["apellidos"]).strip()
+        autores_por_id.setdefault(r["id_preprint"], []).append(nombre)
+
+    resultado = []
+    ids = set()
+    for fila in datos:
+        ident = fila["id_preprint"]
+        if ident in ids:
+            raise ValueError("Preprint duplicado: " + ident)
+        ids.add(ident)
+        pdf_info = pdfs.get(ident, {})
+        pdf = pdf_info.get("pdf", "").replace("\\", "/")
+        if pdf:
+            if not pdf.startswith("archivos_preprints/") or not pdf.lower().endswith(".pdf"):
+                raise ValueError(f"Ruta de PDF inválida para {ident}: {pdf}")
+            ruta = (DOCS / pdf).resolve()
+            if not ruta.is_relative_to(DOCS.resolve()) or not ruta.is_file():
+                raise FileNotFoundError(f"PDF inexistente para {ident}: {pdf}")
+        oficial = oficiales.get(ident)
+        resultado.append({
+            "id_preprint": ident,
+            "titulo": fila["titulo"],
+            "coleccion": (oficial.get("coleccion", "") if oficial else ""),
+            "serie": (oficial.get("serie", "") if oficial else ""),
+            "num_serie": (oficial.get("num_serie", "") if oficial else ""),
+            "portada": fila.get("portada", ""),
+            "resumen": resumenes.get(ident, ""),
+            "autores": autores_por_id.get(ident, []),
+            "pdf": pdf,
+            "fecha": pdf_info.get("fecha", ""),
+            "oficial_disponible": oficial is not None,
+        })
+    salida = DOCS / "data" / "preprints.json"
+    salida.parent.mkdir(exist_ok=True, parents=True)
+    salida.write_text(json.dumps(resultado, indent=2, ensure_ascii=False), encoding="utf-8")
+    print(f"Preprints generados: {len(resultado)}; sin historial de versiones.")
+    print(f"Preprints sin publicación oficial: {sum(not r['oficial_disponible'] for r in resultado)}")
+
+if __name__ == "__main__":
+    main()

@@ -13,15 +13,9 @@
       "Edith Corina Sáenz",
       "María José Souto"
     ],
-    "versiones": [
-      {
-        "id_version": "pap-tex-1-v1",
-        "version": "1",
-        "fecha": "2026-09-29",
-        "archivo": "pap-tex-1-v1.pdf",
-        "nota_version": "Primera versión disponible en Papirhos Preprints."
-      }
-    ]
+    "pdf": "archivos_preprints/pap-tex-1-v1.pdf",
+    "fecha": "2026-09-29",
+    "oficial_disponible": true
   },
   {
     "id_preprint": "pap-tex-2",
@@ -34,15 +28,9 @@
     "autores": [
       "Mónica Clapp"
     ],
-    "versiones": [
-      {
-        "id_version": "pap-tex-2-v1",
-        "version": "1",
-        "fecha": "2026-10-07",
-        "archivo": "pap-tex-2-v1.pdf",
-        "nota_version": "Primera versión disponible en Papirhos Preprints."
-      }
-    ]
+    "pdf": "archivos_preprints/pap-tex-2-v1.pdf",
+    "fecha": "2026-10-07",
+    "oficial_disponible": true
   },
   {
     "id_preprint": "pap-tex-4",
@@ -58,15 +46,9 @@
       "Edith Corina Sáenz",
       "María José Souto"
     ],
-    "versiones": [
-      {
-        "id_version": "pap-tex-4-v1",
-        "version": "1",
-        "fecha": "2026-10-07",
-        "archivo": "pap-tex-4-v1.pdf",
-        "nota_version": "Primera versión disponible en Papirhos Preprints."
-      }
-    ]
+    "pdf": "archivos_preprints/pap-tex-4-v1.pdf",
+    "fecha": "2026-10-07",
+    "oficial_disponible": true
   },
   {
     "id_preprint": "pap-tex-6",
@@ -80,15 +62,9 @@
       "Diana Avella",
       "Gabriela Campero"
     ],
-    "versiones": [
-      {
-        "id_version": "pap-tex-6-v1",
-        "version": "1",
-        "fecha": "2026-09-29",
-        "archivo": "pap-tex-6-v1.pdf",
-        "nota_version": "Primera versión disponible en Papirhos Preprints."
-      }
-    ]
+    "pdf": "archivos_preprints/pap-tex-6-v1.pdf",
+    "fecha": "2026-09-29",
+    "oficial_disponible": true
   },
   {
     "id_preprint": "pap-tex-8",
@@ -101,15 +77,9 @@
     "autores": [
       "Felipe Zaldivar"
     ],
-    "versiones": [
-      {
-        "id_version": "pap-tex-8-v1",
-        "version": "1",
-        "fecha": "2026-10-07",
-        "archivo": "pap-tex-8-v1.pdf",
-        "nota_version": "Primera versión disponible en Papirhos Preprints."
-      }
-    ]
+    "pdf": "archivos_preprints/pap-tex-8-v1.pdf",
+    "fecha": "2026-10-07",
+    "oficial_disponible": true
   },
   {
     "id_preprint": "pap-tex-10",
@@ -124,15 +94,9 @@
       "Gabriela Campero",
       "Edith Corina Sáenz"
     ],
-    "versiones": [
-      {
-        "id_version": "pap-tex-10-v1",
-        "version": "1",
-        "fecha": "2026-10-07",
-        "archivo": "pap-tex-10-v1.pdf",
-        "nota_version": "Primera versión disponible en Papirhos Preprints."
-      }
-    ]
+    "pdf": "archivos_preprints/pap-tex-10-v1.pdf",
+    "fecha": "2026-10-07",
+    "oficial_disponible": true
   },
   {
     "id_preprint": "pap-tex-17",
@@ -145,15 +109,9 @@
     "autores": [
       "Sergey A. Antonyan"
     ],
-    "versiones": [
-      {
-        "id_version": "pap-tex-17-v1",
-        "version": "1",
-        "fecha": "2026-09-29",
-        "archivo": "pap-tex-17-v1.pdf",
-        "nota_version": "Primera versión disponible en Papirhos Preprints."
-      }
-    ]
+    "pdf": "archivos_preprints/pap-tex-17-v1.pdf",
+    "fecha": "2026-09-29",
+    "oficial_disponible": true
   },
   {
     "id_preprint": "pap-tex-18",
@@ -166,15 +124,9 @@
     "autores": [
       "Mónica Clapp"
     ],
-    "versiones": [
-      {
-        "id_version": "pap-tex-18-v1",
-        "version": "1",
-        "fecha": "2026-09-29",
-        "archivo": "pap-tex-18-v1.pdf",
-        "nota_version": "Primera versión disponible en Papirhos Preprints."
-      }
-    ]
+    "pdf": "archivos_preprints/pap-tex-18-v1.pdf",
+    "fecha": "2026-09-29",
+    "oficial_disponible": true
   },
   {
     "id_preprint": "apor-tex-12",
@@ -187,14 +139,8 @@
     "autores": [
       "María del Carmen Hernández Ayuso"
     ],
-    "versiones": [
-      {
-        "id_version": "apor-tex-12-v1",
-        "version": "1",
-        "fecha": "2026-09-29",
-        "archivo": "apor-tex-12-v1.pdf",
-        "nota_version": "Primera versión disponible en Papirhos Preprints."
-      }
-    ]
+    "pdf": "archivos_preprints/apor-tex-12-v1.pdf",
+    "fecha": "2026-09-29",
+    "oficial_disponible": true
   }
 ]

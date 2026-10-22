@@ -29,6 +29,24 @@ autores = leer_csv('autores.csv')
 relaciones = leer_csv('preprints_autores.csv')
 resumenes = leer_csv('resumenes.csv')
 pdfs_oficiales = leer_csv('pdfs_oficiales.csv')
+impresos = leer_csv('disponibilidad_impresa.csv')
+preprints_registrados = leer_csv('preprints.csv')
+pdfs_preprint = leer_csv('pdfs_preprints.csv')
+
+if not {'id_publicacion', 'impreso_disponible'}.issubset(impresos.columns):
+    raise ValueError('disponibilidad_impresa.csv necesita id_publicacion e impreso_disponible')
+if impresos['id_publicacion'].duplicated().any():
+    raise ValueError('ID duplicado en disponibilidad_impresa.csv')
+impreso_por_libro = {}
+for _, fila in impresos.iterrows():
+    valor = fila['impreso_disponible'].lower()
+    if valor not in ('', 'si', 'sí', 'no'):
+        raise ValueError(f"Disponibilidad impresa inválida para {fila['id_publicacion']}: {valor}")
+    impreso_por_libro[fila['id_publicacion']] = valor in ('si', 'sí')
+
+ids_con_pdf_preprint = set(pdfs_preprint.loc[pdfs_preprint['pdf'] != '', 'id_preprint'])
+ids_preprint = set(preprints_registrados['id_preprint']) & ids_con_pdf_preprint
+
 
 # Los años de las ediciones se usan en el filtro de búsqueda avanzada.
 # Los campos pueden estar vacíos; no se inventan fechas.
@@ -131,6 +149,8 @@ for libro in libros.to_dict(orient='records'):
         **datos_bibliograficos.get(identificador, {}),
         # Ruta fija, definida en pdfs_oficiales.csv.
         'pdf': ruta_relativa,
+        'impreso_disponible': impreso_por_libro.get(identificador, False),
+        'preprint_disponible': identificador in ids_preprint,
     })
 
 os.makedirs(os.path.join(DOCS_DIR, 'data'), exist_ok=True)

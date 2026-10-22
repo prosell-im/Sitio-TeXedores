@@ -10,6 +10,7 @@ title: "Clases características"
     <h1 class="libro-titulo">Clases características</h1>
     <p class="oficial-hero-autores">John Milnor · James Stasheff</p>
     <div class="chips"><span class="chip">Papirhos</span><span class="chip">Textos</span><span class="chip">Núm. 7</span></div>
+    <div class="tex-disponibilidad" aria-label="Disponibilidad"><span class="tex-disponibilidad__badge">PDF disponible</span></div>
   </div>
 </section>
 

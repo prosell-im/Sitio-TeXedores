@@ -10,6 +10,7 @@ title: "Curso breve de geometría proyectiva"
     <h1 class="libro-titulo">Curso breve de geometría proyectiva</h1>
     <p class="oficial-hero-autores">Felipe Cano · Beatriz Molina-Samper · Fernando Sanz</p>
     <div class="chips"><span class="chip">Papirhos</span><span class="chip">Textos</span><span class="chip">Núm. 11</span></div>
+    <div class="tex-disponibilidad" aria-label="Disponibilidad"><span class="tex-disponibilidad__badge">PDF disponible</span></div>
   </div>
 </section>
 

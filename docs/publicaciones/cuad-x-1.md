@@ -10,6 +10,7 @@ title: "Combinatoria"
     <h1 class="libro-titulo">Combinatoria</h1>
     <p class="oficial-hero-autores">Maria Luisa Pérez Seguí</p>
     <div class="chips"><span class="chip">Cuadernos de olimpiadas de matemáticas</span><span class="chip">Núm. 1</span></div>
+    <div class="tex-disponibilidad" aria-label="Disponibilidad"><span class="tex-disponibilidad__badge">PDF disponible</span></div>
   </div>
 </section>
 

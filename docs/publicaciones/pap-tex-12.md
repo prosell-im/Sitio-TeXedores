@@ -10,6 +10,7 @@ title: "Métodos topológicos en el estudio de las ecuaciones diferenciales no l
     <h1 class="libro-titulo">Métodos topológicos en el estudio de las ecuaciones diferenciales no lineales</h1>
     <p class="oficial-hero-autores">Pablo Amster</p>
     <div class="chips"><span class="chip">Papirhos</span><span class="chip">Textos</span><span class="chip">Núm. 12</span></div>
+    <div class="tex-disponibilidad" aria-label="Disponibilidad"><span class="tex-disponibilidad__badge">PDF disponible</span></div>
   </div>
 </section>
 

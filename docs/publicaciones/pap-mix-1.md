@@ -10,6 +10,7 @@ title: "Por la senda de los círculos"
     <h1 class="libro-titulo">Por la senda de los círculos</h1>
     <p class="oficial-hero-autores">Cecilia Neve Jimenez · Laura Rosales Ortiz</p>
     <div class="chips"><span class="chip">Papirhos</span><span class="chip">Mixbaal</span><span class="chip">Núm. 1</span></div>
+    <div class="tex-disponibilidad" aria-label="Disponibilidad"><span class="tex-disponibilidad__badge">PDF disponible</span></div>
   </div>
 </section>
 

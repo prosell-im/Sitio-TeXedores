@@ -10,6 +10,7 @@ title: "Geometría euclidiana bidimensional y su grupo de transformaciones"
     <h1 class="libro-titulo">Geometría euclidiana bidimensional y su grupo de transformaciones</h1>
     <p class="oficial-hero-autores">Manuel Cruz · Montserrat García</p>
     <div class="chips"><span class="chip">Papirhos</span><span class="chip">Textos</span><span class="chip">Núm. 5</span></div>
+    <div class="tex-disponibilidad" aria-label="Disponibilidad"><span class="tex-disponibilidad__badge">PDF disponible</span></div>
   </div>
 </section>
 

@@ -10,6 +10,7 @@ title: "Proceedings of the Workshop on Holomorphic Dynamics"
     <h1 class="libro-titulo">Proceedings of the Workshop on Holomorphic Dynamics</h1>
     <p class="oficial-hero-autores">Patricia Dominguez Soto · Peter Makienko · Carlos Cabrera Ocañas</p>
     <div class="chips"><span class="chip">Papirhos</span><span class="chip">Actas</span><span class="chip">Núm. 1</span></div>
+    <div class="tex-disponibilidad" aria-label="Disponibilidad"><span class="tex-disponibilidad__badge">PDF disponible</span></div>
   </div>
 </section>
 

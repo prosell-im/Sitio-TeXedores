@@ -10,6 +10,7 @@ title: "Topología Diferencial"
     <h1 class="libro-titulo">Topología Diferencial</h1>
     <p class="oficial-hero-autores">Victor Guillemin · Allan Pollack</p>
     <div class="chips"><span class="chip">Papirhos</span><span class="chip">Textos</span><span class="chip">Núm. 3</span></div>
+    <div class="tex-disponibilidad" aria-label="Disponibilidad"><span class="tex-disponibilidad__badge">PDF disponible</span></div>
   </div>
 </section>
 

@@ -32,11 +32,6 @@
   const unico = lista => [...new Set(lista.filter(Boolean))];
   const resumenHTML = valor => escapar(valor).replace(/&lt;br\s*\/?&gt;/gi, "<br>");
 
-  // Convierte versiones preliminares a su último registro disponible.
-  function versionReciente(item) {
-    return [...(Array.isArray(item.versiones) ? item.versiones : [])]
-      .sort((a, b) => Number(b.version || 0) - Number(a.version || 0))[0] || null;
-  }
 
   // Cada documento sigue siendo un resultado distinto, aunque tenga el mismo ID.
   function normalizarOficial(x) {
@@ -52,24 +47,28 @@
       coleccion: texto(x.coleccion), serie: texto(x.serie),
       resumen: texto(x.resumen), portada: texto(x.portada),
       pdf: texto(x.pdf), anios, fecha,
+      impreso: x.impreso_disponible === true, preprintDisponible: false,
       extra: [x.num_serie, x.isbn_libro, x.isbn_col, x.editorial, x.edicion]
         .map(texto).join(" ")
     };
   }
 
-  function normalizarPreprint(x) {
-    const actual = versionReciente(x);
-    const fecha = texto(actual?.fecha);
+  function normalizarPreprint(x, oficiales) {
+    const fecha = texto(x.fecha);
+    const id = texto(x.id_preprint);
+    const oficial = oficiales.get(id);
+    // La colección y la serie pertenecen a la obra publicada, no al preprint
+    // por sí solo. Si no hay publicación oficial, se dejan vacías.
     return {
-      tipo: "preprint", id: texto(x.id_preprint), titulo: texto(x.titulo),
+      tipo: "preprint", id, titulo: texto(x.titulo),
       autores: Array.isArray(x.autores) ? x.autores.map(texto) : [],
-      coleccion: texto(x.coleccion), serie: texto(x.serie),
+      coleccion: oficial ? oficial.coleccion : "",
+      serie: oficial ? oficial.serie : "",
       resumen: texto(x.resumen), portada: texto(x.portada),
-      pdf: actual?.archivo ? `archivos_preprints/${actual.archivo}` : "",
-      anios: fecha ? [fecha.slice(0, 4)] : [],
-      fecha, version: actual ? texto(actual.version) : "",
-      versiones: Array.isArray(x.versiones) ? x.versiones.length : 0,
-      extra: texto(x.num_serie)
+      pdf: texto(x.pdf),
+      anios: /^\d{4}/.test(fecha) ? [fecha.slice(0, 4)] : [],
+      fecha, tieneOficial: !!oficial,
+      extra: oficial ? oficial.extra : ""
     };
   }
 
@@ -143,16 +142,20 @@
     const cubierta = portada ? `<div class="preprint-cover">${portada}</div>` : placeholder;
     const datoFecha = isOficial
       ? (item.fecha ? `Edición: ${escapar(item.fecha)}` : "Publicación oficial")
-      : (item.fecha ? `Actualizado: ${escapar(item.fecha)}` : "Preprint");
+      : (item.fecha ? `Disponible desde: ${escapar(item.fecha)}` : "Preprint");
     const descripcion = item.resumen ? `
       <div class="preprint-summary-wrapper">
         <p class="preprint-summary preprint-summary-collapsed">${resumenHTML(item.resumen)}</p>
         <button type="button" class="preprint-summary-toggle" hidden>Ver más</button>
       </div>` : "";
-    const version = isOficial
-      ? `<span class="preprint-version-badge">Oficial</span>`
-      : `<span class="preprint-version-badge">${item.version ? `v${escapar(item.version)}` : "Preprint"}</span>
-         <span class="preprint-version-count">${item.versiones} ${item.versiones === 1 ? "versión" : "versiones"}</span>`;
+    const badges = [
+      `<span class="tex-disponibilidad__badge ${isOficial ? '' : 'tex-disponibilidad__badge--preprint'}">${isOficial ? 'Publicación oficial' : 'Preprint'}</span>`
+    ];
+    if (item.pdf) badges.push('<span class="tex-disponibilidad__badge">PDF disponible</span>');
+    if (isOficial && item.impreso) badges.push('<span class="tex-disponibilidad__badge">Impreso disponible</span>');
+    if (isOficial && item.preprintDisponible) badges.push('<span class="tex-disponibilidad__badge tex-disponibilidad__badge--preprint">Preprint disponible</span>');
+    if (!isOficial && item.tieneOficial) badges.push('<span class="tex-disponibilidad__badge">Edición oficial disponible</span>');
+    const disponibilidad = `<div class="tex-disponibilidad" aria-label="Disponibilidad">${badges.join('')}</div>`;
     const botonPdf = item.pdf ? `<a class="md-button preprint-secondary-button" href="${BASE}${ruta(item.pdf)}" target="_blank" rel="noopener">Ver PDF</a>` : "";
 
     return `<article class="preprint-card busqueda-tarjeta ${isOficial ? "busqueda-oficial" : "busqueda-preprint"}">
@@ -174,7 +177,7 @@
             </div>
           </div>
           <div class="preprint-card-footer">
-            <div class="preprint-version-info">${version}</div>
+            ${disponibilidad}
             <div class="preprint-actions">
               <a class="md-button md-button--primary" href="${ficha}">Ver ficha</a>
               ${botonPdf}
@@ -241,11 +244,19 @@
   }
 
   Promise.allSettled([cargar("catalogo.json"), cargar("preprints.json")]).then(([oficiales, preprints]) => {
+    const mapaOficial = new Map();
     if (oficiales.status === "fulfilled") {
-      publicaciones.push(...oficiales.value.map(normalizarOficial));
+      oficiales.value.map(normalizarOficial).forEach(item => {
+        publicaciones.push(item);
+        mapaOficial.set(item.id, item);
+      });
     }
     if (preprints.status === "fulfilled") {
-      publicaciones.push(...preprints.value.map(normalizarPreprint));
+      preprints.value.map(x => normalizarPreprint(x, mapaOficial)).forEach(item => {
+        publicaciones.push(item);
+        const oficial = mapaOficial.get(item.id);
+        if (oficial && item.pdf) oficial.preprintDisponible = true;
+      });
     }
     if (oficiales.status === "rejected" || preprints.status === "rejected") {
       const faltantes = [

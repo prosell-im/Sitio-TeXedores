@@ -10,6 +10,7 @@ title: "Teoría de singularidades en topología, geometría y foliaciones II"
     <h1 class="libro-titulo">Teoría de singularidades en topología, geometría y foliaciones II</h1>
     <p class="oficial-hero-autores">Jean-Paul Brasselet · Felipe Cano · Dominique Cerveau · Dung Tráng Lê · Frank Loray · Mutsuo Oka · José Seade · Mark Spivakovsky</p>
     <div class="chips"><span class="chip">Papirhos</span><span class="chip">Notas</span><span class="chip">Núm. 2</span></div>
+    <div class="tex-disponibilidad" aria-label="Disponibilidad"><span class="tex-disponibilidad__badge">PDF disponible</span></div>
   </div>
 </section>
 

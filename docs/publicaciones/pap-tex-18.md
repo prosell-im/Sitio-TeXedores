@@ -10,6 +10,7 @@ title: "Métodos variacionales en ecuaciones diferenciales parciales no lineales
     <h1 class="libro-titulo">Métodos variacionales en ecuaciones diferenciales parciales no lineales</h1>
     <p class="oficial-hero-autores">Mónica Clapp</p>
     <div class="chips"><span class="chip">Papirhos</span><span class="chip">Textos</span><span class="chip">Núm. 18</span></div>
+    <div class="tex-disponibilidad" aria-label="Disponibilidad"><span class="tex-disponibilidad__badge">PDF disponible</span><span class="tex-disponibilidad__badge tex-disponibilidad__badge--preprint">Preprint disponible</span></div>
   </div>
 </section>
 

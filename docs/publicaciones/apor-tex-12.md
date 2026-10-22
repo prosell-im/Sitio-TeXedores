@@ -10,6 +10,7 @@ title: "Introducción a la teoría de redes"
     <h1 class="libro-titulo">Introducción a la teoría de redes</h1>
     <p class="oficial-hero-autores">María del Carmen Hernández Ayuso</p>
     <div class="chips"><span class="chip">Aportaciones Matemáticas</span><span class="chip">Textos</span><span class="chip">Núm. 12</span></div>
+    <div class="tex-disponibilidad" aria-label="Disponibilidad"><span class="tex-disponibilidad__badge">PDF disponible</span><span class="tex-disponibilidad__badge tex-disponibilidad__badge--preprint">Preprint disponible</span></div>
   </div>
 </section>
 

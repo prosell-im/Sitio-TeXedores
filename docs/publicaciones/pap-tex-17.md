@@ -10,6 +10,7 @@ title: "Curso de Topología"
     <h1 class="libro-titulo">Curso de Topología</h1>
     <p class="oficial-hero-autores">Sergey A. Antonyan</p>
     <div class="chips"><span class="chip">Papirhos</span><span class="chip">Textos</span><span class="chip">Núm. 17</span></div>
+    <div class="tex-disponibilidad" aria-label="Disponibilidad"><span class="tex-disponibilidad__badge">PDF disponible</span><span class="tex-disponibilidad__badge tex-disponibilidad__badge--preprint">Preprint disponible</span></div>
   </div>
 </section>
 

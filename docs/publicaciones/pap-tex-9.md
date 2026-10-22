@@ -10,6 +10,7 @@ title: "Introducción al álgebra lineal"
     <h1 class="libro-titulo">Introducción al álgebra lineal</h1>
     <p class="oficial-hero-autores">Felipe Zaldivar</p>
     <div class="chips"><span class="chip">Papirhos</span><span class="chip">Textos</span><span class="chip">Núm. 9</span></div>
+    <div class="tex-disponibilidad" aria-label="Disponibilidad"><span class="tex-disponibilidad__badge">PDF disponible</span></div>
   </div>
 </section>
 

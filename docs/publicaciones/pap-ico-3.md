@@ -10,6 +10,7 @@ title: "Concursos Nacionales de la Olimpiada Mexicana de Matemáticas:1987-2016"
     <h1 class="libro-titulo">Concursos Nacionales de la Olimpiada Mexicana de Matemáticas:1987-2016</h1>
     <p class="oficial-hero-autores">Jose Antonio Gómez Ortega · Carlos Jacob Rubio Barrios · Rogelio Valdez Delgado</p>
     <div class="chips"><span class="chip">Papirhos</span><span class="chip">Icosaedro</span><span class="chip">Núm. 3</span></div>
+    <div class="tex-disponibilidad" aria-label="Disponibilidad"><span class="tex-disponibilidad__badge">PDF disponible</span></div>
   </div>
 </section>
 

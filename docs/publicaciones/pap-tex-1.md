@@ -10,6 +10,7 @@ title: "Grupos I"
     <h1 class="libro-titulo">Grupos I</h1>
     <p class="oficial-hero-autores">Diana Avella · Octavio Mendoza · Edith Corina Sáenz · María José Souto</p>
     <div class="chips"><span class="chip">Papirhos</span><span class="chip">Textos</span><span class="chip">Núm. 1</span></div>
+    <div class="tex-disponibilidad" aria-label="Disponibilidad"><span class="tex-disponibilidad__badge">PDF disponible</span><span class="tex-disponibilidad__badge tex-disponibilidad__badge--preprint">Preprint disponible</span></div>
   </div>
 </section>
 

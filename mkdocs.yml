@@ -19,6 +19,7 @@ extra_css:
  - stylesheets/extra.css
  - stylesheets/media.css
  - stylesheets/catalogo-oficial.css
+ - stylesheets/estado-disponibilidad.css
 nav:
  - Inicio: index.md
  - Nuestras publicaciones: 

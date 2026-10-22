@@ -39,7 +39,7 @@
         </div>
       </div>
       <div class="preprint-card-footer">
-        <span class="preprint-version-badge">PDF disponible</span>
+        <div class="tex-disponibilidad" aria-label="Disponibilidad"><span class="tex-disponibilidad__badge">PDF disponible</span></div>
         <div class="preprint-actions">
           <a href="../publicaciones/pap-not-1/" class="md-button md-button--primary">Ver ficha</a>
           <a href="../archivos_preprints/pap-not-1-v1.pdf" target="_blank" rel="noopener" class="md-button preprint-secondary-button">Ver PDF</a>
@@ -66,7 +66,7 @@
         </div>
       </div>
       <div class="preprint-card-footer">
-        <span class="preprint-version-badge">PDF disponible</span>
+        <div class="tex-disponibilidad" aria-label="Disponibilidad"><span class="tex-disponibilidad__badge">PDF disponible</span></div>
         <div class="preprint-actions">
           <a href="../publicaciones/cuad-x-1/" class="md-button md-button--primary">Ver ficha</a>
           <a href="../archivos_preprints/cuad-x-1-v1.pdf" target="_blank" rel="noopener" class="md-button preprint-secondary-button">Ver PDF</a>
@@ -93,7 +93,7 @@
         </div>
       </div>
       <div class="preprint-card-footer">
-        <span class="preprint-version-badge">PDF disponible</span>
+        <div class="tex-disponibilidad" aria-label="Disponibilidad"><span class="tex-disponibilidad__badge">PDF disponible</span><span class="tex-disponibilidad__badge tex-disponibilidad__badge--preprint">Preprint disponible</span></div>
         <div class="preprint-actions">
           <a href="../publicaciones/pap-tex-6/" class="md-button md-button--primary">Ver ficha</a>
           <a href="../archivos_preprints/pap-tex-6-v1.pdf" target="_blank" rel="noopener" class="md-button preprint-secondary-button">Ver PDF</a>
@@ -120,7 +120,7 @@
         </div>
       </div>
       <div class="preprint-card-footer">
-        <span class="preprint-version-badge">PDF disponible</span>
+        <div class="tex-disponibilidad" aria-label="Disponibilidad"><span class="tex-disponibilidad__badge">PDF disponible</span><span class="tex-disponibilidad__badge tex-disponibilidad__badge--preprint">Preprint disponible</span></div>
         <div class="preprint-actions">
           <a href="../publicaciones/pap-tex-10/" class="md-button md-button--primary">Ver ficha</a>
           <a href="../archivos_preprints/pap-tex-10-v1.pdf" target="_blank" rel="noopener" class="md-button preprint-secondary-button">Ver PDF</a>
@@ -147,7 +147,7 @@
         </div>
       </div>
       <div class="preprint-card-footer">
-        <span class="preprint-version-badge">PDF disponible</span>
+        <div class="tex-disponibilidad" aria-label="Disponibilidad"><span class="tex-disponibilidad__badge">PDF disponible</span><span class="tex-disponibilidad__badge tex-disponibilidad__badge--preprint">Preprint disponible</span></div>
         <div class="preprint-actions">
           <a href="../publicaciones/pap-tex-1/" class="md-button md-button--primary">Ver ficha</a>
           <a href="../archivos_preprints/pap-tex-1-v1.pdf" target="_blank" rel="noopener" class="md-button preprint-secondary-button">Ver PDF</a>
@@ -174,7 +174,7 @@
         </div>
       </div>
       <div class="preprint-card-footer">
-        <span class="preprint-version-badge">PDF disponible</span>
+        <div class="tex-disponibilidad" aria-label="Disponibilidad"><span class="tex-disponibilidad__badge">PDF disponible</span><span class="tex-disponibilidad__badge tex-disponibilidad__badge--preprint">Preprint disponible</span></div>
         <div class="preprint-actions">
           <a href="../publicaciones/pap-tex-4/" class="md-button md-button--primary">Ver ficha</a>
           <a href="../archivos_preprints/pap-tex-4-v1.pdf" target="_blank" rel="noopener" class="md-button preprint-secondary-button">Ver PDF</a>
@@ -201,7 +201,7 @@
         </div>
       </div>
       <div class="preprint-card-footer">
-        <span class="preprint-version-badge">PDF disponible</span>
+        <div class="tex-disponibilidad" aria-label="Disponibilidad"><span class="tex-disponibilidad__badge">PDF disponible</span></div>
         <div class="preprint-actions">
           <a href="../publicaciones/pap-mix-1/" class="md-button md-button--primary">Ver ficha</a>
           <a href="../archivos_preprints/pap-mix-1-v1.pdf" target="_blank" rel="noopener" class="md-button preprint-secondary-button">Ver PDF</a>
@@ -228,7 +228,7 @@
         </div>
       </div>
       <div class="preprint-card-footer">
-        <span class="preprint-version-badge">PDF disponible</span>
+        <div class="tex-disponibilidad" aria-label="Disponibilidad"><span class="tex-disponibilidad__badge">PDF disponible</span></div>
         <div class="preprint-actions">
           <a href="../publicaciones/pap-ico-3/" class="md-button md-button--primary">Ver ficha</a>
           <a href="../archivos_preprints/pap-ico-3-v1.pdf" target="_blank" rel="noopener" class="md-button preprint-secondary-button">Ver PDF</a>
@@ -255,7 +255,7 @@
         </div>
       </div>
       <div class="preprint-card-footer">
-        <span class="preprint-version-badge">PDF disponible</span>
+        <div class="tex-disponibilidad" aria-label="Disponibilidad"><span class="tex-disponibilidad__badge">PDF disponible</span><span class="tex-disponibilidad__badge tex-disponibilidad__badge--preprint">Preprint disponible</span></div>
         <div class="preprint-actions">
           <a href="../publicaciones/pap-tex-2/" class="md-button md-button--primary">Ver ficha</a>
           <a href="../archivos_preprints/pap-tex-2-v1.pdf" target="_blank" rel="noopener" class="md-button preprint-secondary-button">Ver PDF</a>
@@ -282,7 +282,7 @@
         </div>
       </div>
       <div class="preprint-card-footer">
-        <span class="preprint-version-badge">PDF disponible</span>
+        <div class="tex-disponibilidad" aria-label="Disponibilidad"><span class="tex-disponibilidad__badge">PDF disponible</span></div>
         <div class="preprint-actions">
           <a href="../publicaciones/pap-tex-3/" class="md-button md-button--primary">Ver ficha</a>
           <a href="../archivos_preprints/pap-tex-3-v1.pdf" target="_blank" rel="noopener" class="md-button preprint-secondary-button">Ver PDF</a>
@@ -309,7 +309,7 @@
         </div>
       </div>
       <div class="preprint-card-footer">
-        <span class="preprint-version-badge">PDF disponible</span>
+        <div class="tex-disponibilidad" aria-label="Disponibilidad"><span class="tex-disponibilidad__badge">PDF disponible</span></div>
         <div class="preprint-actions">
           <a href="../publicaciones/pap-tex-5/" class="md-button md-button--primary">Ver ficha</a>
           <a href="../archivos_preprints/pap-tex-5-v1.pdf" target="_blank" rel="noopener" class="md-button preprint-secondary-button">Ver PDF</a>
@@ -336,7 +336,7 @@
         </div>
       </div>
       <div class="preprint-card-footer">
-        <span class="preprint-version-badge">PDF disponible</span>
+        <div class="tex-disponibilidad" aria-label="Disponibilidad"><span class="tex-disponibilidad__badge">PDF disponible</span></div>
         <div class="preprint-actions">
           <a href="../publicaciones/pap-tex-7/" class="md-button md-button--primary">Ver ficha</a>
           <a href="../archivos_preprints/pap-tex-7-v1.pdf" target="_blank" rel="noopener" class="md-button preprint-secondary-button">Ver PDF</a>
@@ -363,7 +363,7 @@
         </div>
       </div>
       <div class="preprint-card-footer">
-        <span class="preprint-version-badge">PDF disponible</span>
+        <div class="tex-disponibilidad" aria-label="Disponibilidad"><span class="tex-disponibilidad__badge">PDF disponible</span><span class="tex-disponibilidad__badge tex-disponibilidad__badge--preprint">Preprint disponible</span></div>
         <div class="preprint-actions">
           <a href="../publicaciones/pap-tex-8/" class="md-button md-button--primary">Ver ficha</a>
           <a href="../archivos_preprints/pap-tex-8-v1.pdf" target="_blank" rel="noopener" class="md-button preprint-secondary-button">Ver PDF</a>
@@ -390,7 +390,7 @@
         </div>
       </div>
       <div class="preprint-card-footer">
-        <span class="preprint-version-badge">PDF disponible</span>
+        <div class="tex-disponibilidad" aria-label="Disponibilidad"><span class="tex-disponibilidad__badge">PDF disponible</span></div>
         <div class="preprint-actions">
           <a href="../publicaciones/pap-tex-9/" class="md-button md-button--primary">Ver ficha</a>
           <a href="../archivos_preprints/pap-tex-9-v1.pdf" target="_blank" rel="noopener" class="md-button preprint-secondary-button">Ver PDF</a>
@@ -417,7 +417,7 @@
         </div>
       </div>
       <div class="preprint-card-footer">
-        <span class="preprint-version-badge">PDF disponible</span>
+        <div class="tex-disponibilidad" aria-label="Disponibilidad"><span class="tex-disponibilidad__badge">PDF disponible</span></div>
         <div class="preprint-actions">
           <a href="../publicaciones/pap-tex-11/" class="md-button md-button--primary">Ver ficha</a>
           <a href="../archivos_preprints/pap-tex-11-v1.pdf" target="_blank" rel="noopener" class="md-button preprint-secondary-button">Ver PDF</a>
@@ -444,7 +444,7 @@
         </div>
       </div>
       <div class="preprint-card-footer">
-        <span class="preprint-version-badge">PDF disponible</span>
+        <div class="tex-disponibilidad" aria-label="Disponibilidad"><span class="tex-disponibilidad__badge">PDF disponible</span></div>
         <div class="preprint-actions">
           <a href="../publicaciones/pap-tex-12/" class="md-button md-button--primary">Ver ficha</a>
           <a href="../archivos_preprints/pap-tex-12-v1.pdf" target="_blank" rel="noopener" class="md-button preprint-secondary-button">Ver PDF</a>
@@ -471,7 +471,7 @@
         </div>
       </div>
       <div class="preprint-card-footer">
-        <span class="preprint-version-badge">PDF disponible</span>
+        <div class="tex-disponibilidad" aria-label="Disponibilidad"><span class="tex-disponibilidad__badge">PDF disponible</span></div>
         <div class="preprint-actions">
           <a href="../publicaciones/pap-not-2/" class="md-button md-button--primary">Ver ficha</a>
           <a href="../archivos_preprints/pap-not-2-v1.pdf" target="_blank" rel="noopener" class="md-button preprint-secondary-button">Ver PDF</a>
@@ -498,7 +498,7 @@
         </div>
       </div>
       <div class="preprint-card-footer">
-        <span class="preprint-version-badge">PDF disponible</span>
+        <div class="tex-disponibilidad" aria-label="Disponibilidad"><span class="tex-disponibilidad__badge">PDF disponible</span></div>
         <div class="preprint-actions">
           <a href="../publicaciones/pap-not-3/" class="md-button md-button--primary">Ver ficha</a>
           <a href="../archivos_preprints/pap-not-3-v1.pdf" target="_blank" rel="noopener" class="md-button preprint-secondary-button">Ver PDF</a>
@@ -525,7 +525,7 @@
         </div>
       </div>
       <div class="preprint-card-footer">
-        <span class="preprint-version-badge">PDF disponible</span>
+        <div class="tex-disponibilidad" aria-label="Disponibilidad"><span class="tex-disponibilidad__badge">PDF disponible</span></div>
         <div class="preprint-actions">
           <a href="../publicaciones/pap-act-1/" class="md-button md-button--primary">Ver ficha</a>
           <a href="../archivos_preprints/pap-act-1-v1.pdf" target="_blank" rel="noopener" class="md-button preprint-secondary-button">Ver PDF</a>
@@ -552,7 +552,7 @@
         </div>
       </div>
       <div class="preprint-card-footer">
-        <span class="preprint-version-badge">PDF disponible</span>
+        <div class="tex-disponibilidad" aria-label="Disponibilidad"><span class="tex-disponibilidad__badge">PDF disponible</span><span class="tex-disponibilidad__badge tex-disponibilidad__badge--preprint">Preprint disponible</span></div>
         <div class="preprint-actions">
           <a href="../publicaciones/apor-tex-12/" class="md-button md-button--primary">Ver ficha</a>
           <a href="../archivos_preprints/apor-tex-12-v1.pdf" target="_blank" rel="noopener" class="md-button preprint-secondary-button">Ver PDF</a>
@@ -579,7 +579,7 @@
         </div>
       </div>
       <div class="preprint-card-footer">
-        <span class="preprint-version-badge">PDF disponible</span>
+        <div class="tex-disponibilidad" aria-label="Disponibilidad"><span class="tex-disponibilidad__badge">PDF disponible</span><span class="tex-disponibilidad__badge tex-disponibilidad__badge--preprint">Preprint disponible</span></div>
         <div class="preprint-actions">
           <a href="../publicaciones/pap-tex-17/" class="md-button md-button--primary">Ver ficha</a>
           <a href="../archivos_preprints/pap-tex-17-v1.pdf" target="_blank" rel="noopener" class="md-button preprint-secondary-button">Ver PDF</a>
@@ -606,7 +606,7 @@
         </div>
       </div>
       <div class="preprint-card-footer">
-        <span class="preprint-version-badge">PDF disponible</span>
+        <div class="tex-disponibilidad" aria-label="Disponibilidad"><span class="tex-disponibilidad__badge">PDF disponible</span><span class="tex-disponibilidad__badge tex-disponibilidad__badge--preprint">Preprint disponible</span></div>
         <div class="preprint-actions">
           <a href="../publicaciones/pap-tex-18/" class="md-button md-button--primary">Ver ficha</a>
           <a href="../archivos_preprints/pap-tex-18-v1.pdf" target="_blank" rel="noopener" class="md-button preprint-secondary-button">Ver PDF</a>
