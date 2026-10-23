@@ -1,0 +1,122 @@
+/* Búsqueda avanzada unificada de TeXedores.
+ * Estilos limitados a esta página para no afectar catálogo, fichas o preprints.
+ */
+.busqueda-unificada {
+  --busqueda-fondo: var(--color-white, #fff);
+  --busqueda-superficie: var(--color-surface, #f4f4f4);
+  --busqueda-texto: var(--color-ink, #353535);
+  --busqueda-borde: var(--color-border, #d7d7d7);
+  --busqueda-muted: var(--color-muted, #696969);
+  color: var(--busqueda-texto);
+  font-family: var(--font-body, Roboto, Arial, sans-serif);
+}
+
+.busqueda-unificada .busqueda-tipos {
+  margin: 1.2rem 0 0;
+  padding: 1.25rem 1.4rem;
+  border: 1px solid var(--busqueda-borde);
+  border-radius: 0.9rem;
+  background: var(--busqueda-fondo);
+  min-width: 0;
+}
+.busqueda-unificada .busqueda-tipos legend {
+  padding: 0 0.45rem;
+  font-size: 0.88rem;
+  font-weight: 750;
+  color: var(--busqueda-texto);
+}
+.busqueda-unificada .busqueda-tipos__opciones {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+.busqueda-unificada .busqueda-tipo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  min-height: 2.6rem;
+  padding: 0.6rem 0.9rem;
+  border: 1px solid var(--busqueda-borde);
+  border-radius: 0.6rem;
+  background: var(--busqueda-fondo);
+  color: var(--busqueda-texto);
+  font-size: 0.84rem;
+  font-weight: 650;
+  cursor: pointer;
+  transition: background .15s ease, border-color .15s ease;
+}
+.busqueda-unificada .busqueda-tipo:has(input:checked) {
+  background: var(--busqueda-superficie);
+  border-color: var(--busqueda-texto);
+  box-shadow: inset 0 0 0 1px var(--busqueda-texto);
+}
+.busqueda-unificada .busqueda-tipo:hover { background: var(--busqueda-superficie); }
+.busqueda-unificada .busqueda-tipo input {
+  accent-color: var(--busqueda-texto);
+  margin: 0;
+  width: 1rem;
+  height: 1rem;
+}
+.busqueda-unificada .busqueda-tipo:focus-within {
+  outline: 2px solid var(--busqueda-texto);
+  outline-offset: 2px;
+}
+
+/* Retenemos la estructura de tres columnas de Preprints. */
+.busqueda-unificada #filtros {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.busqueda-unificada #filtros label { min-width: 0; }
+.busqueda-unificada #filtros input,
+.busqueda-unificada #filtros select { box-sizing: border-box; }
+.busqueda-unificada .busqueda-resultados-header {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin-bottom: 1rem;
+}
+.busqueda-unificada #contador { display: inline-block; }
+.busqueda-unificada .busqueda-aviso {
+  margin: 1rem 0;
+  padding: 1rem;
+  border: 1px solid var(--busqueda-borde);
+  border-left: 3px solid var(--color-accent, #d88a1d);
+  background: var(--busqueda-fondo);
+  border-radius: 0.5rem;
+}
+.busqueda-unificada .busqueda-clase {
+  color: var(--busqueda-texto);
+  background: var(--busqueda-superficie);
+  border: 1px solid var(--busqueda-borde);
+  border-radius: 99rem;
+  padding: 0.3rem 0.7rem;
+  font-size: 0.73rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.busqueda-unificada .busqueda-preprint .busqueda-clase {
+  background: var(--busqueda-texto);
+  color: var(--busqueda-fondo);
+}
+.busqueda-unificada .busqueda-tarjeta .preprint-summary-wrapper { margin-top: 0.25rem; }
+.busqueda-unificada .busqueda-tarjeta .preprint-summary-toggle[hidden] { display: none !important; }
+.busqueda-unificada .busqueda-tarjeta .preprint-summary {
+  overflow-wrap: anywhere;
+}
+.busqueda-unificada .busqueda-tarjeta .preprint-cover-placeholder small { display: block; }
+.busqueda-unificada #resultados .preprint-card { margin-bottom: 1rem; }
+.busqueda-unificada .preprints-no-results { margin-top: 0; }
+
+@media (max-width: 900px) {
+  .busqueda-unificada #filtros { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 600px) {
+  .busqueda-unificada .busqueda-tipos { padding: 1rem; }
+  .busqueda-unificada .busqueda-tipos__opciones { flex-direction: column; }
+  .busqueda-unificada .busqueda-tipo { width: 100%; }
+  .busqueda-unificada #filtros { grid-template-columns: 1fr; }
+  .busqueda-unificada #contador { width: 100%; }
+}

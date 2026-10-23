@@ -46,6 +46,10 @@
     
       <link rel="stylesheet" href="/Sitio-TeXedores/stylesheets/media.css">
     
+      <link rel="stylesheet" href="/Sitio-TeXedores/stylesheets/catalogo-oficial.css">
+    
+      <link rel="stylesheet" href="/Sitio-TeXedores/stylesheets/estado-disponibilidad.css">
+    
     <script>__md_scope=new URL("/Sitio-TeXedores/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -201,11 +205,21 @@
         
           
             
-<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+
+
+<nav
+  class="md-tabs"
+  aria-label="Pestañas"
+  data-md-component="tabs"
+>
   <div class="md-grid">
     <ul class="md-tabs__list">
+
       
+
         
+
+          
   
   
   
@@ -223,27 +237,87 @@
     </li>
   
 
-      
-        
-  
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="/Sitio-TeXedores/colecciones.md" class="md-tabs__link">
-        
-  
-  
-    
-  
-  Nuestras publicaciones
 
-      </a>
-    </li>
-  
+        
 
       
+
         
+
+          <li class="md-tabs__item">
+
+            <details class="publicaciones-dropdown">
+
+              <summary class="md-tabs__link publicaciones-dropdown__trigger">
+                Nuestras publicaciones
+                <span class="publicaciones-dropdown__chevron" aria-hidden="true"></span>
+              </summary>
+
+              <ul class="publicaciones-dropdown__menu">
+
+                <li class="publicaciones-dropdown__heading">
+                  EXPLORAR CATÁLOGOS
+                </li>
+
+                
+
+                  <li>
+                    <a href="/Sitio-TeXedores/catalogo/"
+                       >
+
+                      <span class="publicaciones-dropdown__number">
+                        01
+                      </span>
+
+                      <span>
+                        <strong>Publicaciones oficiales</strong>
+                        <small>
+                          
+                            Catálogo general
+                          
+                        </small>
+                      </span>
+
+                    </a>
+                  </li>
+
+                
+
+                  <li>
+                    <a href="/Sitio-TeXedores/preprints/"
+                       >
+
+                      <span class="publicaciones-dropdown__number">
+                        02
+                      </span>
+
+                      <span>
+                        <strong>Preprints</strong>
+                        <small>
+                          
+                            Prepublicaciones académicas
+                          
+                        </small>
+                      </span>
+
+                    </a>
+                  </li>
+
+                
+
+              </ul>
+
+            </details>
+
+          </li>
+
+        
+
+      
+
+        
+
+          
   
   
   
@@ -261,8 +335,14 @@
     </li>
   
 
-      
+
         
+
+      
+
+        
+
+          
   
   
   
@@ -280,8 +360,14 @@
     </li>
   
 
-      
+
         
+
+      
+
+        
+
+          
   
   
   
@@ -299,8 +385,14 @@
     </li>
   
 
-      
+
         
+
+      
+
+        
+
+          
   
   
   
@@ -318,7 +410,11 @@
     </li>
   
 
+
+        
+
       
+
     </ul>
   </div>
 </nav>
@@ -379,9 +475,23 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="/Sitio-TeXedores/colecciones.md" class="md-nav__link">
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
   
   
   <span class="md-ellipsis">
@@ -390,7 +500,65 @@
   </span>
   
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Nuestras publicaciones
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Sitio-TeXedores/catalogo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Publicaciones oficiales
+    
+  </span>
+  
+
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/Sitio-TeXedores/preprints/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Preprints
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -608,6 +776,8 @@
       <script src="/Sitio-TeXedores/assets/javascripts/bundle.f55a23d4.min.js"></script>
       
         <script src="/Sitio-TeXedores/js/config.js"></script>
+      
+        <script src="/Sitio-TeXedores/js/publicaciones-menu.js"></script>
       
     
   </body>

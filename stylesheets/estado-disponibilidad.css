@@ -1,0 +1,47 @@
+/* ========================================
+   Estado de disponibilidad — ambos catálogos
+   ======================================== */
+.tex-disponibilidad {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .45rem;
+  margin: .65rem 0;
+}
+
+.md-typeset .tex-disponibilidad__badge {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  max-width: 100%;
+  padding: .38rem .65rem;
+  color: var(--color-ink, #353535);
+  background: var(--color-surface, #f4f4f4);
+  border: 1px solid var(--color-border, #d7d7d7);
+  border-radius: .4rem;
+  font-size: .72rem;
+  line-height: 1.4;
+  font-weight: 650;
+  white-space: normal;
+}
+
+.md-typeset .tex-disponibilidad__badge--preprint {
+  border-style: dashed;
+}
+
+.md-typeset .oficial-card .preprint-card-footer,
+.md-typeset .preprint-card .preprint-card-footer {
+  flex-wrap: wrap;
+}
+
+.md-typeset .preprint-detail-version:empty {
+  display: none;
+}
+
+/* Búsqueda avanzada: misma identidad visual que ambos catálogos. */
+.md-typeset .busqueda-unificada .tex-disponibilidad {
+  display: flex;
+  gap: .45rem;
+  flex-wrap: wrap;
+  margin: .45rem 0;
+}

@@ -1,0 +1,73 @@
+
+{% import "partials/tabs-item.html" as item with context %}
+
+<nav
+  class="md-tabs"
+  aria-label="{{ lang.t('tabs') }}"
+  data-md-component="tabs"
+>
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+
+      {% for nav_item in nav.items %}
+
+        {% if nav_item.title == "Nuestras publicaciones" %}
+
+          <li class="md-tabs__item{% if nav_item.active %} md-tabs__item--active{% endif %}">
+
+            <details class="publicaciones-dropdown">
+
+              <summary class="md-tabs__link publicaciones-dropdown__trigger">
+                Nuestras publicaciones
+                <span class="publicaciones-dropdown__chevron" aria-hidden="true"></span>
+              </summary>
+
+              <ul class="publicaciones-dropdown__menu">
+
+                <li class="publicaciones-dropdown__heading">
+                  EXPLORAR CATÁLOGOS
+                </li>
+
+                {% for child in nav_item.children %}
+
+                  <li>
+                    <a href="{{ child.url | url }}"
+                       {% if child.active %}aria-current="page"{% endif %}>
+
+                      <span class="publicaciones-dropdown__number">
+                        0{{ loop.index }}
+                      </span>
+
+                      <span>
+                        <strong>{{ child.title }}</strong>
+                        <small>
+                          {% if loop.index == 1 %}
+                            Catálogo general
+                          {% else %}
+                            Prepublicaciones académicas
+                          {% endif %}
+                        </small>
+                      </span>
+
+                    </a>
+                  </li>
+
+                {% endfor %}
+
+              </ul>
+
+            </details>
+
+          </li>
+
+        {% else %}
+
+          {{ item.render(nav_item) }}
+
+        {% endif %}
+
+      {% endfor %}
+
+    </ul>
+  </div>
+</nav>
