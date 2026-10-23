@@ -1,0 +1,583 @@
+/* Complemento para Publicaciones oficiales; reutiliza el diseño de Preprints. */
+.oficiales-page .oficial-card[hidden] {
+  display: none !important;
+}
+
+.oficial-ficha-datos {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 0;
+}
+
+.oficial-ficha-datos div {
+  padding: 0.8rem 1rem;
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: 0.55rem;
+}
+
+.oficial-ficha-datos dt {
+  color: var(--color-muted);
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.oficial-ficha-datos dd {
+  margin: 0.3rem 0 0;
+  color: var(--color-ink);
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.oficial-pdf-visor {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: min(75vh, 780px);
+  min-height: 430px;
+  margin: 1rem 0;
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: 0.55rem;
+}
+
+@media (max-width: 600px) {
+  .oficial-ficha-datos {
+    grid-template-columns: 1fr;
+  }
+
+  .oficial-pdf-visor {
+    height: 60vh;
+    min-height: 360px;
+  }
+}
+
+/* Visor expandible, recuperado de mostrador_PDF.py. */
+.pdf-mostrador__acciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .65rem;
+  margin: 1rem 0;
+}
+
+.pdf-mostrador__desplegable {
+  margin-top: 1rem;
+  border: 1px solid var(--color-border, #d7d7d7);
+  border-radius: .65rem;
+  overflow: hidden;
+}
+
+.md-typeset .pdf-mostrador__desplegable > summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: .9rem 1rem;
+  margin: 0;
+  background: var(--color-white, #fff);
+  color: var(--color-ink, #353535);
+  font-size: .95rem;
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none;
+}
+
+.md-typeset .pdf-mostrador__desplegable > summary::-webkit-details-marker {
+  display: none;
+}
+
+.md-typeset .pdf-mostrador__desplegable > summary::after {
+  content: "";
+  width: .55rem;
+  height: .55rem;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(45deg);
+  transition: transform .2s ease;
+}
+
+.md-typeset .pdf-mostrador__desplegable[open] > summary::after {
+  transform: rotate(225deg);
+}
+
+.md-typeset .pdf-mostrador__desplegable > summary:hover,
+.md-typeset .pdf-mostrador__desplegable[open] > summary {
+  background: var(--color-surface, #f4f4f4);
+}
+
+.pdf-mostrador__contenido {
+  padding: .75rem;
+  background: var(--color-white, #fff);
+  border-top: 1px solid var(--color-border, #d7d7d7);
+}
+
+.pdf-mostrador__visor {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: min(75vh, 750px);
+  min-height: 400px;
+  border: 0;
+  background: #fff;
+}
+
+@media (max-width: 600px) {
+  .pdf-mostrador__visor { height: 60vh; min-height: 340px; }
+  .pdf-mostrador__acciones .md-button { width: 100%; text-align: center; }
+}
+
+/* Metadatos y citas de la ficha oficial (estilo Papirhos Digital). */
+.oficial-detalle .oficial-hero-autores {
+  margin: .35rem 0 .85rem;
+  color: var(--color-muted, #696969);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.oficial-detalle .edition-panel[hidden] {
+  display: none !important;
+}
+
+.oficial-detalle .libro-ediciones .edition-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .6rem;
+}
+
+.oficial-detalle .libro-metadatos .oficial-tabla-contenedor {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.oficial-detalle .libro-metadatos table {
+  width: 100%;
+  margin: .7rem 0 1.2rem;
+  border-collapse: collapse;
+}
+
+.oficial-detalle .libro-metadatos th {
+  width: 34%;
+  text-align: left;
+  font-weight: 650;
+  color: var(--color-ink, #353535);
+}
+
+.oficial-detalle .libro-metadatos th,
+.oficial-detalle .libro-metadatos td {
+  padding: .75rem .85rem;
+  border-bottom: 1px solid var(--color-border, #d7d7d7);
+  vertical-align: top;
+  overflow-wrap: anywhere;
+}
+
+.oficial-detalle .oficial-aviso-revision {
+  margin: .5rem 0 1rem;
+  padding: .7rem .9rem;
+  background: var(--color-surface, #f4f4f4);
+  border-left: 3px solid var(--color-border-strong, #b7b7b7);
+  color: var(--color-muted, #696969);
+  font-size: .82rem;
+  line-height: 1.5;
+}
+
+.oficial-detalle .oficial-nota-cita {
+  color: var(--color-muted, #696969);
+  font-size: .82rem;
+}
+
+.oficial-detalle .oficial-bibtex textarea {
+  box-sizing: border-box;
+  max-width: 100%;
+  width: 100%;
+  padding: .9rem;
+  border: 1px solid var(--color-border, #d7d7d7);
+  border-radius: .45rem;
+  background: var(--color-white, #fff);
+  color: var(--color-ink, #353535);
+  font-size: .78rem;
+}
+
+@media (max-width: 680px) {
+  .oficial-detalle .libro-metadatos th { width: 40%; }
+  .oficial-detalle .libro-metadatos th,
+  .oficial-detalle .libro-metadatos td { padding: .65rem .5rem; }
+}
+
+/* ===============================================================
+   FICHAS OFICIALES Y PREPRINTS · DISEÑO COMPARTIDO
+   Usa el CSS ya cargado en mkdocs.yml, sin agregar dependencias.
+   =============================================================== */
+
+/* Encabezados con una apariencia consistente, sin eliminar las
+   diferencias entre información editorial e historial de versiones. */
+.oficial-detalle .libro-hero,
+.preprint-detalle .preprint-detail-hero {
+  background: var(--color-white, #fff);
+  border: 1px solid var(--color-border, #d7d7d7);
+  border-radius: 1rem;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, .045);
+}
+
+/* Las secciones comparten fondo, márgenes y jerarquía visual. */
+.oficial-detalle > .libro-seccion,
+.preprint-detalle > .libro-seccion {
+  box-sizing: border-box;
+  margin: 0 0 1.2rem;
+  padding: 1.5rem 1.7rem;
+  background: var(--color-white, #fff);
+  border: 1px solid var(--color-border, #d7d7d7);
+  border-radius: .85rem;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, .025);
+}
+
+.oficial-detalle > .libro-seccion > h2,
+.preprint-detalle > .libro-seccion > h2 {
+  margin: 0 0 1.1rem;
+  padding: 0 0 .7rem;
+  border-bottom: 1px solid var(--color-border, #d7d7d7);
+  color: var(--color-ink, #353535);
+  font-size: clamp(1.25rem, 2.1vw, 1.5rem);
+  line-height: 1.3;
+  font-weight: 700;
+}
+
+/* El resumen es exactamente el mismo componente visual en ambos. */
+.preprint-detalle > .preprint-resumen::before,
+.preprint-detalle > .preprint-resumen::after {
+  display: none;
+}
+
+.oficial-detalle > .libro-resumen,
+.preprint-detalle > .libro-resumen {
+  background: var(--color-white, #fff);
+  border-left: 4px solid var(--color-border-strong, #b7b7b7);
+}
+
+/* Evita el título en forma de píldora del diseño anterior. */
+.preprint-detalle > .preprint-resumen h2 {
+  display: block;
+  background: transparent;
+  border-radius: 0;
+}
+
+.oficial-detalle > .libro-resumen p,
+.preprint-detalle > .libro-resumen p {
+  margin: 0;
+  color: var(--color-ink, #353535);
+  font-size: .94rem;
+  font-weight: 400;
+  line-height: 1.8;
+  letter-spacing: normal;
+  text-align: justify;
+  text-justify: inter-word;
+  overflow-wrap: anywhere;
+}
+
+/* ===============================================================
+   SOLO PUBLICACIONES OFICIALES · METADATOS POR EDICIÓN
+   =============================================================== */
+
+.oficial-detalle .edition-selector {
+  margin-top: .8rem;
+}
+
+.oficial-detalle .edition-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .55rem;
+  margin: 0 0 1rem;
+}
+
+.oficial-detalle .edition-button {
+  margin: 0;
+  padding: .55rem 1.05rem;
+  border: 1px solid var(--color-border-strong, #b7b7b7);
+  border-radius: 2rem;
+  background: var(--color-white, #fff);
+  color: var(--color-ink, #353535);
+  font: inherit;
+  font-size: .82rem;
+  font-weight: 650;
+  line-height: 1.4;
+  cursor: pointer;
+  transition: background .18s ease, color .18s ease, border-color .18s ease;
+}
+
+.oficial-detalle .edition-button:hover {
+  background: var(--color-surface, #f4f4f4);
+  border-color: var(--color-ink, #353535);
+}
+
+.oficial-detalle .edition-button.active,
+.oficial-detalle .edition-button[aria-expanded="true"] {
+  background: var(--color-ink, #353535);
+  border-color: var(--color-ink, #353535);
+  color: var(--color-white, #fff);
+}
+
+.oficial-detalle .edition-button:focus-visible,
+.relacion-fichas__enlace:focus-visible {
+  outline: 3px solid var(--color-accent, #d88a1d);
+  outline-offset: 3px;
+}
+
+.oficial-detalle .edition-content {
+  margin-top: 0;
+}
+
+.oficial-detalle .edition-panel {
+  padding: .25rem 0 0;
+}
+
+/* Sobrescribimos los bordes y fondos del estilo histórico
+   para que el contenido de las ediciones no parezca un formulario. */
+.oficial-detalle .edition-panel .libro-subseccion {
+  padding: 0;
+  margin: 0 0 1.5rem;
+  border: 0;
+  background: transparent;
+}
+
+.oficial-detalle .edition-panel .libro-subseccion > h3 {
+  margin: 0 0 .85rem;
+  padding: 0;
+  color: var(--color-ink, #353535);
+  font-size: 1.06rem;
+  font-weight: 700;
+}
+
+.oficial-detalle .libro-metadatos .oficial-tabla-contenedor {
+  max-width: 100%;
+  overflow-x: auto;
+  border: 1px solid var(--color-border, #d7d7d7);
+  border-radius: .7rem;
+  background: var(--color-white, #fff);
+}
+
+.oficial-detalle .libro-metadatos table {
+  width: 100%;
+  margin: 0;
+  border: 0;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: transparent;
+  table-layout: fixed;
+}
+
+.oficial-detalle .libro-metadatos tr:nth-child(even) {
+  background: var(--color-surface, #f4f4f4);
+}
+
+.oficial-detalle .libro-metadatos tr:hover {
+  background: #eaeaea;
+}
+
+.oficial-detalle .libro-metadatos th,
+.oficial-detalle .libro-metadatos td {
+  box-sizing: border-box;
+  padding: .85rem 1rem;
+  border: 0;
+  border-bottom: 1px solid var(--color-border, #d7d7d7);
+  line-height: 1.55;
+  vertical-align: top;
+  overflow-wrap: anywhere;
+}
+
+.oficial-detalle .libro-metadatos tr:last-child > * {
+  border-bottom: 0;
+}
+
+.oficial-detalle .libro-metadatos th {
+  width: 38%;
+  color: var(--color-muted, #696969);
+  font-size: .78rem;
+  font-weight: 700;
+  text-align: left;
+}
+
+.oficial-detalle .libro-metadatos td {
+  color: var(--color-ink, #353535);
+  font-size: .87rem;
+  font-weight: 500;
+}
+
+/* Citas legibles y alineadas con los bloques de Preprints. */
+.oficial-detalle .libro-cita .citation-box {
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin: 0 0 .85rem;
+  background: var(--color-surface, #f4f4f4);
+}
+
+.oficial-detalle .libro-cita .citation-box blockquote {
+  flex: 1 1 250px;
+  margin: 0;
+  padding: .25rem .7rem;
+  background: transparent;
+  border-left: 3px solid var(--color-border-strong, #b7b7b7);
+  color: var(--color-ink, #353535);
+  line-height: 1.65;
+}
+
+.oficial-detalle .libro-cita .oficial-bibtex {
+  margin-top: .7rem;
+}
+
+/* ===============================================================
+   SECCIÓN COMPLEMENTARIA · ÚLTIMO BLOQUE DE CADA FICHA
+   =============================================================== */
+
+.oficial-detalle > .relacion-fichas,
+.preprint-detalle > .relacion-fichas {
+  margin: 2.7rem 0 .8rem;
+  padding: 1.8rem 0 0;
+  border-top: 1px solid var(--color-border-strong, #b7b7b7);
+}
+
+.relacion-fichas__marco {
+  box-sizing: border-box;
+  padding: 1.3rem 1.5rem;
+  border: 1px solid var(--color-border, #d7d7d7);
+  border-radius: .85rem;
+  background: var(--color-surface, #f4f4f4);
+}
+
+.md-typeset .relacion-fichas__etiqueta {
+  margin: 0 0 .65rem;
+  color: var(--color-muted, #696969);
+  font-size: .7rem;
+  font-weight: 800;
+  letter-spacing: .11em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.relacion-fichas__contenido {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem 2rem;
+}
+
+.relacion-fichas__descripcion {
+  min-width: 0;
+  flex: 1 1 290px;
+}
+
+.md-typeset .relacion-fichas__descripcion h2 {
+  margin: 0 0 .4rem;
+  padding: 0;
+  border: 0;
+  color: var(--color-ink, #353535);
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.md-typeset .relacion-fichas__descripcion p {
+  max-width: 65ch;
+  margin: 0;
+  color: var(--color-muted, #696969);
+  font-size: .87rem;
+  line-height: 1.65;
+}
+
+.md-typeset .relacion-fichas__enlace {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  gap: .75rem;
+  margin: 0;
+  padding: .7rem 1rem;
+  border-radius: .45rem;
+  background: var(--color-ink, #353535);
+  border-color: var(--color-ink, #353535);
+  color: var(--color-white, #fff);
+  font-size: .78rem;
+  font-weight: 650;
+  text-decoration: none;
+}
+
+.md-typeset .relacion-fichas__enlace:hover {
+  background: #505050;
+  border-color: #505050;
+  color: #fff;
+}
+
+@media screen and (max-width: 680px) {
+  .oficial-detalle > .libro-seccion,
+  .preprint-detalle > .libro-seccion {
+    padding: 1.1rem 1rem;
+  }
+
+  .oficial-detalle .libro-metadatos table,
+  .oficial-detalle .libro-metadatos tbody,
+  .oficial-detalle .libro-metadatos tr {
+    display: block;
+    width: 100%;
+  }
+
+  .oficial-detalle .libro-metadatos th,
+  .oficial-detalle .libro-metadatos td {
+    display: block;
+    width: 100%;
+    padding: .55rem .85rem;
+    border-bottom: 0;
+  }
+
+  .oficial-detalle .libro-metadatos th {
+    padding-bottom: .1rem;
+  }
+
+  .oficial-detalle .libro-metadatos td {
+    padding-top: .1rem;
+    padding-bottom: .85rem;
+    border-bottom: 1px solid var(--color-border, #d7d7d7);
+  }
+
+  .oficial-detalle .libro-metadatos tr:last-child td {
+    border-bottom: 0;
+  }
+
+  .relacion-fichas__marco {
+    padding: 1rem;
+  }
+
+  .relacion-fichas__enlace {
+    width: 100%;
+  }
+}
+
+
+/* ==========================================
+   CORRECCIÓN DE ÍCONOS EN LAS FICHAS
+   ========================================== */
+
+/* Eliminar el ícono azul automático de MkDocs */
+.md-typeset .oficial-detalle details > summary::before,
+.md-typeset .preprint-detalle details > summary::before {
+    content: none !important;
+    display: none !important;
+}
+
+/* Corregir el contenedor de vista previa */
+.md-typeset details.pdf-mostrador__desplegable {
+    padding: 0 !important;
+    border: 1px solid var(--color-border, #d7d7d7) !important;
+    border-radius: 0.65rem;
+    background: var(--color-white, #ffffff);
+    box-shadow: none !important;
+    overflow: hidden;
+}
+
+/* Alinear correctamente el texto */
+.md-typeset .pdf-mostrador__desplegable > summary {
+    position: relative;
+    margin: 0 !important;
+    padding: 0.9rem 1rem !important;
+    background: var(--color-white, #ffffff);
+    color: var(--color-ink, #353535);
+}

@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://prosell-im.github.io/Sitio-TeXedores/explorar/">
       
       
-        <link rel="prev" href="..">
+        <link rel="prev" href="../preprints/">
       
       
         <link rel="next" href="../acerca/">
@@ -51,6 +51,10 @@
       <link rel="stylesheet" href="../stylesheets/extra.css">
     
       <link rel="stylesheet" href="../stylesheets/media.css">
+    
+      <link rel="stylesheet" href="../stylesheets/catalogo-oficial.css">
+    
+      <link rel="stylesheet" href="../stylesheets/estado-disponibilidad.css">
     
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -207,11 +211,21 @@
         
           
             
-<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+
+
+<nav
+  class="md-tabs"
+  aria-label="Pestañas"
+  data-md-component="tabs"
+>
   <div class="md-grid">
     <ul class="md-tabs__list">
+
       
+
         
+
+          
   
   
   
@@ -229,27 +243,87 @@
     </li>
   
 
-      
-        
-  
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../colecciones.md" class="md-tabs__link">
-        
-  
-  
-    
-  
-  Nuestras publicaciones
 
-      </a>
-    </li>
-  
+        
 
       
+
         
+
+          <li class="md-tabs__item">
+
+            <details class="publicaciones-dropdown">
+
+              <summary class="md-tabs__link publicaciones-dropdown__trigger">
+                Nuestras publicaciones
+                <span class="publicaciones-dropdown__chevron" aria-hidden="true"></span>
+              </summary>
+
+              <ul class="publicaciones-dropdown__menu">
+
+                <li class="publicaciones-dropdown__heading">
+                  EXPLORAR CATÁLOGOS
+                </li>
+
+                
+
+                  <li>
+                    <a href="../catalogo/"
+                       >
+
+                      <span class="publicaciones-dropdown__number">
+                        01
+                      </span>
+
+                      <span>
+                        <strong>Publicaciones oficiales</strong>
+                        <small>
+                          
+                            Catálogo general
+                          
+                        </small>
+                      </span>
+
+                    </a>
+                  </li>
+
+                
+
+                  <li>
+                    <a href="../preprints/"
+                       >
+
+                      <span class="publicaciones-dropdown__number">
+                        02
+                      </span>
+
+                      <span>
+                        <strong>Preprints</strong>
+                        <small>
+                          
+                            Prepublicaciones académicas
+                          
+                        </small>
+                      </span>
+
+                    </a>
+                  </li>
+
+                
+
+              </ul>
+
+            </details>
+
+          </li>
+
+        
+
+      
+
+        
+
+          
   
   
   
@@ -269,8 +343,14 @@
     </li>
   
 
-      
+
         
+
+      
+
+        
+
+          
   
   
   
@@ -288,8 +368,14 @@
     </li>
   
 
-      
+
         
+
+      
+
+        
+
+          
   
   
   
@@ -307,8 +393,14 @@
     </li>
   
 
-      
+
         
+
+      
+
+        
+
+          
   
   
   
@@ -326,7 +418,11 @@
     </li>
   
 
+
+        
+
       
+
     </ul>
   </div>
 </nav>
@@ -387,9 +483,23 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../colecciones.md" class="md-nav__link">
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
   
   
   <span class="md-ellipsis">
@@ -398,7 +508,65 @@
   </span>
   
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Nuestras publicaciones
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../catalogo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Publicaciones oficiales
+    
+  </span>
+  
+
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../preprints/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Preprints
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -532,1170 +700,69 @@
 
 
 <section class="catalogo-hero catalogo-hero-busqueda">
-    <p class="catalogo-eyebrow">Explorar</p>
-    <h1>Búsqueda avanzada</h1>
-
-    <p>
-        Combina distintos criterios para localizar prepublicaciones
-        por título, autor, colección, serie o fecha de actualización.
-    </p>
+  <p class="catalogo-eyebrow">Explorar</p>
+  <h1>Búsqueda avanzada</h1>
+  <p>Consulta publicaciones oficiales y preprints. Combina filtros por colección, serie, año, autor, título o palabra clave.</p>
 </section>
 
-<div id="filtros">
+<div class="busqueda-unificada">
+  <fieldset class="busqueda-tipos">
+    <legend>Tipo de publicación</legend>
+    <div class="busqueda-tipos__opciones">
+      <label class="busqueda-tipo">
+        <input type="radio" name="tipo-publicacion" value="ambas" checked>
+        <span>Todas las publicaciones</span>
+      </label>
+      <label class="busqueda-tipo">
+        <input type="radio" name="tipo-publicacion" value="oficial">
+        <span>Publicaciones oficiales</span>
+      </label>
+      <label class="busqueda-tipo">
+        <input type="radio" name="tipo-publicacion" value="preprint">
+        <span>Preprints</span>
+      </label>
+    </div>
+  </fieldset>
 
-    <label>
-        Colección:
-        <select id="f-coleccion">
-            <option value="">Todas</option>
-        </select>
+  <div id="filtros" class="busqueda-filtros">
+    <label for="f-coleccion">Colección
+      <select id="f-coleccion"><option value="">Todas</option></select>
     </label>
-
-
-    <label>
-        Serie:
-        <select id="f-serie">
-            <option value="">Todas</option>
-        </select>
+    <label for="f-serie">Serie
+      <select id="f-serie"><option value="">Todas</option></select>
     </label>
-
-
-    <label>
-        Año de actualización:
-        <select id="f-anio">
-            <option value="">Todos</option>
-        </select>
+    <label for="f-anio">Año (publicación o actualización)
+      <select id="f-anio"><option value="">Todos</option></select>
     </label>
-
-
-    <label>
-        Autor:
-        <input
-            id="f-autor"
-            type="text"
-            placeholder="Ej. Brasselet">
+    <label for="f-autor">Autor
+      <input id="f-autor" type="search" placeholder="Ej. Brasselet" autocomplete="off">
     </label>
-
-
-    <label>
-        Título:
-        <input
-            id="f-titulo"
-            type="text"
-            placeholder="Buscar por título">
+    <label for="f-titulo">Título
+      <input id="f-titulo" type="search" placeholder="Buscar por título" autocomplete="off">
     </label>
-
-
-    <label>
-        Palabra clave:
-        <input
-            id="f-palabra"
-            type="text"
-            placeholder="ID, resumen, autor...">
+    <label for="f-palabra">Palabra clave
+      <input id="f-palabra" type="search" placeholder="ID, resumen, ISBN..." autocomplete="off">
     </label>
-
-
-    <label>
-        Ordenar por:
-        <select id="f-order">
-            <option value="fecha-desc">
-                Más recientes
-            </option>
-
-            <option value="fecha-asc">
-                Más antiguos
-            </option>
-
-            <option value="titulo-asc">
-                Título (A → Z)
-            </option>
-
-            <option value="titulo-desc">
-                Título (Z → A)
-            </option>
-        </select>
+    <label for="f-order">Ordenar por
+      <select id="f-order">
+        <option value="fecha-desc">Más recientes</option>
+        <option value="fecha-asc">Más antiguos</option>
+        <option value="titulo-asc">Título (A → Z)</option>
+        <option value="titulo-desc">Título (Z → A)</option>
+      </select>
     </label>
+    <button id="btn-clear" type="button" class="md-button">Limpiar filtros</button>
+  </div>
 
-
-    <button
-        id="btn-clear"
-        type="button"
-        class="md-button">
-        Limpiar filtros
-    </button>
-
+  <div class="busqueda-resultados-header" aria-live="polite">
+    <span id="contador">Cargando publicaciones…</span>
+  </div>
+  <p id="busqueda-aviso" class="busqueda-aviso" role="status" hidden></p>
+  <div id="resultados" aria-live="polite" aria-busy="true"></div>
 </div>
 
-<div class="busqueda-resultados-header">
-    <span id="contador"></span>
-</div>
-
-<div id="resultados"></div>
-
-<script>
-
-(async function () {
-
-    /*
-     * Calculamos la raíz del sitio a partir de la página actual.
-     *
-     * Ejemplos:
-     *
-     * Local:
-     * /papirhos-preprints/explorar/
-     *          ↓
-     * /papirhos-preprints/
-     *
-     * GitHub Pages:
-     * /papirhos-preprints/explorar/
-     *          ↓
-     * /papirhos-preprints/
-     */
-    const BASE = new URL(
-        "../",
-        window.location.href
-    ).href;
-
-
-    // Leemos la base de datos de preprints.
-    const respuesta = await fetch(
-        `${BASE}data/preprints.json`
-    );
-
-
-    // Si el archivo no pudo cargarse,
-    // mostramos un error claro en la consola.
-    if (!respuesta.ok) {
-
-        throw new Error(
-            `No se pudo cargar preprints.json: ${respuesta.status}`
-        );
-
-    }
-
-
-    const preprints =
-        await respuesta.json();
-
-
-    // Verificamos que el JSON tenga la estructura esperada.
-    if (!Array.isArray(preprints)) {
-
-        throw new Error(
-            "preprints.json no contiene una lista válida."
-        );
-
-    }
-
-
-    // Atajo para querySelector.
-    const $ = (selector) =>
-        document.querySelector(selector);
-
-
-    // Quitamos duplicados y valores vacíos.
-    const unique = (lista) =>
-        Array.from(
-            new Set(
-                lista.filter(Boolean)
-            )
-        );
-
-
-    // Normalizamos texto para que las búsquedas
-    // no dependan de mayúsculas ni acentos.
-    const normalizarTexto = (texto) =>
-
-        String(texto || "")
-            .normalize("NFD")
-            .replace(/[\u0300-\u036f]/g, "")
-            .toLowerCase()
-            .trim();
-
-
-    // Ordenamos las versiones de un preprint.
-    function versionesOrdenadas(preprint) {
-
-        return [...(preprint.versiones || [])]
-            .sort(
-                (a, b) =>
-                    Number(b.version) -
-                    Number(a.version)
-            );
-
-    }
-
-
-    // Obtenemos la versión más reciente.
-    function versionActual(preprint) {
-
-        const versiones =
-            versionesOrdenadas(preprint);
-
-        return versiones.length
-            ? versiones[0]
-            : null;
-
-    }
-
-
-    // Obtenemos el año de la actualización más reciente.
-    function anioActualizacion(preprint) {
-
-        const version =
-            versionActual(preprint);
-
-        if (!version || !version.fecha) {
-            return "";
-        }
-
-        return String(version.fecha)
-            .slice(0, 4);
-
-    }
-
-
-    // Referencias a los controles.
-    const selColeccion = $("#f-coleccion");
-    const selSerie = $("#f-serie");
-    const selAnio = $("#f-anio");
-
-    const inpAutor = $("#f-autor");
-    const inpTitulo = $("#f-titulo");
-    const inpPalabra = $("#f-palabra");
-
-    const selOrder = $("#f-order");
-
-    const contador = $("#contador");
-    const contenedor = $("#resultados");
-
-    const btnClear = $("#btn-clear");
-
-
-// =====================================================
-// RESÚMENES EXPANDIBLES
-// =====================================================
-
-function actualizarBotonesResumenes() {
-
-    const wrappers =
-        contenedor.querySelectorAll(
-            ".preprint-summary-wrapper"
-        );
-
-
-    wrappers.forEach((wrapper) => {
-
-        const resumen =
-            wrapper.querySelector(
-                ".preprint-summary"
-            );
-
-        const boton =
-            wrapper.querySelector(
-                ".preprint-summary-toggle"
-            );
-
-
-        if (!resumen || !boton) {
-            return;
-        }
-
-
-        /*
-         * Comprobamos si realmente existe texto
-         * oculto por el límite de cuatro líneas.
-         *
-         * Si todo el resumen ya cabe, ocultamos
-         * el botón Ver más.
-         */
-        if (
-            resumen.scrollHeight <=
-            resumen.clientHeight + 2
-        ) {
-
-            boton.hidden = true;
-
-        } else {
-
-            boton.hidden = false;
-
-        }
-
-    });
-
-}
-
-
-contenedor.addEventListener(
-    "click",
-    (event) => {
-
-        const boton =
-            event.target.closest(
-                ".preprint-summary-toggle"
-            );
-
-
-        if (!boton) {
-            return;
-        }
-
-
-        const wrapper =
-            boton.closest(
-                ".preprint-summary-wrapper"
-            );
-
-
-        if (!wrapper) {
-            return;
-        }
-
-
-        const resumen =
-            wrapper.querySelector(
-                ".preprint-summary"
-            );
-
-
-        if (!resumen) {
-            return;
-        }
-
-
-        const estaCerrado =
-            resumen.classList.contains(
-                "preprint-summary-collapsed"
-            );
-
-
-        if (estaCerrado) {
-
-            resumen.classList.remove(
-                "preprint-summary-collapsed"
-            );
-
-            boton.textContent =
-                "Ver menos";
-
-        } else {
-
-            resumen.classList.add(
-                "preprint-summary-collapsed"
-            );
-
-            boton.textContent =
-                "Ver más";
-
-        }
-
-    }
-);
-
-    // =====================================================
-    // LLENAMOS LOS SELECTS
-    // =====================================================
-
-    unique(
-        preprints.map(
-            preprint => preprint.coleccion
-        )
-    )
-        .sort()
-        .forEach(
-            coleccion => {
-
-                selColeccion.insertAdjacentHTML(
-                    "beforeend",
-                    `<option>${coleccion}</option>`
-                );
-
-            }
-        );
-
-
-    unique(
-        preprints.map(
-            preprint => preprint.serie
-        )
-    )
-        .sort()
-        .forEach(
-            serie => {
-
-                selSerie.insertAdjacentHTML(
-                    "beforeend",
-                    `<option>${serie}</option>`
-                );
-
-            }
-        );
-
-
-    unique(
-        preprints.map(
-            preprint =>
-                anioActualizacion(preprint)
-        )
-    )
-        .sort(
-            (a, b) =>
-                Number(b) - Number(a)
-        )
-        .forEach(
-            anio => {
-
-                selAnio.insertAdjacentHTML(
-                    "beforeend",
-                    `<option>${anio}</option>`
-                );
-
-            }
-        );
-
-
-    // =====================================================
-    // COINCIDENCIAS
-    // =====================================================
-
-    function coincideAutor(
-        preprint,
-        busqueda
-    ) {
-
-        if (!busqueda) {
-            return true;
-        }
-
-        const needle =
-            normalizarTexto(busqueda);
-
-        return (
-            preprint.autores || []
-        ).some(
-            autor =>
-                normalizarTexto(autor)
-                    .includes(needle)
-        );
-
-    }
-
-
-    function coincideTitulo(
-        preprint,
-        busqueda
-    ) {
-
-        if (!busqueda) {
-            return true;
-        }
-
-        return normalizarTexto(
-            preprint.titulo
-        ).includes(
-            normalizarTexto(busqueda)
-        );
-
-    }
-
-
-    function coincidePalabra(
-        preprint,
-        busqueda
-    ) {
-
-        if (!busqueda) {
-            return true;
-        }
-
-        const needle =
-            normalizarTexto(busqueda);
-
-
-        const textoCompleto = normalizarTexto(
-            [
-                preprint.id_preprint,
-                preprint.titulo,
-                preprint.resumen,
-                preprint.coleccion,
-                preprint.serie,
-                ...(preprint.autores || [])
-            ].join(" ")
-        );
-
-
-        return textoCompleto.includes(
-            needle
-        );
-
-    }
-
-
-    // =====================================================
-    // ORDEN
-    // =====================================================
-
-    function compararTituloAsc(a, b) {
-
-        return String(
-            a.titulo || ""
-        ).localeCompare(
-            String(b.titulo || ""),
-            "es",
-            {
-                sensitivity: "base"
-            }
-        );
-
-    }
-
-
-    function compararTituloDesc(a, b) {
-
-        return -compararTituloAsc(a, b);
-
-    }
-
-
-    function fechaActualizacion(preprint) {
-
-        const version =
-            versionActual(preprint);
-
-        if (!version) {
-            return "";
-        }
-
-        return version.fecha || "";
-
-    }
-
-
-    function compararFechaDesc(a, b) {
-
-        const fechaA =
-            fechaActualizacion(a);
-
-        const fechaB =
-            fechaActualizacion(b);
-
-
-        if (
-            fechaA === "" &&
-            fechaB === ""
-        ) {
-
-            return compararTituloAsc(a, b);
-
-        }
-
-
-        if (fechaA === "") {
-            return 1;
-        }
-
-
-        if (fechaB === "") {
-            return -1;
-        }
-
-
-        const comparacion =
-            fechaB.localeCompare(fechaA);
-
-
-        if (comparacion !== 0) {
-            return comparacion;
-        }
-
-
-        return compararTituloAsc(a, b);
-
-    }
-
-
-    function compararFechaAsc(a, b) {
-
-        const fechaA =
-            fechaActualizacion(a);
-
-        const fechaB =
-            fechaActualizacion(b);
-
-
-        if (
-            fechaA === "" &&
-            fechaB === ""
-        ) {
-
-            return compararTituloAsc(a, b);
-
-        }
-
-
-        if (fechaA === "") {
-            return 1;
-        }
-
-
-        if (fechaB === "") {
-            return -1;
-        }
-
-
-        const comparacion =
-            fechaA.localeCompare(fechaB);
-
-
-        if (comparacion !== 0) {
-            return comparacion;
-        }
-
-
-        return compararTituloAsc(a, b);
-
-    }
-
-
-    function getComparator(modo) {
-
-        switch (modo) {
-
-            case "titulo-asc":
-                return compararTituloAsc;
-
-            case "titulo-desc":
-                return compararTituloDesc;
-
-            case "fecha-asc":
-                return compararFechaAsc;
-
-            case "fecha-desc":
-                return compararFechaDesc;
-
-            default:
-                return compararFechaDesc;
-
-        }
-
-    }
-
-
-    // =====================================================
-    // RENDER
-    // =====================================================
-
-    function prepararResumenes() {
-
-    const wrappers =
-        contenedor.querySelectorAll(
-            ".preprint-summary-wrapper"
-        );
-
-
-    wrappers.forEach((wrapper) => {
-
-        const resumen =
-            wrapper.querySelector(
-                ".preprint-summary"
-            );
-
-        const boton =
-            wrapper.querySelector(
-                ".preprint-summary-toggle"
-            );
-
-
-        if (!resumen || !boton) {
-            return;
-        }
-
-
-        if (
-            resumen.scrollHeight <=
-            resumen.clientHeight + 2
-        ) {
-
-            boton.hidden = true;
-
-        }
-
-
-        boton.addEventListener(
-            "click",
-            () => {
-
-                const estaCerrado =
-                    resumen.classList.contains(
-                        "preprint-summary-collapsed"
-                    );
-
-
-                resumen.classList.toggle(
-                    "preprint-summary-collapsed"
-                );
-
-
-                boton.textContent =
-                    estaCerrado
-                        ? "Ver menos"
-                        : "Ver más";
-
-            }
-        );
-
-    });
-
-}
-
-    function render(lista) {
-
-        if (!Array.isArray(lista)) {
-
-            contenedor.textContent =
-                "Error: datos inválidos.";
-
-            contador.textContent = "";
-
-            return;
-
-        }
-
-
-        contador.textContent =
-            `${lista.length} ${
-                lista.length === 1
-                    ? "resultado"
-                    : "resultados"
-            }`;
-
-
-        if (!lista.length) {
-
-            contenedor.innerHTML = `
-                <div class="preprints-no-results">
-
-                    <strong>
-                        No se encontraron preprints.
-                    </strong>
-
-                    <span>
-                        Intenta modificar o limpiar
-                        alguno de los filtros.
-                    </span>
-
-                </div>
-            `;
-
-            return;
-
-        }
-
-
-        contenedor.innerHTML =
-            lista.map(
-                preprint => {
-
-                    const versiones =
-                        versionesOrdenadas(
-                            preprint
-                        );
-
-
-                    const actual =
-                        versiones.length
-                            ? versiones[0]
-                            : null;
-
-
-                    const numeroVersion =
-                        actual
-                            ? actual.version
-                            : "—";
-
-
-                    const fecha =
-                        actual
-                            ? actual.fecha
-                            : "Sin versión disponible";
-
-
-                    const textoVersiones =
-                        versiones.length === 1
-                            ? "1 versión"
-                            : `${versiones.length} versiones`;
-
-
-                    // Portada real o placeholder.
-                    let portadaHTML;
-
-
-                    if (preprint.portada) {
-
-                        portadaHTML = `
-                            <div class="preprint-cover">
-
-                                <img
-                                    src="${BASE}portadas_preprints/${preprint.portada}"
-                                    alt="Portada de ${preprint.titulo}"
-                                    loading="lazy">
-
-                            </div>
-                        `;
-
-                    } else {
-
-                        portadaHTML = `
-                            <div
-                                class="preprint-cover
-                                       preprint-cover-placeholder">
-
-                                <span>
-                                    ${preprint.id_preprint}
-                                </span>
-
-                                <small>
-                                    Preprint
-                                </small>
-
-                            </div>
-                        `;
-
-                    }
-
-
-                    // Botón del PDF actual.
-                    let botonPDF = "";
-
-
-                    if (
-                        actual &&
-                        actual.archivo
-                    ) {
-
-                        botonPDF = `
-                            <a
-                                href="${BASE}archivos_preprints/${actual.archivo}"
-                                class="md-button
-                                       preprint-secondary-button">
-                                Ver PDF
-                            </a>
-                        `;
-
-                    }
-
-
-                    return `
-                        <article class="preprint-card">
-
-                            <div class="preprint-card-layout">
-
-                                ${portadaHTML}
-
-
-                                <div class="preprint-card-main">
-
-
-                                    <div class="preprint-card-top">
-
-                                        <span class="preprint-id">
-                                            ${preprint.id_preprint}
-                                        </span>
-
-                                        <span class="preprint-date">
-                                            Actualizado ${fecha}
-                                        </span>
-
-                                    </div>
-
-
-                                    <div class="preprint-card-content">
-
-                                        <h3 class="preprint-title">
-
-                                            <a
-                                                href="${BASE}preprints/${preprint.id_preprint}/">
-
-                                                ${preprint.titulo}
-
-                                            </a>
-
-                                        </h3>
-
-
-                                        <p class="preprint-authors">
-
-                                            ${
-                                                (
-                                                    preprint.autores ||
-                                                    []
-                                                ).join(" · ")
-                                            }
-
-                                        </p>
-
-
-                                        <div class="preprint-summary-wrapper">
-
-                                            <p class="preprint-summary preprint-summary-collapsed">
-
-                                                ${preprint.resumen || ""}
-
-                                            </p>
-
-                                            <button
-                                                type="button"
-                                                class="preprint-summary-toggle">
-
-                                                Ver más
-
-                                            </button>
-
-                                        </div>
-
-
-                                        <div class="busqueda-preprint-meta">
-
-                                            ${
-                                                preprint.coleccion
-                                                    ? `<span>
-                                                        <strong>Colección:</strong>
-                                                        ${preprint.coleccion}
-                                                       </span>`
-                                                    : ""
-                                            }
-
-                                            ${
-                                                preprint.serie
-                                                    ? `<span>
-                                                        <strong>Serie:</strong>
-                                                        ${preprint.serie}
-                                                       </span>`
-                                                    : ""
-                                            }
-
-
-                                        </div>
-
-                                    </div>
-
-
-                                    <div class="preprint-card-footer">
-
-                                        <div class="preprint-version-info">
-
-                                            <span class="preprint-version-badge">
-                                                v${numeroVersion}
-                                            </span>
-
-                                            <span class="preprint-version-count">
-                                                ${textoVersiones}
-                                            </span>
-
-                                        </div>
-
-
-                                        <div class="preprint-actions">
-
-                                            <a
-                                                href="${BASE}preprints/${preprint.id_preprint}/"
-                                                class="md-button
-                                                       md-button--primary">
-
-                                                Ver ficha
-
-                                            </a>
-
-                                            ${botonPDF}
-
-                                        </div>
-
-                                    </div>
-
-
-                                </div>
-
-                            </div>
-
-                        </article>
-                    `;
-
-                }
-            ).join("");
-            requestAnimationFrame(actualizarBotonesResumenes);
-
-    }
-
-
-    // =====================================================
-    // FILTROS
-    // =====================================================
-
-    function filtrar() {
-
-        const coleccion =
-            selColeccion.value;
-
-        const serie =
-            selSerie.value;
-
-        const anio =
-            selAnio.value;
-
-        const autor =
-            inpAutor.value.trim();
-
-        const titulo =
-            inpTitulo.value.trim();
-
-        const palabra =
-            inpPalabra.value.trim();
-
-
-        const comparador =
-            getComparator(
-                selOrder.value ||
-                "fecha-desc"
-            );
-
-
-        const resultado =
-            preprints
-
-                .filter(
-                    preprint =>
-
-                        (
-                            !coleccion ||
-                            preprint.coleccion ===
-                                coleccion
-                        )
-
-                        &&
-
-                        (
-                            !serie ||
-                            String(
-                                preprint.serie || ""
-                            ) === String(serie)
-                        )
-
-                        &&
-
-                        (
-                            !anio ||
-                            anioActualizacion(
-                                preprint
-                            ) === anio
-                        )
-
-                        &&
-
-                        coincideAutor(
-                            preprint,
-                            autor
-                        )
-
-                        &&
-
-                        coincideTitulo(
-                            preprint,
-                            titulo
-                        )
-
-                        &&
-
-                        coincidePalabra(
-                            preprint,
-                            palabra
-                        )
-
-                )
-
-                .sort(comparador);
-
-
-        render(resultado);
-
-    }
-
-
-    // =====================================================
-    // EVENTOS
-    // =====================================================
-
-    selColeccion.addEventListener(
-        "change",
-        filtrar
-    );
-
-    selSerie.addEventListener(
-        "change",
-        filtrar
-    );
-
-    selAnio.addEventListener(
-        "change",
-        filtrar
-    );
-
-    inpAutor.addEventListener(
-        "input",
-        filtrar
-    );
-
-    inpTitulo.addEventListener(
-        "input",
-        filtrar
-    );
-
-    inpPalabra.addEventListener(
-        "input",
-        filtrar
-    );
-
-    selOrder.addEventListener(
-        "change",
-        filtrar
-    );
-
-
-    // =====================================================
-    // LIMPIAR
-    // =====================================================
-
-    function limpiar() {
-
-        selColeccion.value = "";
-        selSerie.value = "";
-        selAnio.value = "";
-
-        inpAutor.value = "";
-        inpTitulo.value = "";
-        inpPalabra.value = "";
-
-        selOrder.value =
-            "fecha-desc";
-
-        filtrar();
-
-        inpPalabra.focus();
-
-    }
-
-
-    btnClear.addEventListener(
-        "click",
-        limpiar
-    );
-
-
-    // Primera carga.
-    filtrar();
-
-})();
-
-</script>
+<p><link rel="stylesheet" href="../stylesheets/busqueda-unificada.css"></p>
+<script defer src="../js/busqueda-unificada.js"></script>
 
 
 
@@ -1804,6 +871,8 @@ contenedor.addEventListener(
       <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
       
         <script src="../js/config.js"></script>
+      
+        <script src="../js/publicaciones-menu.js"></script>
       
     
   </body>
