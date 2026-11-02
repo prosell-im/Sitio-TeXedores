@@ -36,4 +36,5 @@ markdown_extensions:
 extra_javascript:
  - js/config.js
  - js/publicaciones-menu.js
+ - js/acerca-colecciones.js
 
