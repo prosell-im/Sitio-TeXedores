@@ -115,9 +115,6 @@ ids_pdfs = set(pdf_por_libro)
 faltantes = ids_libros - ids_pdfs
 if faltantes:
     raise ValueError('Faltan PDF oficiales para: ' + ', '.join(sorted(faltantes)))
-sobrantes = ids_pdfs - ids_libros
-if sobrantes:
-    print('Aviso: hay PDF oficiales sin registro de publicación: ' + ', '.join(sorted(sobrantes)))
 
 catalogo = []
 for libro in libros.to_dict(orient='records'):

@@ -384,7 +384,7 @@ def tarjeta(libro, preprints_relacionados):
     serie = texto(libro.get("serie") or "")
     disponibilidad = badges_disponibilidad(libro, preprints_relacionados)
     return f'''
-<article class="preprint-card oficial-card">
+<article class="preprint-card oficial-card" data-coleccion="{coleccion}">
   <div class="preprint-card-layout">
     {portada}
     <div class="preprint-card-main">
@@ -426,17 +426,74 @@ JS_CATALOGO = r'''
     return String(valor).toLowerCase().normalize("NFD")
       .replace(/[\u0300-\u036f]/g, "").trim();
   }
+  // Una misma página de catálogo sirve para todas las colecciones.
+  // Ejemplo: catalogo/?coleccion=papirhos
+  // Solo se consideran fichas OFICIALES: los preprints sin edición
+  // oficial nunca se asignan aquí a una colección.
+  const colecciones = {
+    aportaciones: {
+      nombre: "Aportaciones Matemáticas",
+      valores: ["aportaciones matematicas"]
+    },
+    bachillerato: {
+      nombre: "Temas de Matemáticas para el Bachillerato",
+      valores: ["temas de matematicas para el bachillerato", "temas para el bachillerato"]
+    },
+    olimpiadas: {
+      nombre: "Cuadernos de Olimpiadas de Matemáticas",
+      valores: ["cuadernos de olimpiadas de matematicas", "cuadernos de olimpiadas"]
+    },
+    papirhos: {
+      nombre: "Papirhos",
+      valores: ["papirhos"]
+    }
+  };
+
+  const parametro = new URLSearchParams(window.location.search).get("coleccion");
+  const coleccionActiva = parametro && Object.prototype.hasOwnProperty.call(colecciones, parametro)
+    ? colecciones[parametro] : null;
+
+  const perteneceColeccion = tarjeta => !coleccionActiva ||
+    coleccionActiva.valores.includes(normalizar(tarjeta.dataset.coleccion));
+
+  if (coleccionActiva) {
+    pagina.querySelector(".preprints-hero h1").textContent = coleccionActiva.nombre;
+    pagina.querySelector(".preprints-eyebrow").textContent = "Colección · Publicaciones oficiales";
+    pagina.querySelector(".preprints-lead").textContent =
+      `Consulta las publicaciones oficiales de la colección ${coleccionActiva.nombre}.`;
+    pagina.querySelector(".preprints-description").textContent =
+      "Explora sus libros, consulta las fichas bibliográficas y los PDF disponibles.";
+    pagina.querySelector(".preprints-section-label").textContent = "Catálogo por colección";
+    pagina.querySelector(".preprints-list-header h2").textContent = "Publicaciones de esta colección";
+
+    const volver = document.createElement("a");
+    volver.className = "coleccion-catalogo__volver";
+    volver.href = window.location.pathname;
+    volver.textContent = "← Ver todas las publicaciones oficiales";
+    pagina.querySelector(".preprints-hero").appendChild(volver);
+  }
+
+  const obrasEnColeccion = tarjetas.filter(perteneceColeccion).length;
+
   function filtrar() {
     const consulta = normalizar(input.value);
     let visibles = 0;
     tarjetas.forEach(tarjeta => {
-      const encontrado = normalizar(tarjeta.textContent).includes(consulta);
+      const encontrado = perteneceColeccion(tarjeta) &&
+        normalizar(tarjeta.textContent).includes(consulta);
       tarjeta.hidden = !encontrado;
       if (encontrado) visibles++;
     });
     contador.textContent = visibles === 1 ?
       "1 publicación encontrada" : `${visibles} publicaciones encontradas`;
     vacio.hidden = visibles !== 0;
+
+    if (!visibles && coleccionActiva && !obrasEnColeccion) {
+      vacio.querySelector("strong").textContent =
+        "Todavía no hay publicaciones oficiales en esta colección.";
+      vacio.querySelector("span").textContent =
+        "Puedes regresar al catálogo general para explorar otras colecciones.";
+    }
   }
   pagina.querySelectorAll(".preprint-summary-toggle").forEach(boton => {
     boton.addEventListener("click", () => {

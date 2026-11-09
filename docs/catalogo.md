@@ -22,7 +22,7 @@
       <span>Prueba con otro título, autor, serie o identificador.</span>
     </div>
     
-<article class="preprint-card oficial-card">
+<article class="preprint-card oficial-card" data-coleccion="Papirhos">
   <div class="preprint-card-layout">
     <div class="preprint-cover"><img src="../portadas_preprints/pap-not-1.jpg" alt="Portada de Teoría de singularidades en topología, geometría y foliaciones I" loading="lazy"></div>
     <div class="preprint-card-main">
@@ -49,7 +49,7 @@
   </div>
 </article>
 
-<article class="preprint-card oficial-card">
+<article class="preprint-card oficial-card" data-coleccion="Cuadernos de olimpiadas de matemáticas">
   <div class="preprint-card-layout">
     <div class="preprint-cover"><img src="../portadas_preprints/cuad-x-1.png" alt="Portada de Combinatoria" loading="lazy"></div>
     <div class="preprint-card-main">
@@ -76,7 +76,7 @@
   </div>
 </article>
 
-<article class="preprint-card oficial-card">
+<article class="preprint-card oficial-card" data-coleccion="Papirhos">
   <div class="preprint-card-layout">
     <div class="preprint-cover"><img src="../portadas_preprints/pap-tex-6.png" alt="Portada de Curso introductorio de álgebra I" loading="lazy"></div>
     <div class="preprint-card-main">
@@ -103,7 +103,7 @@
   </div>
 </article>
 
-<article class="preprint-card oficial-card">
+<article class="preprint-card oficial-card" data-coleccion="Papirhos">
   <div class="preprint-card-layout">
     <div class="preprint-cover"><img src="../portadas_preprints/pap-tex-10.png" alt="Portada de Curso introductorio de álgebra II" loading="lazy"></div>
     <div class="preprint-card-main">
@@ -130,7 +130,7 @@
   </div>
 </article>
 
-<article class="preprint-card oficial-card">
+<article class="preprint-card oficial-card" data-coleccion="Papirhos">
   <div class="preprint-card-layout">
     <div class="preprint-cover"><img src="../portadas_preprints/pap-tex-1.png" alt="Portada de Grupos I" loading="lazy"></div>
     <div class="preprint-card-main">
@@ -157,7 +157,7 @@
   </div>
 </article>
 
-<article class="preprint-card oficial-card">
+<article class="preprint-card oficial-card" data-coleccion="Papirhos">
   <div class="preprint-card-layout">
     <div class="preprint-cover"><img src="../portadas_preprints/pap-tex-4.png" alt="Portada de Grupos II" loading="lazy"></div>
     <div class="preprint-card-main">
@@ -184,7 +184,7 @@
   </div>
 </article>
 
-<article class="preprint-card oficial-card">
+<article class="preprint-card oficial-card" data-coleccion="Papirhos">
   <div class="preprint-card-layout">
     <div class="preprint-cover"><img src="../portadas_preprints/pap-mix-1.jpg" alt="Portada de Por la senda de los círculos" loading="lazy"></div>
     <div class="preprint-card-main">
@@ -211,7 +211,7 @@
   </div>
 </article>
 
-<article class="preprint-card oficial-card">
+<article class="preprint-card oficial-card" data-coleccion="Papirhos">
   <div class="preprint-card-layout">
     <div class="preprint-cover"><img src="../portadas_preprints/pap-ico-3.png" alt="Portada de Concursos Nacionales de la Olimpiada Mexicana de Matemáticas:1987-2016" loading="lazy"></div>
     <div class="preprint-card-main">
@@ -238,7 +238,7 @@
   </div>
 </article>
 
-<article class="preprint-card oficial-card">
+<article class="preprint-card oficial-card" data-coleccion="Papirhos">
   <div class="preprint-card-layout">
     <div class="preprint-cover"><img src="../portadas_preprints/pap-tex-2.png" alt="Portada de Análisis Matemático" loading="lazy"></div>
     <div class="preprint-card-main">
@@ -265,7 +265,7 @@
   </div>
 </article>
 
-<article class="preprint-card oficial-card">
+<article class="preprint-card oficial-card" data-coleccion="Papirhos">
   <div class="preprint-card-layout">
     <div class="preprint-cover"><img src="../portadas_preprints/pap-tex-3.png" alt="Portada de Topología Diferencial" loading="lazy"></div>
     <div class="preprint-card-main">
@@ -292,7 +292,7 @@
   </div>
 </article>
 
-<article class="preprint-card oficial-card">
+<article class="preprint-card oficial-card" data-coleccion="Papirhos">
   <div class="preprint-card-layout">
     <div class="preprint-cover"><img src="../portadas_preprints/pap-tex-5.png" alt="Portada de Geometría euclidiana bidimensional y su grupo de transformaciones" loading="lazy"></div>
     <div class="preprint-card-main">
@@ -319,7 +319,7 @@
   </div>
 </article>
 
-<article class="preprint-card oficial-card">
+<article class="preprint-card oficial-card" data-coleccion="Papirhos">
   <div class="preprint-card-layout">
     <div class="preprint-cover"><img src="../portadas_preprints/pap-tex-7.png" alt="Portada de Clases características" loading="lazy"></div>
     <div class="preprint-card-main">
@@ -346,7 +346,7 @@
   </div>
 </article>
 
-<article class="preprint-card oficial-card">
+<article class="preprint-card oficial-card" data-coleccion="Papirhos">
   <div class="preprint-card-layout">
     <div class="preprint-cover"><img src="../portadas_preprints/pap-tex-8.png" alt="Portada de Introducción a la teoría de Galois" loading="lazy"></div>
     <div class="preprint-card-main">
@@ -373,7 +373,7 @@
   </div>
 </article>
 
-<article class="preprint-card oficial-card">
+<article class="preprint-card oficial-card" data-coleccion="Papirhos">
   <div class="preprint-card-layout">
     <div class="preprint-cover"><img src="../portadas_preprints/pap-tex-9.png" alt="Portada de Introducción al álgebra lineal" loading="lazy"></div>
     <div class="preprint-card-main">
@@ -400,7 +400,7 @@
   </div>
 </article>
 
-<article class="preprint-card oficial-card">
+<article class="preprint-card oficial-card" data-coleccion="Papirhos">
   <div class="preprint-card-layout">
     <div class="preprint-cover"><img src="../portadas_preprints/pap-tex-11.png" alt="Portada de Curso breve de geometría proyectiva" loading="lazy"></div>
     <div class="preprint-card-main">
@@ -427,7 +427,7 @@
   </div>
 </article>
 
-<article class="preprint-card oficial-card">
+<article class="preprint-card oficial-card" data-coleccion="Papirhos">
   <div class="preprint-card-layout">
     <div class="preprint-cover"><img src="../portadas_preprints/pap-tex-12.png" alt="Portada de Métodos topológicos en el estudio de las ecuaciones diferenciales no lineales" loading="lazy"></div>
     <div class="preprint-card-main">
@@ -454,7 +454,7 @@
   </div>
 </article>
 
-<article class="preprint-card oficial-card">
+<article class="preprint-card oficial-card" data-coleccion="Papirhos">
   <div class="preprint-card-layout">
     <div class="preprint-cover"><img src="../portadas_preprints/pap-not-2.jpg" alt="Portada de Teoría de singularidades en topología, geometría y foliaciones II" loading="lazy"></div>
     <div class="preprint-card-main">
@@ -481,7 +481,7 @@
   </div>
 </article>
 
-<article class="preprint-card oficial-card">
+<article class="preprint-card oficial-card" data-coleccion="Papirhos">
   <div class="preprint-card-layout">
     <div class="preprint-cover"><img src="../portadas_preprints/pap-not-3.png" alt="Portada de Teoría de las gráficas: algunas aportaciones desde México" loading="lazy"></div>
     <div class="preprint-card-main">
@@ -508,7 +508,7 @@
   </div>
 </article>
 
-<article class="preprint-card oficial-card">
+<article class="preprint-card oficial-card" data-coleccion="Papirhos">
   <div class="preprint-card-layout">
     <div class="preprint-cover"><img src="../portadas_preprints/pap-act-1.png" alt="Portada de Proceedings of the Workshop on Holomorphic Dynamics" loading="lazy"></div>
     <div class="preprint-card-main">
@@ -535,7 +535,7 @@
   </div>
 </article>
 
-<article class="preprint-card oficial-card">
+<article class="preprint-card oficial-card" data-coleccion="Aportaciones Matemáticas">
   <div class="preprint-card-layout">
     <div class="preprint-cover"><img src="../portadas_preprints/apor-tex-12.png" alt="Portada de Introducción a la teoría de redes" loading="lazy"></div>
     <div class="preprint-card-main">
@@ -562,7 +562,7 @@
   </div>
 </article>
 
-<article class="preprint-card oficial-card">
+<article class="preprint-card oficial-card" data-coleccion="Papirhos">
   <div class="preprint-card-layout">
     <div class="preprint-cover"><img src="../portadas_preprints/pap-tex-17.png" alt="Portada de Curso de Topología" loading="lazy"></div>
     <div class="preprint-card-main">
@@ -589,7 +589,7 @@
   </div>
 </article>
 
-<article class="preprint-card oficial-card">
+<article class="preprint-card oficial-card" data-coleccion="Papirhos">
   <div class="preprint-card-layout">
     <div class="preprint-cover"><img src="../portadas_preprints/pap-tex-18.png" alt="Portada de Métodos variacionales en ecuaciones diferenciales parciales no lineales" loading="lazy"></div>
     <div class="preprint-card-main">
@@ -631,17 +631,74 @@
     return String(valor).toLowerCase().normalize("NFD")
       .replace(/[\u0300-\u036f]/g, "").trim();
   }
+  // Una misma página de catálogo sirve para todas las colecciones.
+  // Ejemplo: catalogo/?coleccion=papirhos
+  // Solo se consideran fichas OFICIALES: los preprints sin edición
+  // oficial nunca se asignan aquí a una colección.
+  const colecciones = {
+    aportaciones: {
+      nombre: "Aportaciones Matemáticas",
+      valores: ["aportaciones matematicas"]
+    },
+    bachillerato: {
+      nombre: "Temas de Matemáticas para el Bachillerato",
+      valores: ["temas de matematicas para el bachillerato", "temas para el bachillerato"]
+    },
+    olimpiadas: {
+      nombre: "Cuadernos de Olimpiadas de Matemáticas",
+      valores: ["cuadernos de olimpiadas de matematicas", "cuadernos de olimpiadas"]
+    },
+    papirhos: {
+      nombre: "Papirhos",
+      valores: ["papirhos"]
+    }
+  };
+
+  const parametro = new URLSearchParams(window.location.search).get("coleccion");
+  const coleccionActiva = parametro && Object.prototype.hasOwnProperty.call(colecciones, parametro)
+    ? colecciones[parametro] : null;
+
+  const perteneceColeccion = tarjeta => !coleccionActiva ||
+    coleccionActiva.valores.includes(normalizar(tarjeta.dataset.coleccion));
+
+  if (coleccionActiva) {
+    pagina.querySelector(".preprints-hero h1").textContent = coleccionActiva.nombre;
+    pagina.querySelector(".preprints-eyebrow").textContent = "Colección · Publicaciones oficiales";
+    pagina.querySelector(".preprints-lead").textContent =
+      `Consulta las publicaciones oficiales de la colección ${coleccionActiva.nombre}.`;
+    pagina.querySelector(".preprints-description").textContent =
+      "Explora sus libros, consulta las fichas bibliográficas y los PDF disponibles.";
+    pagina.querySelector(".preprints-section-label").textContent = "Catálogo por colección";
+    pagina.querySelector(".preprints-list-header h2").textContent = "Publicaciones de esta colección";
+
+    const volver = document.createElement("a");
+    volver.className = "coleccion-catalogo__volver";
+    volver.href = window.location.pathname;
+    volver.textContent = "← Ver todas las publicaciones oficiales";
+    pagina.querySelector(".preprints-hero").appendChild(volver);
+  }
+
+  const obrasEnColeccion = tarjetas.filter(perteneceColeccion).length;
+
   function filtrar() {
     const consulta = normalizar(input.value);
     let visibles = 0;
     tarjetas.forEach(tarjeta => {
-      const encontrado = normalizar(tarjeta.textContent).includes(consulta);
+      const encontrado = perteneceColeccion(tarjeta) &&
+        normalizar(tarjeta.textContent).includes(consulta);
       tarjeta.hidden = !encontrado;
       if (encontrado) visibles++;
     });
     contador.textContent = visibles === 1 ?
       "1 publicación encontrada" : `${visibles} publicaciones encontradas`;
     vacio.hidden = visibles !== 0;
+
+    if (!visibles && coleccionActiva && !obrasEnColeccion) {
+      vacio.querySelector("strong").textContent =
+        "Todavía no hay publicaciones oficiales en esta colección.";
+      vacio.querySelector("span").textContent =
+        "Puedes regresar al catálogo general para explorar otras colecciones.";
+    }
   }
   pagina.querySelectorAll(".preprint-summary-toggle").forEach(boton => {
     boton.addEventListener("click", () => {
