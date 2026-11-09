@@ -1,0 +1,62 @@
+/* TeXedores: enlaces de colecciones y catálogo oficial filtrado. */
+.md-typeset .acerca-coleccion h2 .acerca-coleccion-catalogo {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.4rem 1rem;
+  color: var(--color-ink, #353535);
+  text-decoration: none;
+  border-radius: 0.2rem;
+}
+
+.md-typeset .acerca-coleccion h2 .acerca-coleccion-catalogo:hover,
+.md-typeset .acerca-coleccion h2 .acerca-coleccion-catalogo:focus-visible {
+  color: var(--color-eyebrow, #986f35);
+}
+
+.md-typeset .acerca-coleccion h2 .acerca-coleccion-catalogo:focus-visible {
+  outline: 2px solid var(--color-eyebrow, #986f35);
+  outline-offset: 4px;
+}
+
+.acerca-coleccion-catalogo__accion {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: inherit;
+  font-size: 0.75rem;
+  font-weight: 650;
+  letter-spacing: 0;
+  white-space: nowrap;
+  color: var(--color-eyebrow, #986f35);
+}
+
+.acerca-coleccion-catalogo__accion > span {
+  display: inline-block;
+  transition: transform 0.18s ease;
+}
+
+.acerca-coleccion-catalogo:hover .acerca-coleccion-catalogo__accion > span {
+  transform: translate(2px, -2px);
+}
+
+.md-typeset .coleccion-catalogo__volver {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 1.3rem;
+  padding: 0.65rem 0.95rem;
+  border: 1px solid var(--color-border, #ddd);
+  border-radius: 0.5rem;
+  background: var(--color-white, #fff);
+  color: var(--color-ink, #353535);
+  font-size: 0.85rem;
+  font-weight: 650;
+  text-decoration: none;
+}
+
+.md-typeset .coleccion-catalogo__volver:hover,
+.md-typeset .coleccion-catalogo__volver:focus-visible {
+  background: var(--color-surface, #f4f4f4);
+  border-color: var(--color-eyebrow, #986f35);
+}
