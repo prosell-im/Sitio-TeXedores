@@ -6,9 +6,9 @@
 </div>
 
 <div class="home-hero-books">
-<img src="../assets/covers/pap-not-1.jpg" alt="Portada de Teoría de singularidades en topología, geometría y foliaciones I">
-<img src="../assets/covers/pap-tex-1.png" alt="Portada de Grupos I">
-<img src="../assets/covers/cuad-x-1.png" alt="Portada de Combinatoria">
+<img src="../assets/covers/pap-not-1.jpg" alt="Portada de Teoría de singularidades en topología, geometría y foliaciones I" width="1004" height="1359" decoding="async">
+<img src="../assets/covers/pap-tex-1.png" alt="Portada de Grupos I" width="481" height="651" decoding="async">
+<img src="../assets/covers/cuad-x-1.png" alt="Portada de Combinatoria" width="1959" height="2709" decoding="async">
 </div>
 
 </section>

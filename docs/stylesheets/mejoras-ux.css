@@ -1,0 +1,36 @@
+/* Mejoras puntuales: accesibilidad y usabilidad, sin cambiar el diseño de TeXedores. */
+
+/* Los paneles ocultos por JavaScript no deben ocupar espacio ni recibir foco. */
+.md-typeset .acerca-coleccion[hidden],
+.md-typeset .preprints-no-results[hidden] {
+  display: none !important;
+}
+
+/* Los enlaces institucionales son enlaces reales y se ven igual que los logos previos. */
+#encabezado > a {
+  text-decoration: none;
+}
+
+/* Foco visible para navegar con teclado, usando el acento ya existente. */
+#encabezado > a:focus-visible,
+.md-header__button:focus-visible,
+.md-tabs__link:focus-visible,
+.md-typeset a:focus-visible,
+.md-typeset button:focus-visible,
+.pub-acordeon__boton:focus-visible,
+.pub-acordeon__opciones a:focus-visible,
+.busqueda-unificada input:focus-visible,
+.busqueda-unificada select:focus-visible {
+  outline: 2px solid var(--color-accent, #d88a1d) !important;
+  outline-offset: 3px;
+}
+
+/* Evitar transiciones y animaciones innecesarias si el usuario lo solicita. */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

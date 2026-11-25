@@ -1,4 +1,5 @@
-site_name: TeXedores  
+site_name: TeXedores
+site_description: Catálogo de publicaciones oficiales y preprints del Instituto de Matemáticas de la UNAM.
 site_url: https://prosell-im.github.io/Sitio-TeXedores/
 theme:
   name: material
@@ -21,6 +22,7 @@ extra_css:
  - stylesheets/catalogo-oficial.css
  - stylesheets/estado-disponibilidad.css
  - stylesheets/colecciones-catalogo.css
+ - stylesheets/mejoras-ux.css
 nav:
  - Inicio: index.md
  - Nuestras publicaciones: 

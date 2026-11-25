@@ -146,7 +146,7 @@
     const descripcion = item.resumen ? `
       <div class="preprint-summary-wrapper">
         <p class="preprint-summary preprint-summary-collapsed">${resumenHTML(item.resumen)}</p>
-        <button type="button" class="preprint-summary-toggle" hidden>Ver más</button>
+        <button type="button" class="preprint-summary-toggle" aria-expanded="false" hidden>Ver más</button>
       </div>` : "";
     const badges = [
       `<span class="tex-disponibilidad__badge ${isOficial ? '' : 'tex-disponibilidad__badge--preprint'}">${isOficial ? 'Publicación oficial' : 'Preprint'}</span>`

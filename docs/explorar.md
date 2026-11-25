@@ -57,7 +57,7 @@
     <span id="contador">Cargando publicaciones…</span>
   </div>
   <p id="busqueda-aviso" class="busqueda-aviso" role="status" hidden></p>
-  <div id="resultados" aria-live="polite" aria-busy="true"></div>
+  <div id="resultados" role="region" aria-label="Resultados de búsqueda" aria-busy="true"></div>
 </div>
 
 <link rel="stylesheet" href="../stylesheets/busqueda-unificada.css">

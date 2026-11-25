@@ -6,6 +6,8 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
+        <meta name="description" content="Catálogo de publicaciones oficiales y preprints del Instituto de Matemáticas de la UNAM.">
+      
       
       
         <link rel="canonical" href="https://prosell-im.github.io/Sitio-TeXedores/publicaciones/pap-tex-9/">
@@ -55,6 +57,10 @@
     
       <link rel="stylesheet" href="../../stylesheets/estado-disponibilidad.css">
     
+      <link rel="stylesheet" href="../../stylesheets/colecciones-catalogo.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/mejoras-ux.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -89,12 +95,9 @@
   <!-- Add announcement here, including arbitrary HTML -->
    <!-- Esto es un anuncio -->
   <div id="encabezado">
-     <div id="logoizq" onclick="window.open('http://www.unam.mx');" style="cursor:pointer;">
-      </div>
-      <div id="logomid">
-      </div>
-      <div id="logoder" onclick="window.open('http://www.matem.unam.mx');" style="cursor:pointer;">
-      </div>
+     <a id="logoizq" href="https://www.unam.mx/" target="_blank" rel="noopener noreferrer" aria-label="Universidad Nacional Autónoma de México (abre en una pestaña nueva)"></a>
+     <div id="logomid" aria-hidden="true"></div>
+     <a id="logoder" href="https://www.matem.unam.mx/" target="_blank" rel="noopener noreferrer" aria-label="Instituto de Matemáticas, UNAM (abre en una pestaña nueva)"></a>
   </div>
 
 
@@ -916,8 +919,9 @@
       <div class="footer-column">
         <h3>Sitio</h3>
         <a href="../../acerca/">Acerca de</a>
-        <a href="../../catalogo/">Catálogo</a>
-        <a href="../../explorar/">Explorar</a>
+        <a href="../../catalogo/">Publicaciones oficiales</a>
+        <a href="../../preprints/">Preprints</a>
+        <a href="../../explorar/">Búsqueda avanzada</a>
       </div>
 
       <div class="footer-column footer-contact">
@@ -932,7 +936,7 @@
     <div class="footer-divider"></div>
 
     <div class="footer-meta">
-      <p>© <span id="footer-year"></span> Papirhos Digital</p>
+      <p>© <span id="footer-year"></span> TeXedores · Instituto de Matemáticas, UNAM</p>
     </div>
 
   </div>

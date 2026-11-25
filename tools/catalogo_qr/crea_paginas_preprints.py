@@ -201,6 +201,7 @@ JS_CATALOGO = r'''<script>
       const p = b.parentElement.querySelector('.preprint-summary');
       const cerrado = p.classList.toggle('preprint-summary-collapsed');
       b.textContent = cerrado ? 'Ver más' : 'Ver menos';
+      b.setAttribute('aria-expanded', String(!cerrado));
     });
     const text = b.parentElement.querySelector('.preprint-summary');
     if (text && text.scrollHeight <= text.clientHeight + 2) b.hidden = true;
@@ -220,7 +221,7 @@ def tarjeta(item, oficiales):
                f'target="_blank" rel="noopener">Ver PDF</a>') if pdf else ''
     descripcion = (f'<div class="preprint-summary-wrapper">'
                    f'<p class="preprint-summary preprint-summary-collapsed">{resumen_html(item.get("resumen"))}</p>'
-                   f'<button type="button" class="preprint-summary-toggle">Ver más</button>'
+                   f'<button type="button" class="preprint-summary-toggle" aria-expanded="false">Ver más</button>'
                    f'</div>')
     return f'''<article class="preprint-card">
   <div class="preprint-card-layout">
@@ -264,7 +265,7 @@ def indice(preprints, oficiales):
     <div class="preprints-search-box">
       <input type="search" id="preprints-search-input" autocomplete="off" placeholder="Buscar por título, autor, identificador o palabra clave...">
     </div>
-    <p id="preprints-results-count" class="preprints-results-count"></p>
+    <p id="preprints-results-count" class="preprints-results-count" role="status" aria-live="polite"></p>
     <div class="preprints-advanced-link"><a href="../explorar/">Búsqueda avanzada →</a></div>
   </div>
   <div id="preprints-no-results" class="preprints-no-results" hidden>

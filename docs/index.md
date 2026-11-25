@@ -6,20 +6,20 @@ Editorial del Instituto de Matemáticas, UNAM.
 </p>
 
 <p>
-Consulta trabajos disponibles antes de su publicación editorial definitiva, accede a sus archivos digitales y revisa las distintas versiones disponibles.
+Consulta las publicaciones oficiales y los preprints del Instituto de Matemáticas de la UNAM. Explora sus fichas, información bibliográfica y archivos digitales disponibles.
 </p>
 
 <div class="home-actions">
-<a href="explorar/" class="md-button md-button--primary">Explorar prepublicaciones</a>
-<a href="preprints/" class="md-button">Ver prepublicaciones</a>
+<a href="catalogo/" class="md-button md-button--primary">Publicaciones oficiales</a>
+<a href="preprints/" class="md-button">Preprints</a>
 </div>
 
 </div>
 
 <div class="home-hero-books">
-<img src="assets/covers/pap-not-1.jpg" alt="Portada de libro">
-<img src="assets/covers/pap-tex-1.png" alt="Portada de libro">
-<img src="assets/covers/cuad-x-1.png" alt="Portada de libro">
+<img src="assets/covers/pap-not-1.jpg" alt="Portada de Teoría de singularidades en topología, geometría y foliaciones I" width="1004" height="1359" decoding="async">
+<img src="assets/covers/pap-tex-1.png" alt="Portada de Grupos I" width="481" height="651" decoding="async">
+<img src="assets/covers/cuad-x-1.png" alt="Portada de Combinatoria" width="1959" height="2709" decoding="async">
 </div>
 
 </section>
@@ -39,10 +39,10 @@ Consulta trabajos disponibles antes de su publicación editorial definitiva, acc
 
 <section class="page-section">
 
-<h2>Información de cada prepublicación</h2>
+<h2>Información de cada publicación</h2>
 
 <p>
-Cada ficha puede incluir información sobre los autores, resumen, fecha de publicación, versión actual, historial de versiones, cita bibliográfica, BibTeX y archivos disponibles para consulta o descarga.
+Las fichas reúnen título, autores, resumen, cita bibliográfica, BibTeX y los PDF disponibles. Las publicaciones oficiales presentan sus ediciones y metadatos editoriales; los preprints muestran la información de su documento vigente.
 </p>
 
 </section>

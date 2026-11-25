@@ -397,7 +397,7 @@ def tarjeta(libro, preprints_relacionados):
         <p class="preprint-authors">{autores}</p>
         <div class="preprint-summary-wrapper">
           <p class="preprint-summary preprint-summary-collapsed">{resumen}</p>
-          <button type="button" class="preprint-summary-toggle">Ver más</button>
+          <button type="button" class="preprint-summary-toggle" aria-expanded="false">Ver más</button>
         </div>
       </div>
       <div class="preprint-card-footer">
@@ -500,6 +500,7 @@ JS_CATALOGO = r'''
       const resumen = boton.parentElement.querySelector(".preprint-summary");
       const cerrado = resumen.classList.toggle("preprint-summary-collapsed");
       boton.textContent = cerrado ? "Ver más" : "Ver menos";
+      boton.setAttribute("aria-expanded", String(!cerrado));
     });
   });
   input.addEventListener("input", filtrar);
@@ -528,7 +529,7 @@ def pagina_catalogo(libros, preprints_relacionados):
       <div class="preprints-search-box">
         <input type="search" id="oficiales-search-input" placeholder="Buscar por título, autor, serie o identificador..." autocomplete="off">
       </div>
-      <p id="oficiales-results-count" class="preprints-results-count"></p>
+      <p id="oficiales-results-count" class="preprints-results-count" role="status" aria-live="polite"></p>
     </div>
     <div id="oficiales-no-results" class="preprints-no-results" hidden>
       <strong>No se encontraron publicaciones.</strong>
