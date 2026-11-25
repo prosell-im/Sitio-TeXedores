@@ -65,7 +65,7 @@
     line-height: 100px;
     width: 90%;
   }
-  #encabezado > div#logoizq {
+  #encabezado > #logoizq {
     height: 80px;
     width: 71px;
   }
@@ -73,7 +73,7 @@
     height: 70px;
     width: 291px;
   }
-  #encabezado > div#logoder {
+  #encabezado > #logoder {
     height: 70px;
     width: 168px;
   }
@@ -102,7 +102,7 @@
     line-height: 120px;
     width: 80%;
   }
-  #encabezado > div#logoizq {
+  #encabezado > #logoizq {
     height: 100px;
     width: 89px;
   }
@@ -110,7 +110,7 @@
     height: 81px;
     width: 337px;
   }
-  #encabezado > div#logoder {
+  #encabezado > #logoder {
     height: 90px;
     width: 216px;
   }    

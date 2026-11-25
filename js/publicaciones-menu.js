@@ -77,8 +77,9 @@ document.addEventListener("DOMContentLoaded", function () {
       });
 
       document.addEventListener("keydown", function (event) {
-        if (event.key === "Escape") {
+        if (event.key === "Escape" && dropdown.open) {
           cerrarMenu();
+          boton.focus();
         }
       });
 

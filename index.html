@@ -6,6 +6,8 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
+        <meta name="description" content="Catálogo de publicaciones oficiales y preprints del Instituto de Matemáticas de la UNAM.">
+      
       
       
         <link rel="canonical" href="https://prosell-im.github.io/Sitio-TeXedores/">
@@ -59,6 +61,8 @@
     
       <link rel="stylesheet" href="stylesheets/colecciones-catalogo.css">
     
+      <link rel="stylesheet" href="stylesheets/mejoras-ux.css">
+    
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -93,12 +97,9 @@
   <!-- Add announcement here, including arbitrary HTML -->
    <!-- Esto es un anuncio -->
   <div id="encabezado">
-     <div id="logoizq" onclick="window.open('http://www.unam.mx');" style="cursor:pointer;">
-      </div>
-      <div id="logomid">
-      </div>
-      <div id="logoder" onclick="window.open('http://www.matem.unam.mx');" style="cursor:pointer;">
-      </div>
+     <a id="logoizq" href="https://www.unam.mx/" target="_blank" rel="noopener noreferrer" aria-label="Universidad Nacional Autónoma de México (abre en una pestaña nueva)"></a>
+     <div id="logomid" aria-hidden="true"></div>
+     <a id="logoder" href="https://www.matem.unam.mx/" target="_blank" rel="noopener noreferrer" aria-label="Instituto de Matemáticas, UNAM (abre en una pestaña nueva)"></a>
   </div>
 
 
@@ -754,20 +755,20 @@ Editorial del Instituto de Matemáticas, UNAM.
 </p>
 
 <p>
-Consulta trabajos disponibles antes de su publicación editorial definitiva, accede a sus archivos digitales y revisa las distintas versiones disponibles.
+Consulta las publicaciones oficiales y los preprints del Instituto de Matemáticas de la UNAM. Explora sus fichas, información bibliográfica y archivos digitales disponibles.
 </p>
 
 <div class="home-actions">
-<a href="explorar/" class="md-button md-button--primary">Explorar prepublicaciones</a>
-<a href="preprints/" class="md-button">Ver prepublicaciones</a>
+<a href="catalogo/" class="md-button md-button--primary">Publicaciones oficiales</a>
+<a href="preprints/" class="md-button">Preprints</a>
 </div>
 
 </div>
 
 <div class="home-hero-books">
-<img src="assets/covers/pap-not-1.jpg" alt="Portada de libro">
-<img src="assets/covers/pap-tex-1.png" alt="Portada de libro">
-<img src="assets/covers/cuad-x-1.png" alt="Portada de libro">
+<img src="assets/covers/pap-not-1.jpg" alt="Portada de Teoría de singularidades en topología, geometría y foliaciones I" width="1004" height="1359" decoding="async">
+<img src="assets/covers/pap-tex-1.png" alt="Portada de Grupos I" width="481" height="651" decoding="async">
+<img src="assets/covers/cuad-x-1.png" alt="Portada de Combinatoria" width="1959" height="2709" decoding="async">
 </div>
 
 </section>
@@ -787,10 +788,10 @@ Consulta trabajos disponibles antes de su publicación editorial definitiva, acc
 
 <section class="page-section">
 
-<h2>Información de cada prepublicación</h2>
+<h2>Información de cada publicación</h2>
 
 <p>
-Cada ficha puede incluir información sobre los autores, resumen, fecha de publicación, versión actual, historial de versiones, cita bibliográfica, BibTeX y archivos disponibles para consulta o descarga.
+Las fichas reúnen título, autores, resumen, cita bibliográfica, BibTeX y los PDF disponibles. Las publicaciones oficiales presentan sus ediciones y metadatos editoriales; los preprints muestran la información de su documento vigente.
 </p>
 
 </section>
@@ -873,8 +874,9 @@ Para dudas sobre disponibilidad, pedidos o títulos impresos, consulta la págin
       <div class="footer-column">
         <h3>Sitio</h3>
         <a href="acerca/">Acerca de</a>
-        <a href="catalogo/">Catálogo</a>
-        <a href="explorar/">Explorar</a>
+        <a href="catalogo/">Publicaciones oficiales</a>
+        <a href="preprints/">Preprints</a>
+        <a href="explorar/">Búsqueda avanzada</a>
       </div>
 
       <div class="footer-column footer-contact">
@@ -889,7 +891,7 @@ Para dudas sobre disponibilidad, pedidos o títulos impresos, consulta la págin
     <div class="footer-divider"></div>
 
     <div class="footer-meta">
-      <p>© <span id="footer-year"></span> Papirhos Digital</p>
+      <p>© <span id="footer-year"></span> TeXedores · Instituto de Matemáticas, UNAM</p>
     </div>
 
   </div>

@@ -104,7 +104,7 @@ body{
   height: 90px !important;
 }
 
-#encabezado > div#logoizq:hover {
+#encabezado > #logoizq:hover {
   background-image: url("../assets/logos/unam-gold.svg");
   background-repeat: no-repeat;
   background-size: contain;
@@ -113,7 +113,7 @@ body{
   transform: translateY(-50%);
 }
 
-#encabezado > div#logoizq {
+#encabezado > #logoizq {
   height: 100px;
   width: 90px;
   display: block;
@@ -141,7 +141,7 @@ body{
   transform: translate(-50%, -50%);
 }
 
-#encabezado > div#logoder {
+#encabezado > #logoder {
   height: 90px;
   width: 220px;
   display: block;
@@ -155,7 +155,7 @@ body{
   transform: translateY(-50%);
 }
 
-#encabezado > div#logoder:hover {
+#encabezado > #logoder:hover {
   background-image: url("../assets/logos/im-cropped-H.svg");
   background-repeat: no-repeat;
   background-size: contain;
@@ -1366,7 +1366,7 @@ body:has(.home-hero) .md-top {
     display: none !important;
   }
 
-  #encabezado > div#logoizq {
+  #encabezado > #logoizq {
     left: -0.55rem;
   }
 
